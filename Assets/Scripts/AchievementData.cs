@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New AchievementData", menuName = "AchievementData")]
 public class AchievementData : ScriptableObject
 {
+    public string AchievementID;
     public string SteamID;
     public string XBOXID;
     public string AchievementName;
@@ -13,4 +15,9 @@ public class AchievementData : ScriptableObject
     public Sprite Icon;
     public AchievementType Type;
     public float ProgressGoal;   //for progress tracker achievement
+
+    private void OnEnable()
+    {
+        AchievementID = Guid.NewGuid().ToString();
+    }
 }

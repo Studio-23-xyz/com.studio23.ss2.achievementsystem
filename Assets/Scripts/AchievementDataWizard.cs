@@ -21,6 +21,8 @@ public class AchievementDataWizard : EditorWindow
     private float _achievementProgressTrack;
     private static Vector2 descriptionScrollPosition;
 
+    //private string _achievementID;
+
 
     private void OnGUI()
     {
@@ -59,7 +61,8 @@ public class AchievementDataWizard : EditorWindow
     {
         //Creating data
         AchievementData _data = ScriptableObject.CreateInstance<AchievementData>();
-         _data.SteamID = _steamID;
+        //_data.AchievementID = _achievementID;
+        _data.SteamID = _steamID;
          _data.XBOXID = _xboxID;
         _data.AchievementName = _achievementName;
         _data.AchievementDescription = _achievementDescription;
