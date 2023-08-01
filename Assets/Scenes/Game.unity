@@ -217,116 +217,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1001 &428883178
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 526643755}
-    m_Modifications:
-    - target: {fileID: 7591727657813368632, guid: 8caf9a786c8651040942f2a0da60b431, type: 3}
-      propertyPath: m_Name
-      value: PopupAchievementCard
-      objectReference: {fileID: 0}
-    - target: {fileID: 7591727657813368633, guid: 8caf9a786c8651040942f2a0da60b431, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7591727657813368633, guid: 8caf9a786c8651040942f2a0da60b431, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7591727657813368633, guid: 8caf9a786c8651040942f2a0da60b431, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7591727657813368633, guid: 8caf9a786c8651040942f2a0da60b431, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7591727657813368633, guid: 8caf9a786c8651040942f2a0da60b431, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7591727657813368633, guid: 8caf9a786c8651040942f2a0da60b431, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7591727657813368633, guid: 8caf9a786c8651040942f2a0da60b431, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7591727657813368633, guid: 8caf9a786c8651040942f2a0da60b431, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 876
-      objectReference: {fileID: 0}
-    - target: {fileID: 7591727657813368633, guid: 8caf9a786c8651040942f2a0da60b431, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 107.08539
-      objectReference: {fileID: 0}
-    - target: {fileID: 7591727657813368633, guid: 8caf9a786c8651040942f2a0da60b431, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7591727657813368633, guid: 8caf9a786c8651040942f2a0da60b431, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7591727657813368633, guid: 8caf9a786c8651040942f2a0da60b431, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7591727657813368633, guid: 8caf9a786c8651040942f2a0da60b431, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7591727657813368633, guid: 8caf9a786c8651040942f2a0da60b431, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7591727657813368633, guid: 8caf9a786c8651040942f2a0da60b431, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7591727657813368633, guid: 8caf9a786c8651040942f2a0da60b431, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7591727657813368633, guid: 8caf9a786c8651040942f2a0da60b431, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7591727657813368633, guid: 8caf9a786c8651040942f2a0da60b431, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 7591727657813368633, guid: 8caf9a786c8651040942f2a0da60b431, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7591727657813368633, guid: 8caf9a786c8651040942f2a0da60b431, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7591727657813368633, guid: 8caf9a786c8651040942f2a0da60b431, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7591727658443405470, guid: 8caf9a786c8651040942f2a0da60b431, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7591727658443405470, guid: 8caf9a786c8651040942f2a0da60b431, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8caf9a786c8651040942f2a0da60b431, type: 3}
---- !u!224 &428883179 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7591727657813368633, guid: 8caf9a786c8651040942f2a0da60b431, type: 3}
-  m_PrefabInstance: {fileID: 428883178}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &473889033
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,8 +376,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 428883179}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -507,6 +396,7 @@ GameObject:
   - component: {fileID: 666603466}
   - component: {fileID: 666603468}
   - component: {fileID: 666603467}
+  - component: {fileID: 666603469}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -545,7 +435,7 @@ MonoBehaviour:
   achievements: []
   _unlockedAchievement: []
   _progressAchievements: []
-  ShowToast: 1
+  ShowToast: 0
 --- !u!114 &666603468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,8 +449,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   balloonPoped: 0
-  ToastAchievementCard: {fileID: 7591727657813368632, guid: 8caf9a786c8651040942f2a0da60b431, type: 3}
-  CardParent: {fileID: 526643755}
+--- !u!114 &666603469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666603465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d16c5ff09159754a80a721c8e220d72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AcheivementsData: []
+  AchievementCardPrefab: {fileID: 6922625224033015319, guid: 7158e8c3a775a124e9221343fbefef2c, type: 3}
+  AchievementCardContainer: {fileID: 526643755}
 --- !u!1 &1638907413
 GameObject:
   m_ObjectHideFlags: 0
