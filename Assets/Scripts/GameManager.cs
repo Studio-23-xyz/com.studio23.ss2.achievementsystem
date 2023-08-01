@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        id = Resources.Load<AchievementData>("Forsaken").AchievementID;
+        id = Resources.Load<AchievementData>("Achievements/Forsaken").AchievementID;
 
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -27,8 +27,8 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.S))
         {
-
-           // Debug.Log(AchievementManager.instance._unlockedAchievement[id]);
+           Debug.Log(AchievementManager.instance.IsAchievementUnlocked(id));
+            // Debug.Log(AchievementManager.instance._unlockedAchievement[id]);
         }
     }
 }

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using System;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class AchievementDataWizard : EditorWindow
 {
@@ -17,6 +19,7 @@ public class AchievementDataWizard : EditorWindow
     private string _achievementName;
     private string _achievementDescription;
     private Sprite _achievementSprite;
+    private Sprite _achievementLockedSprite;
     private AchievementType _achievementType;
     private float _achievementProgressTrack;
     private static Vector2 descriptionScrollPosition;
@@ -39,6 +42,7 @@ public class AchievementDataWizard : EditorWindow
         
 
         _achievementSprite = (Sprite)EditorGUILayout.ObjectField("Achievement Icon",_achievementSprite, typeof(Sprite), false) as Sprite;
+        _achievementLockedSprite = (Sprite)EditorGUILayout.ObjectField("Achievement Locked Icon",_achievementSprite, typeof(Sprite), false) as Sprite;
         // _achievementType = (AchievementType)EditorGUILayout.EnumFlagsField("Achievement Type", _achievementType);
         // _achievementProgressTrack =
         //  EditorGUILayout.FloatField("Progress Tracked", _achievementProgressTrack);
@@ -71,7 +75,7 @@ public class AchievementDataWizard : EditorWindow
         _data.Type = _achievementType;
         _data.ProgressGoal = _achievementProgressTrack;
 
-
+        _data.AchievementID = Guid.NewGuid().ToString();
 
         //Store Data
         string path = "Assets/Resources/" + _achievementName + ".asset";

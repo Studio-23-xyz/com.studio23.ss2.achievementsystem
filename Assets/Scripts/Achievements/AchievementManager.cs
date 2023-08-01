@@ -1,21 +1,18 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using File = System.IO.File;
 using System.IO;
-using System.Linq;
 using UnityEngine.SocialPlatforms.Impl;
 
 public class AchievementManager : MonoBehaviour
 {
-
     public static AchievementManager instance;
 
-    public string SavePath;
-    private string fileName = "achievementData.json";
-    [SerializeField]private List<AchievementData> achievements;
-    public List<UnlockableAchievements> _unlockedAchievement;
-    public List<ProgressableAchievements> _progressAchievements;
-    
+    public AchievementData[] data;
+    public Dictionary<string, AchievementData> achievements = new Dictionary<string, AchievementData>();
+    public Dictionary<string, int> dummy = new Dictionary<string, int>();
+    public string saveFileName = "achievements.json";
 
     void Awake()
     {
@@ -24,165 +21,117 @@ public class AchievementManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
+
         else
         {
             Destroy(gameObject);
         }
-
-        if (string.IsNullOrEmpty(SavePath))
-        {
-            SavePath = Application.persistentDataPath + "/achievementData.json";
-        }
-      
     }
 
-   
     void Start()
     {
-        achievements = UIManager.Instance.AcheivementsData;
-        LoadAchievements();
+        dummy.Add("a", 1);
+        dummy.Add("bv", 1);
+        dummy.Add("e", 1);
+        dummy.Add("w", 1);
+        LoadAchievementDataFromResources();
+       // SaveAchievementData();
+        // LoadAchievementDataFromResources();
+       // LoadAchievementData();
+
     }
 
-    private void LoadAchievements()
+    public void LoadAchievementDataFromResources()
     {
-        string jsonData = File.ReadAllText(SavePath);
-        //achievements = JsonUtility.FromJson<List<AchievementData>>(jsonData);
-        Debug.Log(jsonData);
-        //if (string.IsNullOrEmpty(jsonData))
-        //    return;
-        //achievements = JsonUtility.FromJson<List<AchievementData>>(jsonData);
+        AchievementData[] loadedAchievements = Resources.LoadAll<AchievementData>("Achievements");
+        data = loadedAchievements;
 
-        foreach (var achievement in achievements)
+        foreach (var achievement in loadedAchievements)
         {
-            switch (achievement.Type)
+            if (!achievements.ContainsKey(achievement.AchievementID))
             {
-                case AchievementType.Locked:
-                    _unlockedAchievement.Add(new UnlockableAchievements(achievement.AchievementID, false));
-                    break;
-                case AchievementType.Unlocked:
-                    _unlockedAchievement.Add(new UnlockableAchievements(achievement.AchievementID, true));
-                    break;
-                case AchievementType.ProgressTracked:
-                    _progressAchievements.Add(new ProgressableAchievements(achievement.AchievementID,0));
-                    break;
+                achievements.Add(achievement.AchievementID, achievement);
             }
         }
+
+        Debug.Log("Achievement data loaded from Resources folder.");
     }
 
-    public bool IsAchievementUnlocked(string achievementId)
+
+
+
+    public void UnlockAchievement(string achievementID)
     {
-        var data = _unlockedAchievement.FirstOrDefault(x => x.AchievementID.Equals(achievementId));
-        if (data != null)
+        if (achievements.TryGetValue(achievementID, out AchievementData achievement) && !achievement.isAchieved)
         {
-            return data.ISunlocked;
+            achievement.isAchieved = true;
+            SaveAchievementData();
+            Debug.Log("Unlocked Achievement: " + achievement.AchievementName);
         }
+    }
+
+    public bool IsAchievementUnlocked(string achievementID)
+    {
+        if (achievements.TryGetValue(achievementID, out AchievementData achievement))
+        {
+            return achievement.isAchieved;
+        }
+
         return false;
     }
 
-    public void UnlockAchievement(string achievementId)
+    public void SetAchievementProgress(string achievementID, int progress)
     {
-        var data = _unlockedAchievement.FirstOrDefault(x => x.AchievementID.Equals(achievementId));
-        if (data != null)
+        if (achievements.TryGetValue(achievementID, out AchievementData achievement) && achievement.Type == AchievementType.ProgressTracked)
         {
-            data.ISunlocked = true;
-            SaveAchievements();
+            achievement.ProgressGoal = progress;
+            achievement.isAchieved = true;
+            SaveAchievementData();
+            Debug.Log("Unlocked Achievement: " + achievement.AchievementName);
         }
     }
 
-    public int GetAchievementProgress(string achievementId)
+    public AchievementData GetAchievement(string achievementID)
     {
-        var data = _progressAchievements.FirstOrDefault(x=>x.AchievementID.Equals(achievementId));
-        if (data != null) 
+        if (achievements.TryGetValue(achievementID, out AchievementData achievement))
         {
-            return data.ProgressGoal;
+            return achievement;
         }
-        return 0;
-    }
 
-    public void UpdateAchievementProgress(string achievementId, int progress)
-    {
-        var data = _progressAchievements.FirstOrDefault(x => x.AchievementID.Equals(achievementId));
-        if (data != null && achievements.Find(x => x.AchievementID == achievementId).Type == AchievementType.ProgressTracked)
-        {
-            data.ProgressGoal = (int)Mathf.Clamp(progress, 0, achievements.Find(x => x.AchievementID == achievementId).ProgressGoal);
-            CheckProgressAchievementComplete(achievementId);
-            SaveAchievements();
-        }
-    }
-
-    private void CheckProgressAchievementComplete(string achievementId)
-    {
-        var data = _progressAchievements.FirstOrDefault(x => x.AchievementID.Equals(achievementId));
-        var progress = data.ProgressGoal;
-        var goal = achievements.Find(x => x.AchievementID == achievementId).ProgressGoal;
-        if (progress >= goal)
-        {
-            UnlockAchievement(achievementId);
-        }
-    }
-
-    private void OnApplicationQuit()
-    {
-        // Save achievement data when the game closes
-         //SaveAchievements();
+        return null;
     }
 
 
-
-    private void SaveAchievements()
-    {
-        if (File.Exists(SavePath))
-            File.Delete(SavePath);
-        foreach (var achievement in _unlockedAchievement)
-        {
-            string jsonData = JsonUtility.ToJson(achievement);
-            Debug.Log(jsonData);
-            File.AppendAllText(SavePath, jsonData);
-        }
-
-        foreach (var progress in _progressAchievements)
-        {
-            string jsonData = JsonUtility.ToJson(progress);
-            Debug.Log(jsonData);
-            File.AppendAllText(SavePath, jsonData);
-        }
-
-
-
-    }
-
-    //public void LoadAchievementData()
+    //public void SaveAchievementData()
     //{
-    //    string jsonData = File.ReadAllText(SavePath);
-    //    if (string.IsNullOrEmpty(jsonData))
-    //        return;
-    //    achievements = JsonUtility.FromJson<List<AchievementData>>(jsonData);
+    //    string jsonData = JsonUtility.ToJson(this);
+    //    string savePath = Path.Combine(Application.persistentDataPath, saveFileName);
+    //    File.WriteAllText(savePath, jsonData);
+    //    Debug.Log("Achievement data saved to: " + savePath);
     //}
 
-}
-
-[System.Serializable]
-public class UnlockableAchievements
-{
-    public string AchievementID;
-    public bool ISunlocked;
-
-    public UnlockableAchievements(string id, bool val)
+    [ContextMenu("Save")]
+    public void SaveAchievementData()
     {
-        AchievementID = id;
-        ISunlocked = val;
+        string jsonData = JsonUtility.ToJson(dummy);
+        string savePath = Path.Combine(Application.persistentDataPath, saveFileName);
+        File.WriteAllText(savePath, jsonData);
+        Debug.Log("Achievement data saved to: " + savePath);
     }
-}
 
-[System.Serializable]
-public class ProgressableAchievements
-{
-    public string AchievementID;
-    public int ProgressGoal;
-
-    public ProgressableAchievements(string achievementID, int progressGoal)
+    public void LoadAchievementData()
     {
-        AchievementID = achievementID;
-        ProgressGoal = progressGoal;
+        string loadPath = Path.Combine(Application.persistentDataPath, saveFileName);
+
+        if (File.Exists(loadPath))
+        {
+            string jsonData = File.ReadAllText(loadPath);
+            achievements = JsonUtility.FromJson<Dictionary<string, AchievementData>>(jsonData);
+            Debug.Log("Achievement data loaded from: " + loadPath);
+        }
+        else
+        {
+            Debug.LogWarning("No achievement data JSON file found at: " + loadPath);
+        }
     }
 }

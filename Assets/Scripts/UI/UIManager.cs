@@ -30,7 +30,7 @@ public class UIManager : MonoBehaviour
     private void LoadAchievementData()
     {
         AcheivementsData.Clear();
-        AchievementData[] achievements = Resources.LoadAll<AchievementData>("");
+        AchievementData[] achievements = Resources.LoadAll<AchievementData>("Achievements");
 
         if (achievements != null)
         { 

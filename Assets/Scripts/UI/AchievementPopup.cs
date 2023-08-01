@@ -14,6 +14,7 @@ public class AchievementPopup : MonoBehaviour
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
 
+
     private void Start()
     {
         rectTransform = GetComponent<RectTransform>();

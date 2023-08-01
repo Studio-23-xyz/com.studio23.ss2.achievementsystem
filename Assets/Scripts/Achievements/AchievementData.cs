@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 using UnityEngine;
 
 
@@ -12,9 +13,10 @@ public class AchievementData : ScriptableObject
     public string XBOXID;
     public string AchievementName;
     public string AchievementDescription;
-    public Sprite Icon;
+   [JsonIgnore] public Sprite Icon;
     public AchievementType Type;
     public float ProgressGoal;   //for progress tracker achievement
+    public bool isAchieved;
 
     private void OnEnable()
     {
