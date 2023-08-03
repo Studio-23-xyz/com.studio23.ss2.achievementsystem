@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376d3a5124165844d8e8eda7fff70843, type: 3}
+  m_Name: Employee of the day (Again)
+  m_EditorClassIdentifier: 
+  AchievementID: f002c058-9616-4a53-9db3-a22cb14b016f
+  SteamID: 
+  XBOXID: 
+  AchievementName: Employee of the day (Again)
+  AchievementDescription: Deliver 20 orders
+  LockedIcon: {fileID: 0}
+  UnlockedIcon: {fileID: 0}
+  LockedIconResourceUrl: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1955750/bae014bcbe57a732adae18d1753c460ad2f88c78.jpg
+  UnlockedIconResourceUrl: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1955750/ea501534ccc096c9a0f9359e1b5199ea38c07287.jpg
+  Type: 0
+  ProgressGoal: 0
+  isAchieved: 0

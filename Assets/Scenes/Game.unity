@@ -397,6 +397,7 @@ GameObject:
   - component: {fileID: 666603468}
   - component: {fileID: 666603467}
   - component: {fileID: 666603469}
+  - component: {fileID: 666603470}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -464,6 +465,19 @@ MonoBehaviour:
   AcheivementsData: []
   AchievementCardPrefab: {fileID: 6922625224033015319, guid: 7158e8c3a775a124e9221343fbefef2c, type: 3}
   AchievementCardContainer: {fileID: 526643755}
+--- !u!114 &666603470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666603465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55a10bc30a85dad4183abdc168cdd616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CSVFile: {fileID: 4900000, guid: 8fa289f31410a0144b1621be58d185dd, type: 3}
 --- !u!1 &1638907413
 GameObject:
   m_ObjectHideFlags: 0

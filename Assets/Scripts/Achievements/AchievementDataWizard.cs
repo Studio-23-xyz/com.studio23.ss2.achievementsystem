@@ -71,7 +71,7 @@ public class AchievementDataWizard : EditorWindow
          _data.XBOXID = _xboxID;
         _data.AchievementName = _achievementName;
         _data.AchievementDescription = _achievementDescription;
-        _data.Icon = _achievementSprite;
+        //_data.Icon = _achievementSprite;
         _data.Type = _achievementType;
         _data.ProgressGoal = _achievementProgressTrack;
 

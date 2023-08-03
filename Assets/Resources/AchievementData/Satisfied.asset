@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376d3a5124165844d8e8eda7fff70843, type: 3}
+  m_Name: Satisfied
+  m_EditorClassIdentifier: 
+  AchievementID: 5e693360-2bdf-4893-bab6-4a9423bcacdb
+  SteamID: 
+  XBOXID: 
+  AchievementName: Satisfied
+  AchievementDescription: First successful sacrifice
+  LockedIcon: {fileID: 0}
+  UnlockedIcon: {fileID: 0}
+  LockedIconResourceUrl: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1955750/4486025483d4df9c85e166333c057eaed0fb1685.jpg
+  UnlockedIconResourceUrl: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1955750/51d1f6c513e69196d6b0e99b3896fdd9d8f4abea.jpg
+  Type: 0
+  ProgressGoal: 0
+  isAchieved: 0

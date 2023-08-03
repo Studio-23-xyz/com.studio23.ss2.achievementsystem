@@ -55,7 +55,7 @@ public class UIManager : MonoBehaviour
         _ = Instantiate(AchievementCardPrefab, AchievementCardContainer);
         AchievementCardPrefab.GetComponent<AchievementCard>().AchievementName.text = achievement.AchievementName;
         AchievementCardPrefab.GetComponent<AchievementCard>().AchievementDescription.text = achievement.AchievementDescription;
-        AchievementCardPrefab.GetComponent<AchievementCard>().Icon.sprite = achievement.Icon;
+//        AchievementCardPrefab.GetComponent<AchievementCard>().Icon.sprite = Sprite.Create(achievement.Icon, new Rect(0, 0, achievement.Icon.width, achievement.Icon.height), new Vector2(0.5f, 0.5f));
     }
 
   

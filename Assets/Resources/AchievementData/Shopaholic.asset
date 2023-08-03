@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376d3a5124165844d8e8eda7fff70843, type: 3}
+  m_Name: Shopaholic
+  m_EditorClassIdentifier: 
+  AchievementID: 64f02303-2355-4a9a-96ba-f5281f018e80
+  SteamID: 
+  XBOXID: 
+  AchievementName: Shopaholic
+  AchievementDescription: Buy 25 items from the Gatekeeper
+  LockedIcon: {fileID: 0}
+  UnlockedIcon: {fileID: 0}
+  LockedIconResourceUrl: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1955750/535175b90472f03600dc98cacf1e896c402236f8.jpg
+  UnlockedIconResourceUrl: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1955750/ca2591a6407e937caeb47b2c7d5d26dc89572671.jpg
+  Type: 0
+  ProgressGoal: 0
+  isAchieved: 0
