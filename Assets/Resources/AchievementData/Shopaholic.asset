@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376d3a5124165844d8e8eda7fff70843, type: 3}
   m_Name: Shopaholic
   m_EditorClassIdentifier: 
-  AchievementID: 64f02303-2355-4a9a-96ba-f5281f018e80
+  AchievementID: f98ea700-7744-4226-8025-8e470496b4e9
   SteamID: 
   XBOXID: 
   AchievementName: Shopaholic

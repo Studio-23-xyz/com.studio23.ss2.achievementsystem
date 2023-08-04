@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376d3a5124165844d8e8eda7fff70843, type: 3}
   m_Name: Cultist
   m_EditorClassIdentifier: 
-  AchievementID: a0342b18-5581-4429-936f-5287107a8872
+  AchievementID: ab228142-a397-4198-84af-c8d7b11eb04b
   SteamID: 
   XBOXID: 
   AchievementName: Cultist

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -11,7 +13,7 @@ public class UIManager : MonoBehaviour
 
     public List<AchievementData> AcheivementsData = new List<AchievementData>();
     //public AchievementData[] AchievementData;
-    public GameObject AchievementCardPrefab;
+    public AchievementCard AchievementCardPrefab;
     public Transform AchievementCardContainer;
 
     void Awake()
@@ -30,19 +32,24 @@ public class UIManager : MonoBehaviour
     private void LoadAchievementData()
     {
         AcheivementsData.Clear();
-        AchievementData[] achievements = Resources.LoadAll<AchievementData>("Achievements");
+        AchievementData[] achievements = Resources.LoadAll<AchievementData>("AchievementData");
 
         if (achievements != null)
         { 
-            AcheivementsData.AddRange(achievements);
+             AcheivementsData.AddRange(achievements);
             if (AchievementCardPrefab != null)
             {
                 foreach (var achievement in achievements)
                 {
                     AddAchievementDetails(achievement);
                 }
-            }
 
+                //for (int i = 0; i < achievements.Length; i++)
+                //{
+                //    // AddAchievementDetails(achievements[i]);
+
+                //}
+            }
         }
         else
         {
@@ -52,10 +59,10 @@ public class UIManager : MonoBehaviour
 
     private void AddAchievementDetails(AchievementData achievement)
     {
-        _ = Instantiate(AchievementCardPrefab, AchievementCardContainer);
-        AchievementCardPrefab.GetComponent<AchievementCard>().AchievementName.text = achievement.AchievementName;
-        AchievementCardPrefab.GetComponent<AchievementCard>().AchievementDescription.text = achievement.AchievementDescription;
-//        AchievementCardPrefab.GetComponent<AchievementCard>().Icon.sprite = Sprite.Create(achievement.Icon, new Rect(0, 0, achievement.Icon.width, achievement.Icon.height), new Vector2(0.5f, 0.5f));
+        var card = Instantiate(AchievementCardPrefab, AchievementCardContainer);
+        card.AchievementName.text = achievement.AchievementName;
+        card.AchievementDescription.text = achievement.AchievementDescription;
+        card.LockedTexture.sprite = Sprite.Create(achievement.LockedIcon, new Rect(0, 0, achievement.LockedIcon.width, achievement.LockedIcon.height), new Vector2(0.5f, 0.5f));
     }
 
   

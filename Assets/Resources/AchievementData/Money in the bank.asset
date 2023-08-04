@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376d3a5124165844d8e8eda7fff70843, type: 3}
   m_Name: Money in the bank
   m_EditorClassIdentifier: 
-  AchievementID: 715cb014-3d87-47ab-b88f-c8123f89ba8f
+  AchievementID: 61d6cbf8-1930-4d63-aee6-7ecbd44ffa8b
   SteamID: 
   XBOXID: 
   AchievementName: Money in the bank

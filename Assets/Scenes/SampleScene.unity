@@ -297,6 +297,7 @@ GameObject:
   - component: {fileID: 845308207}
   - component: {fileID: 845308206}
   - component: {fileID: 845308209}
+  - component: {fileID: 845308210}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -317,6 +318,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SavePath: 
+  achievements: []
+  _unlockedAchievement: []
+  _progressAchievements: []
+  ShowToast: 0
 --- !u!114 &845308207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,7 +335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AcheivementsData: []
-  AchievementCardPrefab: {fileID: 6922625224033015319, guid: 7158e8c3a775a124e9221343fbefef2c, type: 3}
+  AchievementCardPrefab: {fileID: 957440448699652525, guid: 7158e8c3a775a124e9221343fbefef2c, type: 3}
   AchievementCardContainer: {fileID: 1306924790}
 --- !u!4 &845308208
 Transform:
@@ -360,6 +365,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   balloonPoped: 0
+--- !u!114 &845308210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845308205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55a10bc30a85dad4183abdc168cdd616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CSVFile: {fileID: 4900000, guid: 8fa289f31410a0144b1621be58d185dd, type: 3}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

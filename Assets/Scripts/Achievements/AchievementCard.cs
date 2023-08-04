@@ -7,6 +7,7 @@ public class AchievementCard : MonoBehaviour
 {
     public TextMeshProUGUI AchievementName;
     public TextMeshProUGUI AchievementDescription;
-    public Image Icon;
+    public Image LockedTexture;
+    public Image UnlockedTexture;
 
 }

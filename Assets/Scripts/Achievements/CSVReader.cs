@@ -53,12 +53,13 @@ public class CSVReader : MonoBehaviour
 
 
             //Store Data
-            string path = "Assets/Resources/AchievementData/" + _data.AchievementName + ".asset";
+            string path = $"Assets/Resources/AchievementData/{_data.AchievementName}.asset";
             AssetDatabase.CreateAsset(_data, path);
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
             await DownloadAndSaveSprites();
-            Debug.Log("Achievement data created and saved at " + path);
+            Debug.Log($"Achievement data created and saved at {path}");
+            AssetDatabase.Refresh();
         }
 
         await AssignTextures();
@@ -108,13 +109,14 @@ public class CSVReader : MonoBehaviour
     public async UniTask AssignTextures()
     {
         AchievementData[] loadedAchievements = Resources.LoadAll<AchievementData>($"AchievementData");
-        Debug.Log($"{loadedAchievements.Length}");
+        Debug.Log($"{loadedAchievements.Length} file downloaded completed");
         foreach (var achievement in loadedAchievements)
         {
             achievement.UnlockedIcon =
-                Resources.Load<Texture2D>($"Icons/UnlockedIcons/{achievement.name}");
+                Resources.Load<Texture2D>($"Icons/UnlockedIcons/{achievement.AchievementName}");
             achievement.LockedIcon =
-                Resources.Load<Texture2D>($"Icons/LockedIcons/{achievement.name}");
+                Resources.Load<Texture2D>($"Icons/LockedIcons/{achievement.AchievementName}");
         }
     }
+
 }
