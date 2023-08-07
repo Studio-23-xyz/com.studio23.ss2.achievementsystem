@@ -12,7 +12,6 @@ public class UIManager : MonoBehaviour
 
 
     public List<AchievementData> AcheivementsData = new List<AchievementData>();
-    //public AchievementData[] AchievementData;
     public AchievementCard AchievementCardPrefab;
     public Transform AchievementCardContainer;
 
@@ -41,29 +40,16 @@ public class UIManager : MonoBehaviour
             {
                 foreach (var achievement in achievements)
                 {
-                    AddAchievementDetails(achievement);
+                    var card = Instantiate(AchievementCardPrefab, AchievementCardContainer);
+                    card.OnEnableAchievementCard(achievement);
                 }
 
-                //for (int i = 0; i < achievements.Length; i++)
-                //{
-                //    // AddAchievementDetails(achievements[i]);
-
-                //}
             }
         }
         else
         {
-            Debug.LogError("Failed to load achievement data");
+            Debug.LogError($"Failed to load achievement data");
         }
     }
 
-    private void AddAchievementDetails(AchievementData achievement)
-    {
-        var card = Instantiate(AchievementCardPrefab, AchievementCardContainer);
-        card.AchievementName.text = achievement.AchievementName;
-        card.AchievementDescription.text = achievement.AchievementDescription;
-        card.LockedTexture.sprite = Sprite.Create(achievement.LockedIcon, new Rect(0, 0, achievement.LockedIcon.width, achievement.LockedIcon.height), new Vector2(0.5f, 0.5f));
-    }
-
-  
 }

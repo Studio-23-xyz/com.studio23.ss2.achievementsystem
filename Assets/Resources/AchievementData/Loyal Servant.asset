@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376d3a5124165844d8e8eda7fff70843, type: 3}
   m_Name: Loyal Servant
   m_EditorClassIdentifier: 
-  AchievementID: a34b97d7-1437-4fe6-a76a-f1f690f794f4
+  AchievementID: 835c98a6-4eb1-4485-a547-c0101dd89094
   SteamID: 
   XBOXID: 
   AchievementName: Loyal Servant

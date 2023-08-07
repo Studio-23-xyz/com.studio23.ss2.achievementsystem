@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class CSVReader : MonoBehaviour
+public class CSVDataManager : MonoBehaviour
 {
     public TextAsset CSVFile;
 
@@ -39,7 +39,7 @@ public class CSVReader : MonoBehaviour
 
 
             // Parse data from CSV and assign it to the new AchievementData instance
-            Debug.Log("ID:" + values[0].Trim('"') + " Name:" + values[1] + " Description:" + values[3]);
+            //Debug.Log("ID:" + values[0].Trim('"') + " Name:" + values[1] + " Description:" + values[3]);
 
             _data = ScriptableObject.CreateInstance<AchievementData>();
 

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8272401431186876510}
   - component: {fileID: 7491467841200953046}
   m_Layer: 5
-  m_Name: Icon
+  m_Name: Icon_locked
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -307,8 +307,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AchievementName: {fileID: 6922625224740490838}
   AchievementDescription: {fileID: 6922625224226653107}
-  LockedTexture: {fileID: 8272401431186876510}
-  UnlockedTexture: {fileID: 0}
+  AchievementIcon: {fileID: 8272401431186876510}
+  unlockedColor: {r: 1, g: 0, b: 0, a: 0}
+  lockedColor: {r: 0.6784314, g: 0.6784314, b: 0.6784314, a: 0}
 --- !u!114 &4815050505566294284
 MonoBehaviour:
   m_ObjectHideFlags: 0
