@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        id = Resources.Load<AchievementData>("Achievements/Cultist").AchievementID;
+       // id = Resources.Load<AchievementData>("Achievements/Cultist").AchievementID;
 
         if (Input.GetKeyDown(KeyCode.E))
         {

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376d3a5124165844d8e8eda7fff70843, type: 3}
+  m_Name: Gatekeeper
+  m_EditorClassIdentifier: 
+  AchievementID: 9bbd7aa2-e63a-4148-9675-44791ccf73be
+  SteamID: 
+  XBOXID: 
+  AchievementName: Gatekeeper
+  AchievementDescription: Finish Day 5
+  LockedIcon: {fileID: 2800000, guid: 2178a65841472c94aa95ceaf10233ce7, type: 3}
+  UnlockedIcon: {fileID: 2800000, guid: ef5239535dc7d8342931ca951f061710, type: 3}
+  LockedIconResourceUrl: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1955750/2e62676345003e94790f5fb465110eea97e3d5d6.jpg
+  UnlockedIconResourceUrl: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1955750/1a5363b4c53aee61a33a4096b9e19654aaa1ead5.jpg
+  Type: 0
+  ProgressGoal: 0
+  isAchieved: 0

@@ -30,7 +30,6 @@ public class UIManager : MonoBehaviour
     }
     private void LoadAchievementData()
     {
-        AcheivementsData.Clear();
         AchievementData[] achievements = Resources.LoadAll<AchievementData>("AchievementData");
 
         if (achievements != null)
@@ -42,6 +41,7 @@ public class UIManager : MonoBehaviour
                 {
                     var card = Instantiate(AchievementCardPrefab, AchievementCardContainer);
                     card.OnEnableAchievementCard(achievement);
+                    card.locked = achievement.LockedIcon;
                 }
 
             }

@@ -8,6 +8,8 @@ public class AchievementCard : MonoBehaviour
 {
     public TextMeshProUGUI AchievementName;
     public TextMeshProUGUI AchievementDescription;
+    public Texture2D locked;
+    public Texture2D unlock;
     public Image AchievementIcon;
 
     public void OnEnableAchievementCard(AchievementData achievement)
@@ -18,7 +20,7 @@ public class AchievementCard : MonoBehaviour
     }
 
 
-    public void ChangeAchievementIcon(bool isunlocked, Texture2D lockedTexture, Texture2D unlockedTexture)
+    private void ChangeAchievementIcon(bool isunlocked, Texture2D lockedTexture, Texture2D unlockedTexture)
     {
         AchievementIcon.sprite = isunlocked
             ? Sprite.Create(unlockedTexture, new Rect(0, 0, unlockedTexture.width, unlockedTexture.height), new Vector2(0.5f, 0.5f))

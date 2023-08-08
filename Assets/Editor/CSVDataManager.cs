@@ -64,14 +64,10 @@ public class CSVDataManager : EditorWindow
     [MenuItem("CSV Reader/Debug Init")]
     public void Initialize()
     {
-        if (!Directory.Exists("Assets/Resources/AchievementData/"))
-            Directory.CreateDirectory("Assets/Resources/AchievementData/");
-
-        if (!Directory.Exists("Assets/Resources/Icons/"))
-        {
-            Directory.CreateDirectory("Assets/Resources/Icons/UnlockedIcons");
-            Directory.CreateDirectory("Assets/Resources/Icons/LockedIcons");
-        }
+        Directory.CreateDirectory("Assets/Resources/AchievementData/");
+        Directory.CreateDirectory("Assets/Resources/Icons/UnlockedIcons");
+        Directory.CreateDirectory("Assets/Resources/Icons/LockedIcons");
+      
     }
 
     [MenuItem("CSV Reader/LoadCSVData")]
@@ -91,6 +87,7 @@ public class CSVDataManager : EditorWindow
             //Debug.Log("ID:" + values[0].Trim('"') + " Name:" + values[1] + " Description:" + values[3]);
 
             _data = ScriptableObject.CreateInstance<AchievementData>();
+            
 
              EditorUtility.SetDirty(_data);
            // Undo.RecordObject(_data, "achievement_Recorded");
@@ -164,12 +161,13 @@ public class CSVDataManager : EditorWindow
         Debug.Log($"{loadedAchievements.Length} file downloaded completed");
         foreach (var achievement in loadedAchievements)
         {
+            EditorUtility.SetDirty(achievement);
             achievement.UnlockedIcon = Resources.Load<Texture2D>($"Icons/UnlockedIcons/{achievement.AchievementName}");
             achievement.LockedIcon = Resources.Load<Texture2D>($"Icons/LockedIcons/{achievement.AchievementName}");
-            AssetDatabase.SaveAssetIfDirty(achievement);
-            AssetDatabase.RefreshSettings();
             AssetDatabase.Refresh();
-            
+            AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh();
+
         }
     }
 

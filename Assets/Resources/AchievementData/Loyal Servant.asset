@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376d3a5124165844d8e8eda7fff70843, type: 3}
+  m_Name: Loyal Servant
+  m_EditorClassIdentifier: 
+  AchievementID: 4b685e52-ac5c-4c9a-8260-650010f930e8
+  SteamID: 
+  XBOXID: 
+  AchievementName: Loyal Servant
+  AchievementDescription: Sacrifice 20 customers
+  LockedIcon: {fileID: 2800000, guid: 46893e14c3ea3364ab51c31b541c4bdd, type: 3}
+  UnlockedIcon: {fileID: 2800000, guid: e6a68b5b701ede046a02f89421b1d173, type: 3}
+  LockedIconResourceUrl: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1955750/a62eea4f00e942bc5dd5901bd16f5a90d733fc00.jpg
+  UnlockedIconResourceUrl: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1955750/fcd8b58f4698bc8d0aa2691442476a019f2dfa0a.jpg
+  Type: 0
+  ProgressGoal: 0
+  isAchieved: 0

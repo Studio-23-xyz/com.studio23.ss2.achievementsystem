@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376d3a5124165844d8e8eda7fff70843, type: 3}
+  m_Name: The
+  m_EditorClassIdentifier: 
+  AchievementID: 11e6afb3-abaa-4dc3-bbc2-ccebc6d7b5bc
+  SteamID: 
+  XBOXID: 
+  AchievementName: The
+  AchievementDescription: Finish Day 4
+  LockedIcon: {fileID: 2800000, guid: 15697f76b6cb5b64ca56b1b7c4e76164, type: 3}
+  UnlockedIcon: {fileID: 2800000, guid: 4ea8d0bf413c6d345bd0aa03d7c25f1d, type: 3}
+  LockedIconResourceUrl: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1955750/58db4f3d16610a15aa6ad1495932adee69e01de5.jpg
+  UnlockedIconResourceUrl: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1955750/5c3d6b17f3541f1b53b9d9991255121fd2e8de76.jpg
+  Type: 0
+  ProgressGoal: 0
+  isAchieved: 0

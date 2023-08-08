@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376d3a5124165844d8e8eda7fff70843, type: 3}
+  m_Name: Yellow
+  m_EditorClassIdentifier: 
+  AchievementID: b12d4918-04d8-4d16-b7a0-c7071e2cbf55
+  SteamID: 
+  XBOXID: 
+  AchievementName: Yellow
+  AchievementDescription: Finish Day 1
+  LockedIcon: {fileID: 2800000, guid: a14d3b3d2c3f84d41837798cbf45abc3, type: 3}
+  UnlockedIcon: {fileID: 2800000, guid: 9b3032c3fd0377a4eac66d617a47ce8e, type: 3}
+  LockedIconResourceUrl: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1955750/5511ca89d2607f880ec9ea6e1f281ba1e6e05cd7.jpg
+  UnlockedIconResourceUrl: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1955750/2472f1c0c81b764d6b1c91c5e1a39be2e3070b9e.jpg
+  Type: 0
+  ProgressGoal: 0
+  isAchieved: 0
