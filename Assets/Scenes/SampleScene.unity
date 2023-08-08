@@ -297,7 +297,6 @@ GameObject:
   - component: {fileID: 845308207}
   - component: {fileID: 845308206}
   - component: {fileID: 845308209}
-  - component: {fileID: 845308210}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -365,19 +364,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   balloonPoped: 0
---- !u!114 &845308210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 845308205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55a10bc30a85dad4183abdc168cdd616, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CSVFile: {fileID: 4900000, guid: 8fa289f31410a0144b1621be58d185dd, type: 3}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
