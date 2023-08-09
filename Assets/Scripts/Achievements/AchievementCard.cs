@@ -8,23 +8,38 @@ public class AchievementCard : MonoBehaviour
 {
     public TextMeshProUGUI AchievementName;
     public TextMeshProUGUI AchievementDescription;
-    public Texture2D locked;
-    public Texture2D unlock;
     public Image AchievementIcon;
 
-    public void OnEnableAchievementCard(AchievementData achievement)
+    private AchievementData _data;
+
+    public void Initialize(AchievementData achievement)
     {
-       AchievementName.text = achievement.AchievementName;
-       AchievementDescription.text = achievement.AchievementDescription;
-       ChangeAchievementIcon(achievement.isAchieved,achievement.LockedIcon,achievement.UnlockedIcon);
+        _data= achievement;
+       AchievementName.text = _data.AchievementName;
+       AchievementDescription.text = _data.AchievementDescription;
+       if (!achievement.isAchieved)
+       {
+           LockAchievementIcon();
+       }
+       else
+       {
+           UnlockAchievementIcon();
+       }
+      
     }
 
-
-    private void ChangeAchievementIcon(bool isunlocked, Texture2D lockedTexture, Texture2D unlockedTexture)
+    private void UnlockAchievementIcon()
     {
-        AchievementIcon.sprite = isunlocked
-            ? Sprite.Create(unlockedTexture, new Rect(0, 0, unlockedTexture.width, unlockedTexture.height), new Vector2(0.5f, 0.5f))
-            : Sprite.Create(lockedTexture, new Rect(0, 0, lockedTexture.width, lockedTexture.height), new Vector2(0.5f, 0.5f));
+        var unlockedTexture = _data.UnlockedIcon;
+        AchievementIcon.sprite = Sprite.Create(unlockedTexture, new Rect(0, 0, unlockedTexture.width, unlockedTexture.height), new Vector2(0.5f, 0.5f));
     }
+
+    private void LockAchievementIcon()
+    {
+        var lockedTexture = _data.LockedIcon;
+        AchievementIcon.sprite = Sprite.Create(lockedTexture, new Rect(0, 0, lockedTexture.width, lockedTexture.height), new Vector2(0.5f, 0.5f));
+    }
+
+   
 
 }

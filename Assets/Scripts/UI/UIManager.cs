@@ -26,8 +26,14 @@ public class UIManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+       
+    }
+
+    void Start()
+    {
         LoadAchievementData();
     }
+
     private void LoadAchievementData()
     {
         AchievementData[] achievements = Resources.LoadAll<AchievementData>("AchievementData");
@@ -40,8 +46,7 @@ public class UIManager : MonoBehaviour
                 foreach (var achievement in achievements)
                 {
                     var card = Instantiate(AchievementCardPrefab, AchievementCardContainer);
-                    card.OnEnableAchievementCard(achievement);
-                    card.locked = achievement.LockedIcon;
+                    card.Initialize(achievement);
                 }
 
             }

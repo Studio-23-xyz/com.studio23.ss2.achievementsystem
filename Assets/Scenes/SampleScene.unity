@@ -295,8 +295,8 @@ GameObject:
   m_Component:
   - component: {fileID: 845308208}
   - component: {fileID: 845308207}
-  - component: {fileID: 845308206}
   - component: {fileID: 845308209}
+  - component: {fileID: 845308210}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -304,23 +304,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &845308206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 845308205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37b19d971bb1cba4d85038b2388b16b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SavePath: 
-  achievements: []
-  _unlockedAchievement: []
-  _progressAchievements: []
-  ShowToast: 0
 --- !u!114 &845308207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,7 +346,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3986325261a857b4382f29ee6180c6f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balloonPoped: 0
+  achievements:
+  - {fileID: 11400000, guid: 1acb7416cb2038646bb813eb1fa778f2, type: 2}
+  - {fileID: 11400000, guid: 3f4a45f46a09e2c4bae38dff487d074e, type: 2}
+  - {fileID: 11400000, guid: 54e6874c006b4ac48b3f0322756f0e36, type: 2}
+--- !u!114 &845308210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845308205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b00e9e5096ce5a54e95576cef19c2191, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SavePath: 
+  _achievementData: []
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

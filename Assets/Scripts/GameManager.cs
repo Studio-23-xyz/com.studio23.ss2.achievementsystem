@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public int balloonPoped = 0;
-    string id;
+    public AchievementData[] achievements;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,20 +14,13 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // id = Resources.Load<AchievementData>("Achievements/Cultist").AchievementID;
 
-        if (Input.GetKeyDown(KeyCode.E))
+        foreach (var achievement in achievements)
         {
-            // balloonPoped++;
-           
-            AchievementManager.instance.UnlockAchievement(id);
-
-        }
-
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-           Debug.Log(AchievementManager.instance.IsAchievementUnlocked(id));
-            // Debug.Log(AchievementManager.instance._unlockedAchievement[id]);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                AchivementsManager.instance.UnlockAchievement(achievement);
+            }
         }
     }
 }
