@@ -33,7 +33,7 @@ public class AchivementsManager : MonoBehaviour
             SavePath = Application.persistentDataPath + fileName;
         }
 
-        if (File.Exists(SavePath))
+        if (File.Exists(SavePath)) //available for locally only -> need to give savepath to steam cloud to work on cloud
         {
             LoadAchievements();
         }
@@ -43,11 +43,6 @@ public class AchivementsManager : MonoBehaviour
         }
 
 
-    }
-
-    void Start()
-    {
-       
     }
 
 
@@ -60,11 +55,14 @@ public class AchivementsManager : MonoBehaviour
         }
     }
 
-    public void UnlockAchievement(AchievementData achievement)
+    public void UnlockAchievement(string achievementName)
     {
+
+        var achievement = _achievementData.First(t => t.AchievementName == achievementName);
         achievement.isAchieved = true;
-        _achievementData.Add(achievement);
         SaveAchievements();
+
+        SteamAchievementManager.Instance.UnlockSteamAchievement(achievement.SteamID);
     }
 
 
