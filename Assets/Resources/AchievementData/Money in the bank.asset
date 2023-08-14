@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376d3a5124165844d8e8eda7fff70843, type: 3}
+  m_Name: Money in the bank
+  m_EditorClassIdentifier: 
+  AchievementID: 64739778-4071-497d-8eb9-a433e0bafb09
+  SteamID: 
+  XBOXID: 
+  AchievementName: Money in the bank
+  AchievementDescription: Have 10000$ in cash
+  LockedIcon: {fileID: 2800000, guid: 95a65833fa59a27439fea31bc16f19fa, type: 3}
+  UnlockedIcon: {fileID: 2800000, guid: 038c137275653264eb0fb56ad960d6c1, type: 3}
+  LockedIconResourceUrl: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1955750/4cbdcbe5f41d4a496aba4779990f91226508a039.jpg
+  UnlockedIconResourceUrl: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1955750/6873bd476a2392d7dc7dc3fb1c6370b61b15df8e.jpg
+  Type: 0
+  ProgressGoal: 0
+  isAchieved: 0

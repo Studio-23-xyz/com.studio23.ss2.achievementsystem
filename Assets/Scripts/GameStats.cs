@@ -20,5 +20,11 @@ public class GameStats : MonoBehaviour
     [SerializeField]
     private Stats _achievementStats;
 
-   
+
+    [ContextMenu("unlock level complete")]
+    public void LevelComplete()
+    {
+        AchivementsManager.instance.TestDummyUnlock("Cultist");
+    }
+
 }

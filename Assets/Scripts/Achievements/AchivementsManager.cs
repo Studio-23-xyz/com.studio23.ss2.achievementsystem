@@ -14,7 +14,12 @@ public class AchivementsManager : MonoBehaviour
 
     public static AchivementsManager instance;
 
-    [SerializeField] private List<AchievementData> _achievementData = new List<AchievementData>();
+
+    [SerializeField] private AchievementData[] _achievementData;
+
+    public bool EnableToast;
+    public RectTransform ToastContainer;
+    public GameObject ToastPrefab;
 
     void Awake()
     {
@@ -43,6 +48,11 @@ public class AchivementsManager : MonoBehaviour
         }
 
 
+    }
+
+    void Start()
+    {
+        _achievementData = Resources.LoadAll<AchievementData>($"AchievementData");
     }
 
 
@@ -95,9 +105,17 @@ public class AchivementsManager : MonoBehaviour
         {
             var achievement = achievements.First(r => r.AchievementID == id);
             achievement.isAchieved = true;
-            _achievementData.Add(achievement);
+          //  _achievementData.Add(achievement);
         }
         
+    }
+
+    [ContextMenu("Spawn Toast")]
+    public void TestDummyUnlock(string name)
+    {
+        var achievement = _achievementData.First(t => t.AchievementName == name);
+        var toastCard = Instantiate(ToastPrefab, ToastContainer);
+        toastCard.GetComponent<AchievementPopupAnimation>().EnablePopUp(achievement.UnlockedIcon,achievement.AchievementName,achievement.AchievementDescription);
     }
 
 

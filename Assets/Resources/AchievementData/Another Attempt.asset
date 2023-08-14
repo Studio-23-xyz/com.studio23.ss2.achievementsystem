@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376d3a5124165844d8e8eda7fff70843, type: 3}
+  m_Name: Another Attempt
+  m_EditorClassIdentifier: 
+  AchievementID: 12dcff2c-24f9-4c24-8be7-ee58c91e736d
+  SteamID: 
+  XBOXID: 
+  AchievementName: Another Attempt
+  AchievementDescription: Try To Sacrifice the Stranger Again
+  LockedIcon: {fileID: 2800000, guid: 61e655d73d520c748920bc809432eff4, type: 3}
+  UnlockedIcon: {fileID: 2800000, guid: 1177ae4bfed82ac4684a0c41e08d376b, type: 3}
+  LockedIconResourceUrl: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1955750/a6a4e21c28e2783f6ebfad9cd66f351fed6b0322.jpg
+  UnlockedIconResourceUrl: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1955750/116dc8c886d1b11cebc24b704e9c73acfd2da9cf.jpg
+  Type: 0
+  ProgressGoal: 0
+  isAchieved: 0

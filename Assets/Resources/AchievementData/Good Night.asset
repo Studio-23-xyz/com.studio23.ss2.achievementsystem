@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376d3a5124165844d8e8eda7fff70843, type: 3}
+  m_Name: Good Night
+  m_EditorClassIdentifier: 
+  AchievementID: e6a0b022-d060-4876-ad1a-184c49cad225
+  SteamID: 
+  XBOXID: 
+  AchievementName: Good Night
+  AchievementDescription: Knocked 3 customer with fools god tear
+  LockedIcon: {fileID: 2800000, guid: fb1eab4eb8fb2c349913c8acfec62f13, type: 3}
+  UnlockedIcon: {fileID: 2800000, guid: cea32b09fe442ef44902de88c8808d9f, type: 3}
+  LockedIconResourceUrl: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1955750/3d15c2b865f4ee685dab05f10e023a716d7d6243.jpg
+  UnlockedIconResourceUrl: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1955750/830d87d9f09548eedd2e1d2de9f2db51b515c0c9.jpg
+  Type: 0
+  ProgressGoal: 0
+  isAchieved: 0

@@ -347,7 +347,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3986325261a857b4382f29ee6180c6f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievement: {fileID: 0}
 --- !u!114 &845308210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,6 +361,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SavePath: 
   _achievementData: []
+  EnableToast: 1
+  ToastContainer: {fileID: 2061147642}
+  ToastPrefab: {fileID: 8850697257627486788, guid: 18d6fdf239e3c9f43a97d9b56ea3a5f6, type: 3}
 --- !u!114 &845308211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -652,7 +654,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1598255524
 RectTransform:
   m_ObjectHideFlags: 0
