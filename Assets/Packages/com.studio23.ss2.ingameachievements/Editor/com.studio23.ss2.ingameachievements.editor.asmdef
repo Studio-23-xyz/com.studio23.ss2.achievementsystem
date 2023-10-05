@@ -1,0 +1,19 @@
+{
+    "name": "com.studio23.ss2.ingameachievements.editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:d71212f901861074293b8c1e6f53d45f",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
