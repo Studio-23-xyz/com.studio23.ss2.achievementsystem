@@ -1,6 +1,7 @@
-using Studio23.SS2.IngameAchievements.Local;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 
 namespace Studio23.SS2.IngameAchievements.Core
 {
@@ -8,7 +9,6 @@ namespace Studio23.SS2.IngameAchievements.Core
 	{
 		private static Dictionary<string, Type> m_achievementManagersByName;
 		private static bool IsInitialized => m_achievementManagersByName != null;
-
 		private static AchievementManager m_achievementManager;
 
 		private static void InitializeFactory()
@@ -16,16 +16,19 @@ namespace Studio23.SS2.IngameAchievements.Core
 			if (IsInitialized)
 				return;
 
-			//var managerTypes = Assembly.GetAssembly(typeof(AchievementManager)).GetTypes()
-			//	.Where(myType => myType.IsClass && !myType.IsAbstract);
+#if STUDIO23_INGAMEACHIEVEMENTS_THIRDPARTY_INSTALLED
+			Assembly target = Assembly.Load("com.studio23.ss2.ingameachievements.thirdparty");
+#else
+			Assembly target = Assembly.Load("com.studio23.ss2.ingameachievements");
+#endif
+			var managers = target.GetTypes().Where(mytype => !mytype.IsAbstract && mytype.IsSubclassOf(typeof(AchievementManager)));
 			m_achievementManagersByName = new Dictionary<string, Type>();
-			m_achievementManagersByName.Add("Local", typeof(LocalAchievements));
 
-			//foreach (var manager in managerTypes)
-			//{
-			//	var temp = Activator.CreateInstance(manager) as AchievementManager;
-			//	m_achievementManagersByName.Add(temp.Name, manager);
-			//}
+			foreach (var manager in managers)
+			{
+				var temp = Activator.CreateInstance(manager) as AchievementManager;
+				m_achievementManagersByName.Add(temp.Name, manager);
+			}
 		}
 
 		public static AchievementManager GetManager(string managerType)

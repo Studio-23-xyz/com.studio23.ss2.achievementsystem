@@ -1,5 +1,6 @@
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Studio23.SS2.IngameAchievements.Data
@@ -8,9 +9,9 @@ namespace Studio23.SS2.IngameAchievements.Data
 	[CreateAssetMenu(fileName = "New AchievementData", menuName = "AchievementData")]
 	public class AchievementData : ScriptableObject
 	{
+
+		public List<AchievementIdData> AchievementIDs;
 		public string AchievementID;
-		public string SteamID;
-		public string XBOXID;
 		public string AchievementName;
 		public string AchievementDescription;
 		[SerializeField] public Texture2D LockedIcon;
@@ -22,4 +23,18 @@ namespace Studio23.SS2.IngameAchievements.Data
 		public float ProgressGoal; //for progress tracker achievement
 		public bool isAchieved;
 	}
+}
+
+public enum AchievementProvider
+{
+	Xbox,
+	Playstation,
+	Steam
+}
+
+[Serializable]
+public class AchievementIdData
+{
+	public AchievementProvider AchievementProvider;
+	public string Id;
 }

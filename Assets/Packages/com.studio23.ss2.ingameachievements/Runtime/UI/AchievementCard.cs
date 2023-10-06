@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Studio23.SS2.IngameAchievements.Core
+namespace Studio23.SS2.IngameAchievements.UI
 {
 	public class AchievementCard : MonoBehaviour
 	{

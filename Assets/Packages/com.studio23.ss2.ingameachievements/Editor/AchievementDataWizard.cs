@@ -1,17 +1,19 @@
 using Studio23.SS2.IngameAchievements.Data;
 using System;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
 public class AchievementDataWizard : EditorWindow
 {
 
-	[MenuItem("Custom Tools/Achievement  Data Wizard")]
+	[MenuItem("Studio-23/Ingame Achievements/Achievement Data Wizard")]
 	private static void ShowWindow()
 	{
 		GetWindow<AchievementDataWizard>("Achievement Data Wizard");
 	}
 
+	private List<AchievementIdData> _achievementIdData;
 	private string _steamID;
 	private string _xboxID;
 	private string _achievementName;
@@ -28,7 +30,7 @@ public class AchievementDataWizard : EditorWindow
 	private void OnGUI()
 	{
 		GUILayout.Label("Achievement Data Settings", EditorStyles.boldLabel);
-		// _achievementID = EditorGUILayout.IntField("Achievement ID", _achievementID);
+		
 		_steamID = EditorGUILayout.TextField("Steam ID", _steamID);
 		_xboxID = EditorGUILayout.TextField("Xbox ID", _xboxID);
 		_achievementName = EditorGUILayout.TextField("Achievement Name", _achievementName);
@@ -56,8 +58,8 @@ public class AchievementDataWizard : EditorWindow
 		//Creating data
 		AchievementData _data = ScriptableObject.CreateInstance<AchievementData>();
 		//_data.AchievementID = _achievementID;
-		_data.SteamID = _steamID;
-		_data.XBOXID = _xboxID;
+		//_data.SteamID = _steamID;
+		//_data.XBOXID = _xboxID;
 		_data.AchievementName = _achievementName;
 		_data.AchievementDescription = _achievementDescription;
 		//_data.Icon = _achievementSprite;

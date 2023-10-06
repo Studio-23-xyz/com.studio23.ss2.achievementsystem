@@ -12,9 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376d3a5124165844d8e8eda7fff70843, type: 3}
   m_Name: An Attempt
   m_EditorClassIdentifier: 
+  AchievementIDs:
+  - AchievementProvider: 0
+    Id: HakunaMatata
+  - AchievementProvider: 2
+    Id: HakunaMatata
+  - AchievementProvider: 1
+    Id: HakunaMatata
   AchievementID: 507b5cf1-5537-4dce-b206-e2d05427bf6a
-  SteamID: 
-  XBOXID: 
   AchievementName: An Attempt
   AchievementDescription: Try To Sacrifice The Stranger
   LockedIcon: {fileID: 2800000, guid: 5de3a1fd80771b34ba647f195a79cf7f, type: 3}

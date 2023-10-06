@@ -13,6 +13,11 @@ namespace Studio23.SS2.IngameAchievements.Local
 		private AchievementData[] _achievementData;
 		private string _localSavePath = Application.persistentDataPath + "/unlockedAchievementIDs.json";
 
+		public AchievementData[] AchievementData
+		{
+			get { return _achievementData; }
+		}
+
 		public override string Name => "Local";
 
 		public override void SetupAchievements()
