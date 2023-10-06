@@ -1,30 +1,18 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+using Studio23.SS2.IngameAchievements.Data;
 using UnityEngine;
 
-[Serializable]
-public class Stats
+namespace Studio23.SS2.IngameAchievements.Core
 {
-    public bool IsLevelCompleted;
-    public int LevelCompleted;
-    public float TotalCash;
-}
+	public class GameStats : MonoBehaviour
+	{
+		public static GameStats Instance;
+		public Stats CurrentGameStats;
+		[SerializeField] private Stats _achievementStats;
 
-
-public class GameStats : MonoBehaviour
-{
-    public static GameStats Instance;
-    public Stats CurrentGameStats;
-    [SerializeField]
-    private Stats _achievementStats;
-
-
-    [ContextMenu("unlock level complete")]
-    public void LevelComplete()
-    {
-        AchivementsManager.instance.TestDummyUnlock("Cultist");
-    }
-
+		[ContextMenu("unlock level complete")]
+		public void LevelComplete()
+		{
+			AchivementsManager.instance.TestDummyUnlock("Cultist");
+		}
+	}
 }

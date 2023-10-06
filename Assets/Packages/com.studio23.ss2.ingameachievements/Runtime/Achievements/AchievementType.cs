@@ -1,8 +1,10 @@
-
-public enum AchievementType 
+namespace Studio23.SS2.IngameAchievements.Data
 {
-    Locked,
-    Unlocked,
-    Hidden,
-    ProgressTracked
+	public enum AchievementType
+	{
+		Locked,
+		Unlocked,
+		Hidden,
+		ProgressTracked
+	}
 }
