@@ -18,7 +18,7 @@ namespace Studio23.SS2.IngameAchievements.UI
 			_data = achievement;
 			AchievementName.text = _data.AchievementName;
 			AchievementDescription.text = _data.AchievementDescription;
-			if (!achievement.isAchieved)
+			if (!achievement.IsAchieved)
 			{
 				LockAchievementIcon();
 			}

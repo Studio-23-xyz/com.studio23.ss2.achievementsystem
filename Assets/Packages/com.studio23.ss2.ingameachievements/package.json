@@ -1,0 +1,45 @@
+{
+  "name": "com.studio23.ss2.ingameachievementsystem",
+  "version": "1.0.0",
+  "displayName": "In-Game Achievement System",
+  "description": "Elevate your game development experience with the Unity Achievements Manager Package! This powerful Unity package simplifies the creation and management of achievements in your games, enhancing player engagement and retention.",
+  "unity": "2021.3",
+  "unityRelease": "15f1",
+  "documentationUrl": "https://openupm.com/packages/com.studio23.ss2.{package_name}/",
+  "changelogUrl": "https://openupm.com/packages/com.studio23.ss2.{package_name}/",
+  "licensesUrl": "https://opensource.org/license/mit/",
+  "scopedRegistries": [
+    {
+      "name": "Studio 23",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "com.studio23.ss2"
+      ]
+    }
+  ],
+  "dependencies": {
+    "com.unity.nuget.newtonsoft-json": "3.2.1"
+  },
+  "keywords": [
+    "Inventory",
+    "Inventory System",
+    "System"
+  ],
+  "samples": [
+    {
+      "displayName": "Functional Example",
+      "description": "A small sample to demonstrate the abilities of the package.",
+      "path": "Samples~/Demo1"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Studio-23-xyz/{package_name}.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Studio 23",
+    "email": "contact@studio-23.xyz",
+    "url": "https://studio-23.xyz"
+  }
+}

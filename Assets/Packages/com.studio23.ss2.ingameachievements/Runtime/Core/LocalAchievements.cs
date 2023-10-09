@@ -26,10 +26,10 @@ namespace Studio23.SS2.IngameAchievements.Local
 			Debug.Log($"Achievement data: {_achievementData.Length}");
 		}
 
-		public override bool UnlockAchievement(string achievementId)
+		public override bool UnlockAchievement(string achievementName)
 		{
-			var achievement = _achievementData.First(t => t.AchievementName == achievementId);
-			achievement.isAchieved = true;
+			var achievement = _achievementData.First(t => t.AchievementName == achievementName);
+			achievement.IsAchieved = true;
 			SaveAchievements();
 			return true;
 		}
@@ -40,7 +40,10 @@ namespace Studio23.SS2.IngameAchievements.Local
 			List<string> achievementID = new List<string>();
 			foreach (var achievement in achievements)
 			{
-				if (achievement.isAchieved) achievementID.Add(achievement.AchievementID);
+				if (achievement.IsAchieved)
+				{
+					achievementID.Add(achievement.AchievementName);
+				}
 			}
 			string jsonData = JsonConvert.SerializeObject(achievementID);
 			File.WriteAllText(_localSavePath, jsonData);
@@ -51,13 +54,13 @@ namespace Studio23.SS2.IngameAchievements.Local
 		public override void LoadAchievements()
 		{
 			string jsonData = File.ReadAllText(_localSavePath);
-			List<string> achievementID = JsonConvert.DeserializeObject<List<string>>(jsonData);
+			List<string> achievementNames = JsonConvert.DeserializeObject<List<string>>(jsonData);
 			AchievementData[] achievements = Resources.LoadAll<AchievementData>($"AchievementData");
 
-			foreach (var id in achievementID)
+			foreach (var name in achievementNames)
 			{
-				var achievement = achievements.First(r => r.AchievementID == id);
-				achievement.isAchieved = true;
+				var achievement = achievements.First(r => r.AchievementName == name);
+				achievement.IsAchieved = true;
 			}
 		}
 	}
