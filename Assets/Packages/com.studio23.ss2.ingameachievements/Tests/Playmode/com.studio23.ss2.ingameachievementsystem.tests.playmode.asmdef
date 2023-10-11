@@ -1,10 +1,10 @@
 {
-    "name": "com.studio23.ss2.ingameachievements.tests",
+    "name": "com.studio23.ss2.ingameachievementsystem.tests.playmode",
     "rootNamespace": "",
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "com.studio23.ss2.ingameachievements"
+        "com.studio23.ss2.ingameachievementsystem"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -1,9 +1,9 @@
-using Studio23.SS2.IngameAchievements.Core;
-using Studio23.SS2.IngameAchievements.Data;
+using Studio23.SS2.InGameAchievementSystem.Core;
 using System.Collections.Generic;
+using Studio23.SS2.InGameAchievementSystem.Data;
 using UnityEngine;
 
-namespace Studio23.SS2.IngameAchievements.UI
+namespace Studio23.SS2.InGameAchievementSystem.UI
 {
 	public class UIManager : MonoBehaviour
 	{

@@ -1,4 +1,4 @@
-namespace Studio23.SS2.IngameAchievements.Core
+namespace Studio23.SS2.InGameAchievementSystem.Core
 {
 	public abstract class AchievementManager
 	{

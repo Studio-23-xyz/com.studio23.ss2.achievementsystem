@@ -1,5 +1,4 @@
-using Studio23.SS2.IngameAchievements.Data;
-using System;
+using Studio23.SS2.InGameAchievementSystem.Data;
 using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
@@ -7,8 +6,7 @@ using UnityEngine;
 
 public class AchievementDataWizard : EditorWindow
 {
-
-	[MenuItem("Studio-23/Ingame Achievements/Achievement Data Wizard")]
+	[MenuItem("Studio-23/In-Game Achievements/Achievement Data Wizard")]
 	private static void ShowWindow()
 	{
 		GetWindow<AchievementDataWizard>("Achievement Data Wizard");
@@ -19,19 +17,21 @@ public class AchievementDataWizard : EditorWindow
 	private string _achievementDescription;
 	private Sprite _achievementSprite;
 	private Sprite _achievementLockedSprite;
+	private Sprite _achievementSpriteForXBox;
+	private float _achievementProgressGoal;
 	private AchievementType _achievementType;
-	private float _achievementProgressTrack;
-	private static Vector2 descriptionScrollPosition;
+	private static Vector2 m_descriptionScrollPosition;
 
-	private Vector2 _scrollPos;
-
-	private static GUIStyle _headerStyle;
-	private static GUIStyle _subHeaderStyle;
+	private static Vector2 m_scrollPos;
+	private static GUIStyle m_headerStyle;
+	private static GUIStyle m_subHeaderStyle;
 
 	private void OnEnable()
 	{
+		m_scrollPos = Vector2.zero;
+		m_descriptionScrollPosition = Vector2.zero;
 		_achievementIdData = new List<AchievementIdData>();
-		_headerStyle = new GUIStyle
+		m_headerStyle = new GUIStyle
 		{
 			alignment = TextAnchor.MiddleCenter,
 			fontStyle = FontStyle.Bold,
@@ -41,7 +41,7 @@ public class AchievementDataWizard : EditorWindow
 				textColor = Color.white
 			}
 		};
-		_subHeaderStyle = new GUIStyle
+		m_subHeaderStyle = new GUIStyle
 		{
 			alignment = TextAnchor.MiddleCenter,
 			fontStyle = FontStyle.Bold,
@@ -55,25 +55,32 @@ public class AchievementDataWizard : EditorWindow
 
 	private void OnGUI()
 	{
-		GUILayout.BeginScrollView(_scrollPos);
-		GUILayout.Label("Achievement Data Settings", _headerStyle);
+		GUILayout.BeginScrollView(m_scrollPos);
+		GUILayout.Label("Achievement Data Settings", m_headerStyle);
 		GUILayout.Space(10f);
-#if STUDIO23_INGAMEACHIEVEMENTS_THIRDPARTY_INSTALLED
-		RenderAchievementIDSection();
-#endif
+		RenderAchievementIdSection();
 		_achievementName = EditorGUILayout.TextField("Achievement Name", _achievementName);
 		GUILayout.Space(10f);
-		GUILayout.Label("Item Description", _subHeaderStyle);
-		GUILayout.Space(10f);
+
 		GUILayout.Label("Achievement Description");
+		GUILayout.BeginScrollView(m_descriptionScrollPosition);
 		_achievementDescription = EditorGUILayout.TextArea(_achievementDescription, GUILayout.Height(80));
+		GUILayout.EndScrollView();
+
 		_achievementSprite = (Sprite)EditorGUILayout.ObjectField("Achievement Icon", _achievementSprite, typeof(Sprite), false) as Sprite;
 		_achievementLockedSprite = (Sprite)EditorGUILayout.ObjectField("Achievement Locked Icon", _achievementLockedSprite, typeof(Sprite), false) as Sprite;
+		_achievementSpriteForXBox = (Sprite)EditorGUILayout.ObjectField("Achievement Sprite for XBox", _achievementSpriteForXBox, typeof(Sprite), false) as Sprite;
+
 		GUILayout.Space(10f);
+
 		GUILayout.Label("Achievement Type", EditorStyles.boldLabel);
 		_achievementType = (AchievementType)EditorGUILayout.EnumPopup(_achievementType);
+		if (_achievementType == AchievementType.ProgressTracked)
+		{
+			_achievementProgressGoal =
+				EditorGUILayout.FloatField("Achievement Progress Goal", _achievementProgressGoal);
+		}
 		GUILayout.FlexibleSpace();
-
 
 		if (GUILayout.Button("Create Achievement Data"))
 		{
@@ -82,9 +89,9 @@ public class AchievementDataWizard : EditorWindow
 		GUILayout.EndScrollView();
 	}
 
-	private void RenderAchievementIDSection()
+	private void RenderAchievementIdSection()
 	{
-		GUILayout.Label($"Achievement IDs", _subHeaderStyle);
+		GUILayout.Label($"Achievement IDs", m_subHeaderStyle);
 
 		foreach (var achievementProvider in _achievementIdData)
 		{
@@ -118,35 +125,45 @@ public class AchievementDataWizard : EditorWindow
 
 	private void CreateAchievementData()
 	{
-		if (string.IsNullOrEmpty(_achievementName) || string.IsNullOrEmpty(_achievementDescription) ||
-		    _achievementSprite == null || _achievementLockedSprite == null)
-		{
-			EditorUtility.DisplayDialog("Empty Fields", "Please ensure that all fields are filled.", "Ok");
+		if (IsFormIncomplete())
 			return;
-		}
-		if (File.Exists("Assets/Resources/"+_achievementName+".asset"))
-		{
-			bool result = EditorUtility.DisplayDialog("Already Exists", "Achievement Data with the same name already exists!\nDo you want to overwrite it?", "Yes, replace.", "No.");
-			if (!result)
-				return;
-		}
+
 		AssetDatabase.Refresh();
-		//Creating data
 		AchievementData _data = ScriptableObject.CreateInstance<AchievementData>();
-#if STUDIO23_INGAMEACHIEVEMENTS_THIRDPARTY_INSTALLED
 		_data.AchievementIDs = _achievementIdData;
-#endif
 		_data.AchievementName = _achievementName;
 		_data.AchievementDescription = _achievementDescription;
 		_data.LockedIcon = _achievementSprite.texture;
 		_data.UnlockedIcon = _achievementLockedSprite.texture;
+		_data.ImageForXbox = _achievementSpriteForXBox.texture;
 		_data.Type = _achievementType;
-		_data.ProgressGoal = _achievementProgressTrack;
-		//Store Data
+		if (_achievementType == AchievementType.ProgressTracked)
+			_data.ProgressGoal = _achievementProgressGoal;
 		string path = "Assets/Resources/" + _achievementName + ".asset";
 		AssetDatabase.CreateAsset(_data, path);
 		AssetDatabase.SaveAssets();
 		AssetDatabase.Refresh();
 		Debug.Log("Achievement data created and saved at " + path);
+	}
+
+	private bool IsFormIncomplete()
+	{
+		if (string.IsNullOrEmpty(_achievementName) || string.IsNullOrEmpty(_achievementDescription) ||
+			_achievementSprite == null || _achievementLockedSprite == null)
+		{
+			EditorUtility.DisplayDialog("Empty Fields", "Please ensure that all fields are filled.", "Ok");
+			return true;
+		}
+
+		if (File.Exists("Assets/Resources/" + _achievementName + ".asset"))
+		{
+			bool result = EditorUtility.DisplayDialog("Already Exists",
+				"Achievement Data with the same name already exists!\nDo you want to overwrite it?", "Yes, replace.",
+				"No.");
+			if (!result)
+				return true;
+		}
+
+		return false;
 	}
 }

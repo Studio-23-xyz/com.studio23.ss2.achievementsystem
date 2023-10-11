@@ -1,4 +1,4 @@
-namespace Studio23.SS2.IngameAchievements.Data
+namespace Studio23.SS2.InGameAchievementSystem.Data
 {
 	public enum ToastType
 	{

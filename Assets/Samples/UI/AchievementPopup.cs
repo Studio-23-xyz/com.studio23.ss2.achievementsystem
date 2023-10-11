@@ -1,7 +1,7 @@
 using DG.Tweening;
 using UnityEngine;
 
-namespace Studio23.SS2.IngameAchievements.UI
+namespace Studio23.SS2.InGameAchievementSystem.UI
 {
 	public class AchievementPopup : MonoBehaviour
 	{

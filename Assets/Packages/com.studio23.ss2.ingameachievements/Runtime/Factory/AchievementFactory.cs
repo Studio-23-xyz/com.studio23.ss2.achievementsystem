@@ -1,46 +1,40 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using UnityEngine;
 
-namespace Studio23.SS2.IngameAchievements.Core
+namespace Studio23.SS2.InGameAchievementSystem.Core
 {
 	public static class AchievementFactory
 	{
-		private static Dictionary<string, Type> m_achievementManagersByName;
-		private static bool IsInitialized => m_achievementManagersByName != null;
 		private static AchievementManager m_achievementManager;
 
 		private static void InitializeFactory()
 		{
-			if (IsInitialized)
+			if (m_achievementManager != null)
 				return;
 
-#if STUDIO23_INGAMEACHIEVEMENTS_THIRDPARTY_INSTALLED
-			Assembly target = Assembly.Load("com.studio23.ss2.ingameachievements.thirdparty");
+#if INGAMEACHIEVEMENT_USE_THIRDPARTY
+			Assembly target = Assembly.Load("com.studio23.ss2.ingameachievementsystem.thirdparty");
+			Debug.Log($"Using third party assembly");
 #else
-			Assembly target = Assembly.Load("com.studio23.ss2.ingameachievements");
+			Assembly target = Assembly.Load("com.studio23.ss2.ingameachievementsystem");
+			Debug.Log($"Using default assembly");
 #endif
 			var managers = target.GetTypes().Where(mytype => !mytype.IsAbstract && mytype.IsSubclassOf(typeof(AchievementManager)));
-			m_achievementManagersByName = new Dictionary<string, Type>();
-
-			foreach (var manager in managers)
-			{
-				var temp = Activator.CreateInstance(manager) as AchievementManager;
-				m_achievementManagersByName.Add(temp.Name, manager);
-			}
+			var targetType = managers.First();
+			m_achievementManager = Activator.CreateInstance(targetType) as AchievementManager;
 		}
 
-		public static AchievementManager GetManager(string managerType)
+		public static AchievementManager GetManager()
 		{
 			InitializeFactory();
-			if (m_achievementManager != null) return m_achievementManager;
-			if (m_achievementManagersByName.TryGetValue(managerType, out var type))
+			if (m_achievementManager != null)
 			{
-				var manager = Activator.CreateInstance(type) as AchievementManager;
-				m_achievementManager = manager;
-				return manager;
+				Debug.Log($"AchievementManager found and is {m_achievementManager.GetType()}");
+				return m_achievementManager;
 			}
+			Debug.LogWarning($"AchievementManager not initialized! Fatal!!!");
 			return null;
 		}
 	}

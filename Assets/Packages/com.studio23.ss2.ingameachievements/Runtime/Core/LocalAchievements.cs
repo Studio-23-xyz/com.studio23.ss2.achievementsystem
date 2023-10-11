@@ -1,12 +1,12 @@
 using Newtonsoft.Json;
-using Studio23.SS2.IngameAchievements.Core;
-using Studio23.SS2.IngameAchievements.Data;
+using Studio23.SS2.InGameAchievementSystem.Core;
+using Studio23.SS2.InGameAchievementSystem.Data;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEngine;
 
-namespace Studio23.SS2.IngameAchievements.Local
+namespace Studio23.SS2.InGameAchievementSystem.Local
 {
 	public class LocalAchievements : AchievementManager
 	{

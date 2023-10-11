@@ -1,9 +1,9 @@
-using Studio23.SS2.IngameAchievements.Data;
+using Studio23.SS2.InGameAchievementSystem.Data;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Studio23.SS2.IngameAchievements.UI
+namespace Studio23.SS2.InGameAchievementSystem.UI
 {
 	public class AchievementCard : MonoBehaviour
 	{

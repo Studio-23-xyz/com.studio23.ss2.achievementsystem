@@ -5,8 +5,8 @@
   "description": "Elevate your game development experience with the Unity Achievements Manager Package! This powerful Unity package simplifies the creation and management of achievements in your games, enhancing player engagement and retention.",
   "unity": "2021.3",
   "unityRelease": "15f1",
-  "documentationUrl": "https://openupm.com/packages/com.studio23.ss2.{package_name}/",
-  "changelogUrl": "https://openupm.com/packages/com.studio23.ss2.{package_name}/",
+  "documentationUrl": "https://openupm.com/packages/com.studio23.ss2.ingameachievementsystem/",
+  "changelogUrl": "https://github.com/Studio-23-xyz/InGameAchievementTools/blob/upm/CHANGELOG.md",
   "licensesUrl": "https://opensource.org/license/mit/",
   "scopedRegistries": [
     {
@@ -21,20 +21,14 @@
     "com.unity.nuget.newtonsoft-json": "3.2.1"
   },
   "keywords": [
-    "Inventory",
-    "Inventory System",
-    "System"
-  ],
-  "samples": [
-    {
-      "displayName": "Functional Example",
-      "description": "A small sample to demonstrate the abilities of the package.",
-      "path": "Samples~/Demo1"
-    }
+    "Achievement",
+    "Local Achievement",
+    "Manager",
+    "Achievement Manager"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Studio-23-xyz/{package_name}.git"
+    "url": "https://github.com/Studio-23-xyz/InGameAchievementTools.git"
   },
   "license": "MIT",
   "author": {
