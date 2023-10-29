@@ -3,37 +3,28 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Studio23.SS2.InGameAchievementSystem.Data
+namespace Studio23.SS2.AchievementSystem.Data
 {
 	[Serializable]
-	[CreateAssetMenu(fileName = "New AchievementData", menuName = "Studio-23/Ingame Achievement Tool/Achievement Data")]
+	[CreateAssetMenu(fileName = "New AchievementData", menuName = "Studio-23/Achievement System/New Achievement")]
 	public class AchievementData : ScriptableObject
 	{
-		public List<AchievementIdData> AchievementIDs;
 		public string AchievementName;
 		public string AchievementDescription;
-		[SerializeField] public Texture2D LockedIcon;
-		[SerializeField] public Texture2D UnlockedIcon;
-		[SerializeField] public Texture2D ImageForXbox;
-		[JsonIgnore] public string LockedIconResourceUrl;
-		[JsonIgnore] public string UnlockedIconResourceUrl;
+        public Texture2D LockedIcon;
+		public Texture2D UnlockedIcon;
+
 
 		public AchievementType Type;
-		public float ProgressGoal; //for progress tracker achievement
+		public float ProgressGoal;
 		public bool IsAchieved;
 	}
 
-	public enum AchievementProvider
-	{
-		Xbox,
-		Playstation,
-		Steam
-	}
 
 	[Serializable]
 	public class AchievementIdData
 	{
-		public AchievementProvider AchievementProvider;
+		public string AchievementProvider;
 		public string Id;
 	}
 }

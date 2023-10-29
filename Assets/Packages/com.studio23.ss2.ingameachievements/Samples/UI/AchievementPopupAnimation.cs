@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Studio23.SS2.InGameAchievementSystem.UI
+namespace Studio23.SS2.AchievementSystem.UI
 {
 	public class AchievementPopupAnimation : MonoBehaviour
 	{

@@ -1,13 +1,12 @@
 {
-    "name": "com.studio23.ss2.ingameachievementsystem.tests.editmode",
+    "name": "com.studio23.ss2.achievementsystem.tests.playmode",
     "rootNamespace": "",
     "references": [
         "UnityEngine.TestRunner",
-        "UnityEditor.TestRunner"
+        "UnityEditor.TestRunner",
+        "com.studio23.ss2.achievementsystem"
     ],
-    "includePlatforms": [
-        "Editor"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,

@@ -1,7 +1,7 @@
 using NUnit.Framework;
+using Studio23.SS2.AchievementSystem.Providers;
 using System.Collections;
-using Studio23.SS2.InGameAchievementSystem.Core;
-using Studio23.SS2.InGameAchievementSystem.Local;
+
 using UnityEngine.TestTools;
 
 public class LocalManagerFunctionalityTests

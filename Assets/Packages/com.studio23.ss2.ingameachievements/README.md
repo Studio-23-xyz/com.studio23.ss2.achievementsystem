@@ -1,6 +1,6 @@
-<h1 align="center">In-Game Achievement System</h1>
+<h1 align="center">Achievement System</h1>
 <p align="center">
-<a href="https://openupm.com/packages/com.studio23.ss2.ingameachievementsystem/"><img src="https://img.shields.io/npm/v/com.studio23.ss2.ingameachievementsystem?label=openupm&amp;registry_uri=https://package.openupm.com" /></a>
+<a href="https://openupm.com/packages/com.studio23.ss2.achievementsystem/"><img src="https://img.shields.io/npm/v/com.studio23.ss2.achievementsystem?label=openupm&amp;registry_uri=https://package.openupm.com" /></a>
 </p>
 
 Description about the package goes here. 
@@ -19,7 +19,7 @@ Description about the package goes here.
 
 You can also use the "Install from Git URL" option from Unity Package Manager to install the package.
 ```
-https://github.com/Studio-23-xyz/InGameAchievementTools.git#upm
+https://github.com/Studio-23-xyz/com.studio23.ss2.achievementsystem.git#upm
 ```
 
 ## Usage
@@ -28,7 +28,7 @@ https://github.com/Studio-23-xyz/InGameAchievementTools.git#upm
 
 You can quickly create achievements from the Editor without having to touch a single line of code. 
 
-1. Click on the 'Studio-23' available on the top navigation bar and navigate to "In-Game Achievements > Achievement Data Wizard"
+1. Click on the 'Studio-23' available on the top navigation bar and navigate to "Achievement System > Achievement Data Wizard"
 
 2. A new window will appear in-front of you. Fill it up with the details of your achievements. 
 

@@ -1,32 +1,31 @@
 using System;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace Studio23.SS2.InGameAchievementSystem.Core
+[assembly:InternalsVisibleTo("com.studio23.ss2.achievementsystem.tests.playmode")]
+namespace Studio23.SS2.AchievementSystem.Providers
 {
-	public static class AchievementFactory
+	internal static class AchievementFactory
 	{
-		private static AchievementManager m_achievementManager;
+		private static AchievementProvider m_achievementManager;
 
 		private static void InitializeFactory()
 		{
 			if (m_achievementManager != null)
 				return;
 
-#if INGAMEACHIEVEMENT_USE_THIRDPARTY
-			Assembly target = Assembly.Load("com.studio23.ss2.ingameachievementsystem.thirdparty");
-			Debug.Log($"Using third party assembly");
-#else
-			Assembly target = Assembly.Load("com.studio23.ss2.ingameachievementsystem");
-			Debug.Log($"Using default assembly");
-#endif
-			var managers = target.GetTypes().Where(mytype => !mytype.IsAbstract && mytype.IsSubclassOf(typeof(AchievementManager)));
-			var targetType = managers.First();
-			m_achievementManager = Activator.CreateInstance(targetType) as AchievementManager;
+
+			Assembly target = Assembly.Load("com.studio23.ss2.achievementsystem");
+
+
+			var managers = target.GetTypes().Where(mytype => !mytype.IsAbstract && mytype.IsSubclassOf(typeof(AchievementProvider)));
+			var targetType = managers.First();//TODO Order by priority later
+			m_achievementManager = Activator.CreateInstance(targetType) as AchievementProvider;
 		}
 
-		public static AchievementManager GetManager()
+		public static AchievementProvider GetManager()
 		{
 			InitializeFactory();
 			if (m_achievementManager != null)

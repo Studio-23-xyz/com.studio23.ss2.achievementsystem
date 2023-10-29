@@ -1,4 +1,4 @@
-namespace Studio23.SS2.InGameAchievementSystem.Data
+namespace Studio23.SS2.AchievementSystem.Data
 {
 	public enum AchievementType
 	{
