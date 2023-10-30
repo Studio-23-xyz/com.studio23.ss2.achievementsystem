@@ -3,7 +3,7 @@
 <a href="https://openupm.com/packages/com.studio23.ss2.achievementsystem/"><img src="https://img.shields.io/npm/v/com.studio23.ss2.achievementsystem?label=openupm&amp;registry_uri=https://package.openupm.com" /></a>
 </p>
 
-Description about the package goes here. 
+Introduced an Achievement System package for Unity, enabling the creation and management of achievements without coding.
 
 ## Table of Contents
 

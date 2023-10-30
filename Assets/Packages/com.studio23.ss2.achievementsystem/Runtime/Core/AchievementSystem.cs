@@ -1,4 +1,3 @@
-using Studio23.SS2.AchievementSystem.Data;
 using Studio23.SS2.AchievementSystem.Providers;
 using UnityEngine;
 
@@ -6,14 +5,15 @@ namespace Studio23.SS2.AchievementSystem.Core
 {
     public class AchievementSystem : MonoBehaviour
     {
-        public static AchievementSystem instance;
+        public static AchievementSystem Instance;
 
         public AchievementProvider _achievementProvider;
 
+        
 
-        void Awake()
+        private void Awake()
         {
-            instance = this;
+            Instance = this;
             Initialize();
         }
 
@@ -21,7 +21,7 @@ namespace Studio23.SS2.AchievementSystem.Core
         public void Initialize()
         {
             _achievementProvider = GetComponent<AchievementProvider>();
-            if (_achievementProvider != null )
+            if (_achievementProvider == null )
             {
                 Debug.LogError($"Must Have a provider");
             }
@@ -29,9 +29,9 @@ namespace Studio23.SS2.AchievementSystem.Core
         }
 
       
-        public  void UnlockAchievement(AchievementData achievementData)
+        public  void UnlockAchievement(string achievementName)
         {
-           _achievementProvider.UnlockAchievement(achievementData.AchievementName);
+           _achievementProvider.UnlockAchievement(achievementName);
         }
 
 
