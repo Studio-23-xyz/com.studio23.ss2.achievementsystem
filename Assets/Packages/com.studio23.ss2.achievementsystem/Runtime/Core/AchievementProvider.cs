@@ -5,7 +5,7 @@ namespace Studio23.SS2.AchievementSystem.Providers
 {
 	public  abstract class AchievementProvider : MonoBehaviour
 	{
-		[SerializeField] private IDTableMapper mapper;
+		[SerializeField] protected IDTableMapper _mapper;
 		public abstract void Initialize();
 		public abstract void UnlockAchievement(string achievementIdentifier);
 

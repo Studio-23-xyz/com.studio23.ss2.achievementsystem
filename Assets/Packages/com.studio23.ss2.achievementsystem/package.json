@@ -1,6 +1,6 @@
 {
     "name": "com.studio23.ss2.achievementsystem",
-    "version": "0.0.9",
+    "version": "0.1.0",
     "displayName": "Achievement System",
     "description": "Elevate your game development experience with the Unity Achievements System Package! This powerful Unity package simplifies the creation and management of achievements in your games, enhancing player engagement and retention.",
     "unity": "2021.3",

@@ -1,5 +1,13 @@
 # Changelog
 
+
+## [v0.1.0] - 2023-10-31
+
+
+### Updated
+- Updated Provider Classs : Made IDMapper Protected
+
+
 ## [v0.0.9] - 2023-10-30
 
 ### Added
