@@ -1,0 +1,77 @@
+{
+  "api/Global.AchievementsGeneratorWindow.html": {
+    "href": "api/Global.AchievementsGeneratorWindow.html",
+    "title": "Class AchievementsGeneratorWindow | |",
+    "keywords": "Class AchievementsGeneratorWindow Namespace Global public class AchievementsGeneratorWindow : EditorWindow Inheritance object AchievementsGeneratorWindow Methods OpenWindow() public static void OpenWindow()"
+  },
+  "api/Global.IDTableMapEditor.html": {
+    "href": "api/Global.IDTableMapEditor.html",
+    "title": "Class IDTableMapEditor | |",
+    "keywords": "Class IDTableMapEditor Namespace Global public class IDTableMapEditor : EditorWindow Inheritance object IDTableMapEditor Methods OpenWindow() public static void OpenWindow()"
+  },
+  "api/Global.html": {
+    "href": "api/Global.html",
+    "title": "Namespace | |",
+    "keywords": "Namespace Classes AchievementsGeneratorWindow IDTableMapEditor"
+  },
+  "api/Studio23.SS2.AchievementSystem.Core.AchievementSystem.html": {
+    "href": "api/Studio23.SS2.AchievementSystem.Core.AchievementSystem.html",
+    "title": "Class AchievementSystem | |",
+    "keywords": "Class AchievementSystem Namespace Studio23.SS2.AchievementSystem.Core public class AchievementSystem : MonoBehaviour Inheritance object AchievementSystem Fields Instance public static AchievementSystem Instance Field Value AchievementSystem _achievementProvider public AchievementProvider _achievementProvider Field Value AchievementProvider Methods Initialize() public void Initialize() UnlockAchievement(string) public void UnlockAchievement(string achievementName) Parameters achievementName string"
+  },
+  "api/Studio23.SS2.AchievementSystem.Core.html": {
+    "href": "api/Studio23.SS2.AchievementSystem.Core.html",
+    "title": "Namespace Studio23.SS2.AchievementSystem.Core | |",
+    "keywords": "Namespace Studio23.SS2.AchievementSystem.Core Classes AchievementSystem"
+  },
+  "api/Studio23.SS2.AchievementSystem.Data.IDMap.html": {
+    "href": "api/Studio23.SS2.AchievementSystem.Data.IDMap.html",
+    "title": "Class IDMap | |",
+    "keywords": "Class IDMap Namespace Studio23.SS2.AchievementSystem.Data [Serializable] public class IDMap Inheritance object IDMap Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields Key public string Key Field Value string Value public string Value Field Value string"
+  },
+  "api/Studio23.SS2.AchievementSystem.Data.IDTableMapper.html": {
+    "href": "api/Studio23.SS2.AchievementSystem.Data.IDTableMapper.html",
+    "title": "Class IDTableMapper | |",
+    "keywords": "Class IDTableMapper Namespace Studio23.SS2.AchievementSystem.Data public class IDTableMapper : ScriptableObject Inheritance object IDTableMapper Fields IDMaps public List<IDMap> IDMaps Field Value List<IDMap>"
+  },
+  "api/Studio23.SS2.AchievementSystem.Data.html": {
+    "href": "api/Studio23.SS2.AchievementSystem.Data.html",
+    "title": "Namespace Studio23.SS2.AchievementSystem.Data | |",
+    "keywords": "Namespace Studio23.SS2.AchievementSystem.Data Classes IDMap IDTableMapper"
+  },
+  "api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html": {
+    "href": "api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html",
+    "title": "Class AchievementProvider | |",
+    "keywords": "Class AchievementProvider Namespace Studio23.SS2.AchievementSystem.Providers public abstract class AchievementProvider : MonoBehaviour Inheritance object AchievementProvider Methods Initialize() public abstract void Initialize() UnlockAchievement(string) public abstract void UnlockAchievement(string achievementIdentifier) Parameters achievementIdentifier string"
+  },
+  "api/Studio23.SS2.AchievementSystem.Providers.html": {
+    "href": "api/Studio23.SS2.AchievementSystem.Providers.html",
+    "title": "Namespace Studio23.SS2.AchievementSystem.Providers | |",
+    "keywords": "Namespace Studio23.SS2.AchievementSystem.Providers Classes AchievementProvider"
+  },
+  "api/index.html": {
+    "href": "api/index.html",
+    "title": "| |",
+    "keywords": "This is the documentation for the Scripting APIs of this package."
+  },
+  "changelog/CHANGELOG.html": {
+    "href": "changelog/CHANGELOG.html",
+    "title": "Changelog | |",
+    "keywords": "Changelog [v0.0.9] - 2023-10-30 Added Added an Achievement Wizard for easy creation of achievements, including name, description, icons, type, and progress goal. Implemented an Achievement Manager for efficient management of achievements. Provided extensions for Xbox and Steam platforms. Added a new script for GUI elements and styles in the Achievement Wizard. Added ID Mapping Table Generator Updated Updated README with instructions on how to use the Achievement System package. Added a new MIT License, granting permissions for use, modification, and distribution of the software. Removed Removed all data classes as it's unnecessary for the System Removed Editor script for creating the assets"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "| |",
+    "keywords": "This page redirects to the manual."
+  },
+  "license/LICENSE.html": {
+    "href": "license/LICENSE.html",
+    "title": "| |",
+    "keywords": "MIT License Copyright (c) 2023 Studio-23 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+  },
+  "manual/index.html": {
+    "href": "manual/index.html",
+    "title": "Achievement System | |",
+    "keywords": "Achievement System Introducing an Achievement System package for Unity, enabling the creation and management of achievements without coding. Table of Contents Installation Usage Getting Started Using the Achievement System Extensions Installation Install via Git URL You can also use the \"Install from Git URL\" option from Unity Package Manager to install the package. https://github.com/Studio-23-xyz/com.studio23.ss2.achievementsystem.git#upm Usage Getting Started To start using the Achievement System. You need to take a few setup stepts Click on the 'Studio-23' available on the top navigation bar and navigate to \"Achievement System > ID Table Generator\" A new window will appear in-front of you. Fill it up with the names of your Achievements. It will generate an achievements.cs class with static string properties that you can use when calling the UnlockAchievement() method Once you're done,Again on the top navigation bar and navigate to \"Achievement System > ID Table Map Generator\". Now you need to create a map for your Preferred Provider (Steam, Xbox, etc.) This IDMap needs to be assigned on your provider Script. Install your Preferred provider extention package. Using the Achievement System Create an empty gameobject. Attach The Achievement System Script to it. Create your own provider or install one and add it to the same gameobject. Simply call this following method to unlock an Achievement AchievementSystem.instance.UnlockAchievement(AchievementData achievementData) Extensions There are two extensions available for In-Game Achievement System that adds support for Xbox and Steam platforms separately. Please ensure that this base package is installed if you want to use either of them. And that only one of the extension packages can be used at a time."
+  }
+}
