@@ -172,3 +172,9 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.UnlockAchievement
   nameWithType: AchievementProvider.UnlockAchievement
+- uid: Studio23.SS2.AchievementSystem.Providers.AchievementProvider._mapper
+  name: _mapper
+  href: api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html#Studio23_SS2_AchievementSystem_Providers_AchievementProvider__mapper
+  commentId: F:Studio23.SS2.AchievementSystem.Providers.AchievementProvider._mapper
+  fullName: Studio23.SS2.AchievementSystem.Providers.AchievementProvider._mapper
+  nameWithType: AchievementProvider._mapper
