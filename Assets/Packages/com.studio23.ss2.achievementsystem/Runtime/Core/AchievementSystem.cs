@@ -9,8 +9,6 @@ namespace Studio23.SS2.AchievementSystem.Core
 
         public AchievementProvider _achievementProvider;
 
-        
-
         private void Awake()
         {
             Instance = this;

@@ -7,6 +7,7 @@
 - Implemented an Achievement Manager for efficient management of achievements.
 - Provided extensions for Xbox and Steam platforms.
 - Added a new script for GUI elements and styles in the Achievement Wizard.
+- Added ID Mapping Table Generator
 
 ### Updated
 - Updated README with instructions on how to use the Achievement System package.

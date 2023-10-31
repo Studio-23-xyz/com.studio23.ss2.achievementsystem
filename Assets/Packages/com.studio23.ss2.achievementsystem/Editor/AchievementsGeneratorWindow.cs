@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
@@ -13,11 +12,12 @@ public class AchievementsGeneratorWindow : EditorWindow
     }
 
     private List<Property> properties = new List<Property>();
-    private static string className = "AchievementsTable";
+    private static string _className = "AchievementsTable";
+    private static string _nameSpace = "Studio23.SS2.AchievementSystem.Data";
     private Vector2 scrollPosition;
 
 
-    [MenuItem("Studio-23/Achievement System/ID Table")]
+    [MenuItem("Studio-23/Achievement System/ID Table Generator")]
     public static void OpenWindow()
     {
         AchievementsGeneratorWindow window = GetWindow<AchievementsGeneratorWindow>("ID Table Generator");
@@ -26,7 +26,7 @@ public class AchievementsGeneratorWindow : EditorWindow
 
     private void OnGUI()
     {
-        GUILayout.Label("Achievement Table Generator", EditorStyles.boldLabel);
+        GUILayout.Label("ID Table Generator", EditorStyles.boldLabel);
 
 
         scrollPosition = EditorGUILayout.BeginScrollView(scrollPosition);
@@ -61,7 +61,7 @@ public class AchievementsGeneratorWindow : EditorWindow
 
         if (GUILayout.Button("Add Property"))
         {
-            properties.Add(new Property() { name = "NewProperty" });
+            properties.Add(new Property() { name = "ACHIEVEMENT_NAME" });
         }
 
         if (GUILayout.Button("Generate"))
@@ -72,29 +72,25 @@ public class AchievementsGeneratorWindow : EditorWindow
 
     private void GenerateStringProperties()
     {
-        string scriptContent = $"public static class {className}\n{{\n";
+        string scriptContent = $"namespace {_nameSpace}\n{{\n";
+
+        scriptContent += $"\tpublic static class {_className}\n\t{{\n";
 
         foreach (var property in properties)
         {
             if (!string.IsNullOrEmpty(property.name))
             {
-                scriptContent += $"    public static string {property.name.ToUpperSnakeCase()} = \"{property.name}\";\n";
+                scriptContent += $"\t\tpublic static readonly string {property.name} = \"{property.name}\";\n";
             }
         }
 
+        scriptContent += "\t}\n";
         scriptContent += "}";
 
-        string scriptPath = Path.Combine("Assets", $"{className}.cs");
+        string scriptPath = Path.Combine("Assets", $"{_className}.cs");
         File.WriteAllText(scriptPath, scriptContent);
         AssetDatabase.Refresh();
     }
 }
 
 
-public static class StringExtensions
-{
-    public static string ToUpperSnakeCase(this string input)
-    {
-        return string.Join("_", input.Split(' ')).ToUpper();
-    }
-}
