@@ -125,6 +125,22 @@ references:
   commentId: T:Studio23.SS2.AchievementSystem.Data.IDTableMapper
   fullName: Studio23.SS2.AchievementSystem.Data.IDTableMapper
   nameWithType: IDTableMapper
+- uid: Studio23.SS2.AchievementSystem.Data.IDTableMapper.GetMappedID(System.String)
+  name: GetMappedID(string)
+  href: api/Studio23.SS2.AchievementSystem.Data.IDTableMapper.html#Studio23_SS2_AchievementSystem_Data_IDTableMapper_GetMappedID_System_String_
+  commentId: M:Studio23.SS2.AchievementSystem.Data.IDTableMapper.GetMappedID(System.String)
+  name.vb: GetMappedID(String)
+  fullName: Studio23.SS2.AchievementSystem.Data.IDTableMapper.GetMappedID(string)
+  fullName.vb: Studio23.SS2.AchievementSystem.Data.IDTableMapper.GetMappedID(String)
+  nameWithType: IDTableMapper.GetMappedID(string)
+  nameWithType.vb: IDTableMapper.GetMappedID(String)
+- uid: Studio23.SS2.AchievementSystem.Data.IDTableMapper.GetMappedID*
+  name: GetMappedID
+  href: api/Studio23.SS2.AchievementSystem.Data.IDTableMapper.html#Studio23_SS2_AchievementSystem_Data_IDTableMapper_GetMappedID_
+  commentId: Overload:Studio23.SS2.AchievementSystem.Data.IDTableMapper.GetMappedID
+  isSpec: "True"
+  fullName: Studio23.SS2.AchievementSystem.Data.IDTableMapper.GetMappedID
+  nameWithType: IDTableMapper.GetMappedID
 - uid: Studio23.SS2.AchievementSystem.Data.IDTableMapper.IDMaps
   name: IDMaps
   href: api/Studio23.SS2.AchievementSystem.Data.IDTableMapper.html#Studio23_SS2_AchievementSystem_Data_IDTableMapper_IDMaps

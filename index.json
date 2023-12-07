@@ -32,7 +32,7 @@
   "api/Studio23.SS2.AchievementSystem.Data.IDTableMapper.html": {
     "href": "api/Studio23.SS2.AchievementSystem.Data.IDTableMapper.html",
     "title": "Class IDTableMapper | |",
-    "keywords": "Class IDTableMapper Namespace Studio23.SS2.AchievementSystem.Data public class IDTableMapper : ScriptableObject Inheritance object IDTableMapper Fields IDMaps public List<IDMap> IDMaps Field Value List<IDMap>"
+    "keywords": "Class IDTableMapper Namespace Studio23.SS2.AchievementSystem.Data public class IDTableMapper : ScriptableObject Inheritance object IDTableMapper Fields IDMaps public List<IDMap> IDMaps Field Value List<IDMap> Methods GetMappedID(string) public string GetMappedID(string id) Parameters id string Returns string"
   },
   "api/Studio23.SS2.AchievementSystem.Data.html": {
     "href": "api/Studio23.SS2.AchievementSystem.Data.html",
