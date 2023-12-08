@@ -15,20 +15,20 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Global.AchievementsGeneratorWindow.yml",
+      "source_relative_path": "api/Global.AchievementTableMapEditor.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Global.AchievementsGeneratorWindow.html"
+          "relative_path": "api/Global.AchievementTableMapEditor.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Global.IDTableMapEditor.yml",
+      "source_relative_path": "api/Global.StatTableMapEditor.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Global.IDTableMapEditor.html"
+          "relative_path": "api/Global.StatTableMapEditor.html"
         }
       },
       "version": ""
@@ -89,6 +89,36 @@
       "output": {
         ".html": {
           "relative_path": "api/Studio23.SS2.AchievementSystem.Data.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.AchievementSystem.Editor.AchievementsGeneratorWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.AchievementSystem.Editor.AchievementsGeneratorWindow.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.AchievementSystem.Editor.StatsGeneratorWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.AchievementSystem.Editor.StatsGeneratorWindow.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.AchievementSystem.Editor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.AchievementSystem.Editor.html"
         }
       },
       "version": ""

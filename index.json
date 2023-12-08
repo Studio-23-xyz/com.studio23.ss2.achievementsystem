@@ -1,23 +1,23 @@
 {
-  "api/Global.AchievementsGeneratorWindow.html": {
-    "href": "api/Global.AchievementsGeneratorWindow.html",
-    "title": "Class AchievementsGeneratorWindow | |",
-    "keywords": "Class AchievementsGeneratorWindow Namespace Global public class AchievementsGeneratorWindow : EditorWindow Inheritance object AchievementsGeneratorWindow Methods OpenWindow() public static void OpenWindow()"
+  "api/Global.AchievementTableMapEditor.html": {
+    "href": "api/Global.AchievementTableMapEditor.html",
+    "title": "Class AchievementTableMapEditor | |",
+    "keywords": "Class AchievementTableMapEditor Namespace Global public class AchievementTableMapEditor : EditorWindow Inheritance object AchievementTableMapEditor Methods OpenWindow() public static void OpenWindow()"
   },
-  "api/Global.IDTableMapEditor.html": {
-    "href": "api/Global.IDTableMapEditor.html",
-    "title": "Class IDTableMapEditor | |",
-    "keywords": "Class IDTableMapEditor Namespace Global public class IDTableMapEditor : EditorWindow Inheritance object IDTableMapEditor Methods OpenWindow() public static void OpenWindow()"
+  "api/Global.StatTableMapEditor.html": {
+    "href": "api/Global.StatTableMapEditor.html",
+    "title": "Class StatTableMapEditor | |",
+    "keywords": "Class StatTableMapEditor Namespace Global public class StatTableMapEditor : EditorWindow Inheritance object StatTableMapEditor Methods OpenWindow() public static void OpenWindow()"
   },
   "api/Global.html": {
     "href": "api/Global.html",
     "title": "Namespace | |",
-    "keywords": "Namespace Classes AchievementsGeneratorWindow IDTableMapEditor"
+    "keywords": "Namespace Classes AchievementTableMapEditor StatTableMapEditor"
   },
   "api/Studio23.SS2.AchievementSystem.Core.AchievementSystem.html": {
     "href": "api/Studio23.SS2.AchievementSystem.Core.AchievementSystem.html",
     "title": "Class AchievementSystem | |",
-    "keywords": "Class AchievementSystem Namespace Studio23.SS2.AchievementSystem.Core public class AchievementSystem : MonoBehaviour Inheritance object AchievementSystem Fields Instance public static AchievementSystem Instance Field Value AchievementSystem _achievementProvider public AchievementProvider _achievementProvider Field Value AchievementProvider Methods Initialize() public void Initialize() UnlockAchievement(string) public void UnlockAchievement(string achievementName) Parameters achievementName string"
+    "keywords": "Class AchievementSystem Namespace Studio23.SS2.AchievementSystem.Core public class AchievementSystem : MonoBehaviour Inheritance object AchievementSystem Fields Instance public static AchievementSystem Instance Field Value AchievementSystem _achievementProvider public AchievementProvider _achievementProvider Field Value AchievementProvider Methods GetStat(string) Gets the value of the stat public float GetStat(string statName) Parameters statName string Returns float SetStat(string, float) Sets the value of the stat public void SetStat(string statName, float value) Parameters statName string value float UnlockAchievement(string) Unlocks The achievement public void UnlockAchievement(string achievementName) Parameters achievementName string"
   },
   "api/Studio23.SS2.AchievementSystem.Core.html": {
     "href": "api/Studio23.SS2.AchievementSystem.Core.html",
@@ -39,10 +39,25 @@
     "title": "Namespace Studio23.SS2.AchievementSystem.Data | |",
     "keywords": "Namespace Studio23.SS2.AchievementSystem.Data Classes IDMap IDTableMapper"
   },
+  "api/Studio23.SS2.AchievementSystem.Editor.AchievementsGeneratorWindow.html": {
+    "href": "api/Studio23.SS2.AchievementSystem.Editor.AchievementsGeneratorWindow.html",
+    "title": "Class AchievementsGeneratorWindow | |",
+    "keywords": "Class AchievementsGeneratorWindow Namespace Studio23.SS2.AchievementSystem.Editor public class AchievementsGeneratorWindow : EditorWindow Inheritance object AchievementsGeneratorWindow Methods OpenWindow() public static void OpenWindow()"
+  },
+  "api/Studio23.SS2.AchievementSystem.Editor.StatsGeneratorWindow.html": {
+    "href": "api/Studio23.SS2.AchievementSystem.Editor.StatsGeneratorWindow.html",
+    "title": "Class StatsGeneratorWindow | |",
+    "keywords": "Class StatsGeneratorWindow Namespace Studio23.SS2.AchievementSystem.Editor public class StatsGeneratorWindow : EditorWindow Inheritance object StatsGeneratorWindow Methods OpenWindow() public static void OpenWindow()"
+  },
+  "api/Studio23.SS2.AchievementSystem.Editor.html": {
+    "href": "api/Studio23.SS2.AchievementSystem.Editor.html",
+    "title": "Namespace Studio23.SS2.AchievementSystem.Editor | |",
+    "keywords": "Namespace Studio23.SS2.AchievementSystem.Editor Classes AchievementsGeneratorWindow StatsGeneratorWindow"
+  },
   "api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html": {
     "href": "api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html",
     "title": "Class AchievementProvider | |",
-    "keywords": "Class AchievementProvider Namespace Studio23.SS2.AchievementSystem.Providers public abstract class AchievementProvider : MonoBehaviour Inheritance object AchievementProvider Fields _mapper protected IDTableMapper _mapper Field Value IDTableMapper Methods Initialize() public abstract void Initialize() UnlockAchievement(string) public abstract void UnlockAchievement(string achievementIdentifier) Parameters achievementIdentifier string"
+    "keywords": "Class AchievementProvider Namespace Studio23.SS2.AchievementSystem.Providers public abstract class AchievementProvider : MonoBehaviour Inheritance object AchievementProvider Fields _achievementMapper protected IDTableMapper _achievementMapper Field Value IDTableMapper _statsMapper protected IDTableMapper _statsMapper Field Value IDTableMapper Methods Initialize() public abstract void Initialize() UnlockAchievement(string) public abstract void UnlockAchievement(string achievementIdentifier) Parameters achievementIdentifier string"
   },
   "api/Studio23.SS2.AchievementSystem.Providers.html": {
     "href": "api/Studio23.SS2.AchievementSystem.Providers.html",
@@ -57,7 +72,7 @@
   "changelog/CHANGELOG.html": {
     "href": "changelog/CHANGELOG.html",
     "title": "Changelog | |",
-    "keywords": "Changelog [v0.1.0] - 2023-10-31 Updated Updated Provider Classs : Made IDMapper Protected [v0.0.9] - 2023-10-30 Added Added an Achievement Wizard for easy creation of achievements, including name, description, icons, type, and progress goal. Implemented an Achievement Manager for efficient management of achievements. Provided extensions for Xbox and Steam platforms. Added a new script for GUI elements and styles in the Achievement Wizard. Added ID Mapping Table Generator Updated Updated README with instructions on how to use the Achievement System package. Added a new MIT License, granting permissions for use, modification, and distribution of the software. Removed Removed all data classes as it's unnecessary for the System Removed Editor script for creating the assets"
+    "keywords": "Changelog [v1.1.1] - 2023-12-08 Added Stats Table Generator and Mapper Added New API to call Stats From Achievement System [v0.1.0] - 2023-10-31 Updated Updated Provider Classs : Made IDMapper Protected [v0.0.9] - 2023-10-30 Added Added an Achievement Wizard for easy creation of achievements, including name, description, icons, type, and progress goal. Implemented an Achievement Manager for efficient management of achievements. Provided extensions for Xbox and Steam platforms. Added a new script for GUI elements and styles in the Achievement Wizard. Added ID Mapping Table Generator Updated Updated README with instructions on how to use the Achievement System package. Added a new MIT License, granting permissions for use, modification, and distribution of the software. Removed Removed all data classes as it's unnecessary for the System Removed Editor script for creating the assets"
   },
   "index.html": {
     "href": "index.html",
