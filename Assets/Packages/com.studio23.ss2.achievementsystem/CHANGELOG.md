@@ -1,6 +1,13 @@
 # Changelog
 
 
+## [v1.1.1] - 2023-12-08
+
+### Added
+- Stats Table Generator and Mapper
+- Added New API to call Stats From Achievement System
+
+
 ## [v0.1.0] - 2023-10-31
 
 

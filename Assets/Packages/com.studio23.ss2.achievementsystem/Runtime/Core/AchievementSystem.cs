@@ -16,7 +16,7 @@ namespace Studio23.SS2.AchievementSystem.Core
         }
 
 
-        public void Initialize()
+        private void Initialize()
         {
             _achievementProvider = GetComponent<AchievementProvider>();
             if (_achievementProvider == null )
@@ -26,10 +26,34 @@ namespace Studio23.SS2.AchievementSystem.Core
             _achievementProvider.Initialize();
         }
 
-      
+        
+        /// <summary>
+        /// Unlocks The achievement
+        /// </summary>
+        /// <param name="achievementName"></param>
         public  void UnlockAchievement(string achievementName)
         {
            _achievementProvider.UnlockAchievement(achievementName);
+        }
+
+        /// <summary>
+        /// Sets the value of the stat
+        /// </summary>
+        /// <param name="statName"></param>
+        /// <param name="value"></param>
+        public void SetStat(string statName,float value)
+        {
+            _achievementProvider.SetStat(statName,value);
+        }
+
+        /// <summary>
+        /// Gets the value of the stat
+        /// </summary>
+        /// <param name="statName"></param>
+        /// <returns></returns>
+        public float GetStat(string statName)
+        {
+            return _achievementProvider.GetStat();
         }
 
 
