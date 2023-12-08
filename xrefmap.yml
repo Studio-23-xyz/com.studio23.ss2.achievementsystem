@@ -70,6 +70,19 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.AchievementSystem.Core.AchievementSystem.GetStat
   nameWithType: AchievementSystem.GetStat
+- uid: Studio23.SS2.AchievementSystem.Core.AchievementSystem.Initialize
+  name: Initialize()
+  href: api/Studio23.SS2.AchievementSystem.Core.AchievementSystem.html#Studio23_SS2_AchievementSystem_Core_AchievementSystem_Initialize
+  commentId: M:Studio23.SS2.AchievementSystem.Core.AchievementSystem.Initialize
+  fullName: Studio23.SS2.AchievementSystem.Core.AchievementSystem.Initialize()
+  nameWithType: AchievementSystem.Initialize()
+- uid: Studio23.SS2.AchievementSystem.Core.AchievementSystem.Initialize*
+  name: Initialize
+  href: api/Studio23.SS2.AchievementSystem.Core.AchievementSystem.html#Studio23_SS2_AchievementSystem_Core_AchievementSystem_Initialize_
+  commentId: Overload:Studio23.SS2.AchievementSystem.Core.AchievementSystem.Initialize
+  isSpec: "True"
+  fullName: Studio23.SS2.AchievementSystem.Core.AchievementSystem.Initialize
+  nameWithType: AchievementSystem.Initialize
 - uid: Studio23.SS2.AchievementSystem.Core.AchievementSystem.Instance
   name: Instance
   href: api/Studio23.SS2.AchievementSystem.Core.AchievementSystem.html#Studio23_SS2_AchievementSystem_Core_AchievementSystem_Instance
