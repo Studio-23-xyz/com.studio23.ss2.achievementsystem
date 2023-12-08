@@ -16,14 +16,13 @@ namespace Studio23.SS2.AchievementSystem.Core
         }
 
 
-        private void Initialize()
+        /// <summary>
+        /// Initialize Provider
+        /// </summary>
+        public void Initialize()
         {
             _achievementProvider = GetComponent<AchievementProvider>();
-            if (_achievementProvider == null )
-            {
-                Debug.LogError($"Must Have a provider");
-            }
-            _achievementProvider.Initialize();
+            _achievementProvider?.Initialize();
         }
 
         
