@@ -52,7 +52,7 @@ namespace Studio23.SS2.AchievementSystem.Core
         /// <returns></returns>
         public float GetStat(string statName)
         {
-            return _achievementProvider.GetStat();
+            return _achievementProvider.GetStat(statName);
         }
 
 
