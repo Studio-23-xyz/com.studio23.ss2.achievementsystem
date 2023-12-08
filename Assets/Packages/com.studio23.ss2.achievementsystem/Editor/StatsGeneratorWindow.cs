@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Studio23.SS2.AchievementSystem.Editor
 {
-    public class AchievementsGeneratorWindow : EditorWindow
+    public class StatsGeneratorWindow : EditorWindow
     {
         private class Property
         {
@@ -14,21 +14,21 @@ namespace Studio23.SS2.AchievementSystem.Editor
         }
 
         private List<Property> properties = new List<Property>();
-        private static string _className = "AchievementsTable";
+        private static string _className = "StatsTable";
         private static string _nameSpace = "Studio23.SS2.AchievementSystem.Data";
         private Vector2 scrollPosition;
 
 
-        [MenuItem("Studio-23/Achievement System/Achievement Table Generator")]
+        [MenuItem("Studio-23/Achievement System/Stats Table Generator")]
         public static void OpenWindow()
         {
-            AchievementsGeneratorWindow window = GetWindow<AchievementsGeneratorWindow>("Achievement Table Generator");
+            AchievementsGeneratorWindow window = GetWindow<AchievementsGeneratorWindow>("Stats Table Generator");
             window.minSize = new Vector2(250, 150);
         }
 
         private void OnGUI()
         {
-            GUILayout.Label("Achievement Table Generator", EditorStyles.boldLabel);
+            GUILayout.Label("Stats Table Generator", EditorStyles.boldLabel);
 
 
             scrollPosition = EditorGUILayout.BeginScrollView(scrollPosition);
@@ -63,7 +63,7 @@ namespace Studio23.SS2.AchievementSystem.Editor
 
             if (GUILayout.Button("Add Property"))
             {
-                properties.Add(new Property() { name = "ACHIEVEMENT_NAME" });
+                properties.Add(new Property() { name = "STAT_NAME" });
             }
 
             if (GUILayout.Button("Generate"))
@@ -101,6 +101,4 @@ namespace Studio23.SS2.AchievementSystem.Editor
         }
     }
 }
-
-
 

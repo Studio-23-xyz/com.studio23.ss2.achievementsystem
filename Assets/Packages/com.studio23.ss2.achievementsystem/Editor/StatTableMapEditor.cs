@@ -6,34 +6,44 @@ using System.Reflection;
 using System;
 using System.IO;
 
-public class IDTableMapEditor : EditorWindow
+public class StatTableMapEditor : EditorWindow
 {
-    private IDTableMapper idTableMap;
+    private IDTableMapper AchievementIdTableMap;
     private Dictionary<string, string> defaultValues=new Dictionary<string, string>();
     private string AssetSaveFolderPath = "Assets/Resources/AchievementSystem";
 
-    [MenuItem("Studio-23/Achievement System/ID Table Map Generator")]
+    string scriptPath => Path.Combine("Assets", "Resources", $"StatsTable.cs");
+
+
+    [MenuItem("Studio-23/Achievement System/Stats Table Map Generator")]
     public static void OpenWindow()
     {
-        IDTableMapEditor window = GetWindow<IDTableMapEditor>("ID Table Map Generator");
+        AchievementTableMapEditor window = GetWindow<AchievementTableMapEditor>("Stats Table Map Generator");
         window.minSize = new Vector2(300, 300);
   
     }
 
     private void OnGUI()
     {
-        GUILayout.Label("ID Table Map Generator", EditorStyles.boldLabel);
+        GUILayout.Label("Stats Table Map Generator", EditorStyles.boldLabel);
 
-        if (GUILayout.Button("Create New ID Table Map"))
+        if(!File.Exists(scriptPath))
+        {
+            EditorGUILayout.HelpBox("Create Stats Table First", MessageType.Error);
+            return;
+        }
+
+
+        if (GUILayout.Button("Create New Stats Table Map"))
         {
             CreateIDTableMap();
         }
 
-        if (idTableMap != null)
+        if (AchievementIdTableMap != null)
         {
-            GUILayout.Label("ID Mappning Table", EditorStyles.boldLabel);
+            GUILayout.Label("Stats Mapping Table", EditorStyles.boldLabel);
 
-            foreach (var IDMap in idTableMap.IDMaps)
+            foreach (var IDMap in AchievementIdTableMap.IDMaps)
             {
                 GUILayout.BeginHorizontal();
                 IDMap.Value = EditorGUILayout.TextField(IDMap.Key,IDMap.Value);
@@ -46,9 +56,9 @@ public class IDTableMapEditor : EditorWindow
 
     private void CreateIDTableMap()
     {
-        idTableMap = ScriptableObject.CreateInstance<IDTableMapper>();
+        AchievementIdTableMap = ScriptableObject.CreateInstance<IDTableMapper>();
         
-        idTableMap.IDMaps = new List<IDMap>();
+        AchievementIdTableMap.IDMaps = new List<IDMap>();
         LoadAchievementsTable();
         ApplyDefaultValues();
 
@@ -57,7 +67,7 @@ public class IDTableMapEditor : EditorWindow
             Directory.CreateDirectory(AssetSaveFolderPath);
         }
 
-        AssetDatabase.CreateAsset(idTableMap, $"{AssetSaveFolderPath}/IDMap.asset");
+        AssetDatabase.CreateAsset(AchievementIdTableMap, $"{AssetSaveFolderPath}/StatIDMap.asset");
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
 
@@ -65,20 +75,20 @@ public class IDTableMapEditor : EditorWindow
 
     private void ApplyDefaultValues()
     {
-        if (idTableMap == null)
+        if (AchievementIdTableMap == null)
         {
-            Debug.LogWarning("ID Table Map is not created.");
+            Debug.LogWarning("Stats Table Map is not created.");
             return;
         }
 
-        idTableMap.IDMaps.Clear();
+        AchievementIdTableMap.IDMaps.Clear();
 
         foreach (var kvp in defaultValues)
         {
-            idTableMap.IDMaps.Add(new IDMap { Key = kvp.Key, Value = kvp.Value });
+            AchievementIdTableMap.IDMaps.Add(new IDMap { Key = kvp.Key, Value = kvp.Value });
         }
 
-        EditorUtility.SetDirty(idTableMap);
+        EditorUtility.SetDirty(AchievementIdTableMap);
         AssetDatabase.SaveAssets();
         Debug.Log("Default values applied and IDTableMap saved.");
     }
@@ -89,7 +99,7 @@ public class IDTableMapEditor : EditorWindow
 
         foreach (Assembly assembly in assemblies)
         {
-            Type achievementsTableType = assembly.GetType("Studio23.SS2.AchievementSystem.Data.AchievementsTable");
+            Type achievementsTableType = assembly.GetType("Studio23.SS2.AchievementSystem.Data.StatsTable");
 
             if (achievementsTableType != null)
             {
@@ -105,11 +115,11 @@ public class IDTableMapEditor : EditorWindow
                     }
                 }
 
-                Debug.Log("AchievementsTable.cs properties loaded, default keys created.");
+                Debug.Log("StatsTable.cs properties loaded, default keys created.");
                 return; // Exit the loop if AchievementsTable is found
             }
         }
 
-        Debug.LogError("AchievementsTable.cs class not found.");
+        Debug.LogError("StatsTable.cs class not found.");
     }
 }
