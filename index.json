@@ -57,7 +57,7 @@
   "api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html": {
     "href": "api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html",
     "title": "Class AchievementProvider | |",
-    "keywords": "Class AchievementProvider Namespace Studio23.SS2.AchievementSystem.Providers public abstract class AchievementProvider : MonoBehaviour Inheritance object AchievementProvider Fields _achievementMapper protected IDTableMapper _achievementMapper Field Value IDTableMapper _statsMapper protected IDTableMapper _statsMapper Field Value IDTableMapper Methods Initialize() public abstract void Initialize() UnlockAchievement(string) public abstract void UnlockAchievement(string achievementIdentifier) Parameters achievementIdentifier string"
+    "keywords": "Class AchievementProvider Namespace Studio23.SS2.AchievementSystem.Providers public abstract class AchievementProvider : MonoBehaviour Inheritance object AchievementProvider Fields _achievementMapper protected IDTableMapper _achievementMapper Field Value IDTableMapper _statsMapper protected IDTableMapper _statsMapper Field Value IDTableMapper Methods GetStat(string) public abstract float GetStat(string statName) Parameters statName string Returns float Initialize() public abstract void Initialize() SetStat(string, float) public abstract void SetStat(string statName, float value) Parameters statName string value float UnlockAchievement(string) public abstract void UnlockAchievement(string achievementIdentifier) Parameters achievementIdentifier string"
   },
   "api/Studio23.SS2.AchievementSystem.Providers.html": {
     "href": "api/Studio23.SS2.AchievementSystem.Providers.html",
