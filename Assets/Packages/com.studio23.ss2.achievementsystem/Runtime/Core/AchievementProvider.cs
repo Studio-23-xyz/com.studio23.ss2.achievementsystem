@@ -1,4 +1,5 @@
 using Studio23.SS2.AchievementSystem.Data;
+using System;
 using UnityEngine;
 
 namespace Studio23.SS2.AchievementSystem.Providers
@@ -11,5 +12,6 @@ namespace Studio23.SS2.AchievementSystem.Providers
 		public abstract void UnlockAchievement(string achievementIdentifier);
         public abstract float GetStat(string statName);
         public abstract void SetStat(string statName, float value);
+        public abstract bool IsAchievementUnlocked(string achievementName);
     }
 }

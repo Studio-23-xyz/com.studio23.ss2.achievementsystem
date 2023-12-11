@@ -18,7 +18,7 @@ public class StatTableMapEditor : EditorWindow
     [MenuItem("Studio-23/Achievement System/Stats Table Map Generator")]
     public static void OpenWindow()
     {
-        AchievementTableMapEditor window = GetWindow<AchievementTableMapEditor>("Stats Table Map Generator");
+        StatTableMapEditor window = GetWindow<StatTableMapEditor>("Stats Table Map Generator");
         window.minSize = new Vector2(300, 300);
   
     }

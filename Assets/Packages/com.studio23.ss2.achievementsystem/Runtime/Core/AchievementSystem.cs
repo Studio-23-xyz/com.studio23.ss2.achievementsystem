@@ -25,7 +25,13 @@ namespace Studio23.SS2.AchievementSystem.Core
             _achievementProvider?.Initialize();
         }
 
-        
+
+        public bool IsAchievementUnlocked(string achievementName)
+        {
+            return _achievementProvider.IsAchievementUnlocked(achievementName);
+        }
+
+
         /// <summary>
         /// Unlocks The achievement
         /// </summary>

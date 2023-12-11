@@ -22,7 +22,7 @@ namespace Studio23.SS2.AchievementSystem.Editor
         [MenuItem("Studio-23/Achievement System/Stats Table Generator")]
         public static void OpenWindow()
         {
-            AchievementsGeneratorWindow window = GetWindow<AchievementsGeneratorWindow>("Stats Table Generator");
+            StatsGeneratorWindow window = GetWindow<StatsGeneratorWindow>("Stats Table Generator");
             window.minSize = new Vector2(250, 150);
         }
 
