@@ -89,6 +89,22 @@ references:
   commentId: F:Studio23.SS2.AchievementSystem.Core.AchievementSystem.Instance
   fullName: Studio23.SS2.AchievementSystem.Core.AchievementSystem.Instance
   nameWithType: AchievementSystem.Instance
+- uid: Studio23.SS2.AchievementSystem.Core.AchievementSystem.IsAchievementUnlocked(System.String)
+  name: IsAchievementUnlocked(string)
+  href: api/Studio23.SS2.AchievementSystem.Core.AchievementSystem.html#Studio23_SS2_AchievementSystem_Core_AchievementSystem_IsAchievementUnlocked_System_String_
+  commentId: M:Studio23.SS2.AchievementSystem.Core.AchievementSystem.IsAchievementUnlocked(System.String)
+  name.vb: IsAchievementUnlocked(String)
+  fullName: Studio23.SS2.AchievementSystem.Core.AchievementSystem.IsAchievementUnlocked(string)
+  fullName.vb: Studio23.SS2.AchievementSystem.Core.AchievementSystem.IsAchievementUnlocked(String)
+  nameWithType: AchievementSystem.IsAchievementUnlocked(string)
+  nameWithType.vb: AchievementSystem.IsAchievementUnlocked(String)
+- uid: Studio23.SS2.AchievementSystem.Core.AchievementSystem.IsAchievementUnlocked*
+  name: IsAchievementUnlocked
+  href: api/Studio23.SS2.AchievementSystem.Core.AchievementSystem.html#Studio23_SS2_AchievementSystem_Core_AchievementSystem_IsAchievementUnlocked_
+  commentId: Overload:Studio23.SS2.AchievementSystem.Core.AchievementSystem.IsAchievementUnlocked
+  isSpec: "True"
+  fullName: Studio23.SS2.AchievementSystem.Core.AchievementSystem.IsAchievementUnlocked
+  nameWithType: AchievementSystem.IsAchievementUnlocked
 - uid: Studio23.SS2.AchievementSystem.Core.AchievementSystem.SetStat(System.String,System.Single)
   name: SetStat(string, float)
   href: api/Studio23.SS2.AchievementSystem.Core.AchievementSystem.html#Studio23_SS2_AchievementSystem_Core_AchievementSystem_SetStat_System_String_System_Single_
@@ -264,6 +280,22 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.Initialize
   nameWithType: AchievementProvider.Initialize
+- uid: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.IsAchievementUnlocked(System.String)
+  name: IsAchievementUnlocked(string)
+  href: api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html#Studio23_SS2_AchievementSystem_Providers_AchievementProvider_IsAchievementUnlocked_System_String_
+  commentId: M:Studio23.SS2.AchievementSystem.Providers.AchievementProvider.IsAchievementUnlocked(System.String)
+  name.vb: IsAchievementUnlocked(String)
+  fullName: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.IsAchievementUnlocked(string)
+  fullName.vb: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.IsAchievementUnlocked(String)
+  nameWithType: AchievementProvider.IsAchievementUnlocked(string)
+  nameWithType.vb: AchievementProvider.IsAchievementUnlocked(String)
+- uid: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.IsAchievementUnlocked*
+  name: IsAchievementUnlocked
+  href: api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html#Studio23_SS2_AchievementSystem_Providers_AchievementProvider_IsAchievementUnlocked_
+  commentId: Overload:Studio23.SS2.AchievementSystem.Providers.AchievementProvider.IsAchievementUnlocked
+  isSpec: "True"
+  fullName: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.IsAchievementUnlocked
+  nameWithType: AchievementProvider.IsAchievementUnlocked
 - uid: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.SetStat(System.String,System.Single)
   name: SetStat(string, float)
   href: api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html#Studio23_SS2_AchievementSystem_Providers_AchievementProvider_SetStat_System_String_System_Single_
