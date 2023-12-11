@@ -1,5 +1,12 @@
 # Changelog
 
+## [v1.1.4] - 2023-12-11
+
+### Added
+- Get Achievement Method
+
+### Fixed
+- An editor script bug that didn't show stats features
 
 ## [v1.1.1] - 2023-12-08
 
