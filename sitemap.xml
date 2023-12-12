@@ -2,109 +2,109 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.achievementsystem/api/Global.AchievementTableMapEditor.html</loc>
-    <lastmod>2023-12-11T06:26:48+00:00</lastmod>
+    <lastmod>2023-12-12T10:30:25+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.achievementsystem/api/Global.StatTableMapEditor.html</loc>
-    <lastmod>2023-12-11T06:26:48+00:00</lastmod>
+    <lastmod>2023-12-12T10:30:25+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.achievementsystem/api/Global.html</loc>
-    <lastmod>2023-12-11T06:26:48+00:00</lastmod>
+    <lastmod>2023-12-12T10:30:25+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.achievementsystem/api/Studio23.SS2.AchievementSystem.Core.AchievementSystem.html</loc>
-    <lastmod>2023-12-11T06:26:48+00:00</lastmod>
+    <lastmod>2023-12-12T10:30:25+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.achievementsystem/api/Studio23.SS2.AchievementSystem.Core.html</loc>
-    <lastmod>2023-12-11T06:26:48+00:00</lastmod>
+    <lastmod>2023-12-12T10:30:25+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.achievementsystem/api/Studio23.SS2.AchievementSystem.Data.IDMap.html</loc>
-    <lastmod>2023-12-11T06:26:48+00:00</lastmod>
+    <lastmod>2023-12-12T10:30:25+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.achievementsystem/api/Studio23.SS2.AchievementSystem.Data.IDTableMapper.html</loc>
-    <lastmod>2023-12-11T06:26:48+00:00</lastmod>
+    <lastmod>2023-12-12T10:30:25+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.achievementsystem/api/Studio23.SS2.AchievementSystem.Data.html</loc>
-    <lastmod>2023-12-11T06:26:48+00:00</lastmod>
+    <lastmod>2023-12-12T10:30:25+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.achievementsystem/api/Studio23.SS2.AchievementSystem.Editor.AchievementsGeneratorWindow.html</loc>
-    <lastmod>2023-12-11T06:26:48+00:00</lastmod>
+    <lastmod>2023-12-12T10:30:25+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.achievementsystem/api/Studio23.SS2.AchievementSystem.Editor.StatsGeneratorWindow.html</loc>
-    <lastmod>2023-12-11T06:26:48+00:00</lastmod>
+    <lastmod>2023-12-12T10:30:25+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.achievementsystem/api/Studio23.SS2.AchievementSystem.Editor.html</loc>
-    <lastmod>2023-12-11T06:26:48+00:00</lastmod>
+    <lastmod>2023-12-12T10:30:25+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.achievementsystem/api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html</loc>
-    <lastmod>2023-12-11T06:26:48+00:00</lastmod>
+    <lastmod>2023-12-12T10:30:25+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.achievementsystem/api/Studio23.SS2.AchievementSystem.Providers.html</loc>
-    <lastmod>2023-12-11T06:26:48+00:00</lastmod>
+    <lastmod>2023-12-12T10:30:25+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.achievementsystem/api/index.html</loc>
-    <lastmod>2023-12-11T06:26:48+00:00</lastmod>
+    <lastmod>2023-12-12T10:30:25+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.achievementsystem/changelog/CHANGELOG.html</loc>
-    <lastmod>2023-12-11T06:26:48+00:00</lastmod>
+    <lastmod>2023-12-12T10:30:25+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.achievementsystem/index.html</loc>
-    <lastmod>2023-12-11T06:26:48+00:00</lastmod>
+    <lastmod>2023-12-12T10:30:25+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.achievementsystem/license/LICENSE.html</loc>
-    <lastmod>2023-12-11T06:26:48+00:00</lastmod>
+    <lastmod>2023-12-12T10:30:25+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.achievementsystem/manual/index.html</loc>
-    <lastmod>2023-12-11T06:26:48+00:00</lastmod>
+    <lastmod>2023-12-12T10:30:25+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

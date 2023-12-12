@@ -137,6 +137,22 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.AchievementSystem.Core.AchievementSystem.UnlockAchievement
   nameWithType: AchievementSystem.UnlockAchievement
+- uid: Studio23.SS2.AchievementSystem.Core.AchievementSystem.UpdateAchievementProgress(System.String,System.Single)
+  name: UpdateAchievementProgress(string, float)
+  href: api/Studio23.SS2.AchievementSystem.Core.AchievementSystem.html#Studio23_SS2_AchievementSystem_Core_AchievementSystem_UpdateAchievementProgress_System_String_System_Single_
+  commentId: M:Studio23.SS2.AchievementSystem.Core.AchievementSystem.UpdateAchievementProgress(System.String,System.Single)
+  name.vb: UpdateAchievementProgress(String, Single)
+  fullName: Studio23.SS2.AchievementSystem.Core.AchievementSystem.UpdateAchievementProgress(string, float)
+  fullName.vb: Studio23.SS2.AchievementSystem.Core.AchievementSystem.UpdateAchievementProgress(String, Single)
+  nameWithType: AchievementSystem.UpdateAchievementProgress(string, float)
+  nameWithType.vb: AchievementSystem.UpdateAchievementProgress(String, Single)
+- uid: Studio23.SS2.AchievementSystem.Core.AchievementSystem.UpdateAchievementProgress*
+  name: UpdateAchievementProgress
+  href: api/Studio23.SS2.AchievementSystem.Core.AchievementSystem.html#Studio23_SS2_AchievementSystem_Core_AchievementSystem_UpdateAchievementProgress_
+  commentId: Overload:Studio23.SS2.AchievementSystem.Core.AchievementSystem.UpdateAchievementProgress
+  isSpec: "True"
+  fullName: Studio23.SS2.AchievementSystem.Core.AchievementSystem.UpdateAchievementProgress
+  nameWithType: AchievementSystem.UpdateAchievementProgress
 - uid: Studio23.SS2.AchievementSystem.Core.AchievementSystem._achievementProvider
   name: _achievementProvider
   href: api/Studio23.SS2.AchievementSystem.Core.AchievementSystem.html#Studio23_SS2_AchievementSystem_Core_AchievementSystem__achievementProvider
@@ -312,22 +328,22 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.SetStat
   nameWithType: AchievementProvider.SetStat
-- uid: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.UnlockAchievement(System.String)
-  name: UnlockAchievement(string)
-  href: api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html#Studio23_SS2_AchievementSystem_Providers_AchievementProvider_UnlockAchievement_System_String_
-  commentId: M:Studio23.SS2.AchievementSystem.Providers.AchievementProvider.UnlockAchievement(System.String)
-  name.vb: UnlockAchievement(String)
-  fullName: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.UnlockAchievement(string)
-  fullName.vb: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.UnlockAchievement(String)
-  nameWithType: AchievementProvider.UnlockAchievement(string)
-  nameWithType.vb: AchievementProvider.UnlockAchievement(String)
-- uid: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.UnlockAchievement*
-  name: UnlockAchievement
-  href: api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html#Studio23_SS2_AchievementSystem_Providers_AchievementProvider_UnlockAchievement_
-  commentId: Overload:Studio23.SS2.AchievementSystem.Providers.AchievementProvider.UnlockAchievement
+- uid: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.UpdateAchievementProgress(System.String,System.Single)
+  name: UpdateAchievementProgress(string, float)
+  href: api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html#Studio23_SS2_AchievementSystem_Providers_AchievementProvider_UpdateAchievementProgress_System_String_System_Single_
+  commentId: M:Studio23.SS2.AchievementSystem.Providers.AchievementProvider.UpdateAchievementProgress(System.String,System.Single)
+  name.vb: UpdateAchievementProgress(String, Single)
+  fullName: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.UpdateAchievementProgress(string, float)
+  fullName.vb: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.UpdateAchievementProgress(String, Single)
+  nameWithType: AchievementProvider.UpdateAchievementProgress(string, float)
+  nameWithType.vb: AchievementProvider.UpdateAchievementProgress(String, Single)
+- uid: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.UpdateAchievementProgress*
+  name: UpdateAchievementProgress
+  href: api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html#Studio23_SS2_AchievementSystem_Providers_AchievementProvider_UpdateAchievementProgress_
+  commentId: Overload:Studio23.SS2.AchievementSystem.Providers.AchievementProvider.UpdateAchievementProgress
   isSpec: "True"
-  fullName: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.UnlockAchievement
-  nameWithType: AchievementProvider.UnlockAchievement
+  fullName: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.UpdateAchievementProgress
+  nameWithType: AchievementProvider.UpdateAchievementProgress
 - uid: Studio23.SS2.AchievementSystem.Providers.AchievementProvider._achievementMapper
   name: _achievementMapper
   href: api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html#Studio23_SS2_AchievementSystem_Providers_AchievementProvider__achievementMapper
