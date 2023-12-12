@@ -33,12 +33,26 @@ namespace Studio23.SS2.AchievementSystem.Core
 
 
         /// <summary>
+        /// Unlocks The achievement progression
+        /// </summary>
+        /// <param name="achievementName"></param>
+        /// <param name="progression"> progression is the unlock percentage of a achievement, the value will be withing 0 to 100</param>
+        
+        public  void UpdateAchievementProgress(string achievementName, float progression)
+        {
+           _achievementProvider.UpdateAchievementProgress(achievementName, progression);
+        }
+        
+        
+        /// <summary>
         /// Unlocks The achievement
         /// </summary>
         /// <param name="achievementName"></param>
+
+        
         public  void UnlockAchievement(string achievementName)
         {
-           _achievementProvider.UnlockAchievement(achievementName);
+            UpdateAchievementProgress(achievementName, 100);
         }
 
         /// <summary>
