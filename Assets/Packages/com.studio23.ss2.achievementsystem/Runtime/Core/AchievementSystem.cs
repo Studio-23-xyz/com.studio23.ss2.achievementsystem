@@ -9,6 +9,7 @@ namespace Studio23.SS2.AchievementSystem.Core
 
         public AchievementProvider _achievementProvider;
 
+
         private void Awake()
         {
             Instance = this;
@@ -25,12 +26,12 @@ namespace Studio23.SS2.AchievementSystem.Core
             _achievementProvider?.Initialize();
         }
 
-
-        public bool IsAchievementUnlocked(string achievementName)
+    
+        public AchievementData GetAchievement(string id)
         {
-            return _achievementProvider.IsAchievementUnlocked(achievementName);
+            return _achievementProvider.GetAchievement(id);
         }
-
+         
 
         /// <summary>
         /// Unlocks The achievement progression
@@ -55,25 +56,7 @@ namespace Studio23.SS2.AchievementSystem.Core
             UpdateAchievementProgress(achievementName, 100);
         }
 
-        /// <summary>
-        /// Sets the value of the stat
-        /// </summary>
-        /// <param name="statName"></param>
-        /// <param name="value"></param>
-        public void SetStat(string statName,float value)
-        {
-            _achievementProvider.SetStat(statName,value);
-        }
-
-        /// <summary>
-        /// Gets the value of the stat
-        /// </summary>
-        /// <param name="statName"></param>
-        /// <returns></returns>
-        public float GetStat(string statName)
-        {
-            return _achievementProvider.GetStat(statName);
-        }
+      
 
 
     }

@@ -1,13 +1,4 @@
 # Changelog
-
-
-## [v1.1.7] - 2023-12-14
-
-### Added
-- AchievementData Class added
-- Now you can get AchievementData from the system
-
-
 ## [v1.1.5] - 2023-12-12
 
 ### Added
