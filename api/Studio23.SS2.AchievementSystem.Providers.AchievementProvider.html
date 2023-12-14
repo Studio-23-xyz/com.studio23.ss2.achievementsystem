@@ -189,14 +189,44 @@
 
 
 
+
+  <h3 id="Studio23_SS2_AchievementSystem_Providers_AchievementProvider_achievementDatas" data-uid="Studio23.SS2.AchievementSystem.Providers.AchievementProvider.achievementDatas">
+  achievementDatas
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.achievementsystem/blob/main/Assets/Packages/com.studio23.ss2.achievementsystem/Runtime/Core/AchievementProvider.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AchievementData[] achievementDatas</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="AchievementData.html">AchievementData</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
 
-  <a id="Studio23_SS2_AchievementSystem_Providers_AchievementProvider_GetStat_" data-uid="Studio23.SS2.AchievementSystem.Providers.AchievementProvider.GetStat*"></a>
+  <a id="Studio23_SS2_AchievementSystem_Providers_AchievementProvider_GetAchievement_" data-uid="Studio23.SS2.AchievementSystem.Providers.AchievementProvider.GetAchievement*"></a>
 
-  <h3 id="Studio23_SS2_AchievementSystem_Providers_AchievementProvider_GetStat_System_String_" data-uid="Studio23.SS2.AchievementSystem.Providers.AchievementProvider.GetStat(System.String)">
-  GetStat(string)
+  <h3 id="Studio23_SS2_AchievementSystem_Providers_AchievementProvider_GetAchievement_System_String_" data-uid="Studio23.SS2.AchievementSystem.Providers.AchievementProvider.GetAchievement(System.String)">
+  GetAchievement(string)
   <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.achievementsystem/blob/main/Assets/Packages/com.studio23.ss2.achievementsystem/Runtime/Core/AchievementProvider.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -204,18 +234,18 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract float GetStat(string statName)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract AchievementData GetAchievement(string id)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>statName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dt><a class="xref" href="Global.AchievementData.html">AchievementData</a></dt>
     <dd></dd>
   </dl>
 
@@ -233,7 +263,7 @@
 
   <h3 id="Studio23_SS2_AchievementSystem_Providers_AchievementProvider_Initialize" data-uid="Studio23.SS2.AchievementSystem.Providers.AchievementProvider.Initialize">
   Initialize()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.achievementsystem/blob/main/Assets/Packages/com.studio23.ss2.achievementsystem/Runtime/Core/AchievementProvider.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.achievementsystem/blob/main/Assets/Packages/com.studio23.ss2.achievementsystem/Runtime/Core/AchievementProvider.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -255,46 +285,10 @@
 
 
 
-  <a id="Studio23_SS2_AchievementSystem_Providers_AchievementProvider_IsAchievementUnlocked_" data-uid="Studio23.SS2.AchievementSystem.Providers.AchievementProvider.IsAchievementUnlocked*"></a>
+  <a id="Studio23_SS2_AchievementSystem_Providers_AchievementProvider_UpdateAchievementProgress_" data-uid="Studio23.SS2.AchievementSystem.Providers.AchievementProvider.UpdateAchievementProgress*"></a>
 
-  <h3 id="Studio23_SS2_AchievementSystem_Providers_AchievementProvider_IsAchievementUnlocked_System_String_" data-uid="Studio23.SS2.AchievementSystem.Providers.AchievementProvider.IsAchievementUnlocked(System.String)">
-  IsAchievementUnlocked(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.achievementsystem/blob/main/Assets/Packages/com.studio23.ss2.achievementsystem/Runtime/Core/AchievementProvider.cs/#L15"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract bool IsAchievementUnlocked(string achievementName)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>achievementName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Studio23_SS2_AchievementSystem_Providers_AchievementProvider_SetStat_" data-uid="Studio23.SS2.AchievementSystem.Providers.AchievementProvider.SetStat*"></a>
-
-  <h3 id="Studio23_SS2_AchievementSystem_Providers_AchievementProvider_SetStat_System_String_System_Single_" data-uid="Studio23.SS2.AchievementSystem.Providers.AchievementProvider.SetStat(System.String,System.Single)">
-  SetStat(string, float)
+  <h3 id="Studio23_SS2_AchievementSystem_Providers_AchievementProvider_UpdateAchievementProgress_System_String_System_Single_" data-uid="Studio23.SS2.AchievementSystem.Providers.AchievementProvider.UpdateAchievementProgress(System.String,System.Single)">
+  UpdateAchievementProgress(string, float)
   <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.achievementsystem/blob/main/Assets/Packages/com.studio23.ss2.achievementsystem/Runtime/Core/AchievementProvider.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -302,45 +296,12 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void SetStat(string statName, float value)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract void UpdateAchievementProgress(string id, float progression)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>statName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Studio23_SS2_AchievementSystem_Providers_AchievementProvider_UpdateAchievementProgress_" data-uid="Studio23.SS2.AchievementSystem.Providers.AchievementProvider.UpdateAchievementProgress*"></a>
-
-  <h3 id="Studio23_SS2_AchievementSystem_Providers_AchievementProvider_UpdateAchievementProgress_System_String_System_Single_" data-uid="Studio23.SS2.AchievementSystem.Providers.AchievementProvider.UpdateAchievementProgress(System.String,System.Single)">
-  UpdateAchievementProgress(string, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.achievementsystem/blob/main/Assets/Packages/com.studio23.ss2.achievementsystem/Runtime/Core/AchievementProvider.cs/#L12"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void UpdateAchievementProgress(string achievementIdentifier, float progression)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>achievementIdentifier</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
     <dt><code>progression</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
     <dd></dd>
