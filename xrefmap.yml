@@ -22,6 +22,12 @@ references:
   commentId: F:Global.AchievementData.IsSecret
   fullName: AchievementData.IsSecret
   nameWithType: AchievementData.IsSecret
+- uid: Global.AchievementData.IsUnlocked
+  name: IsUnlocked
+  href: api/Global.AchievementData.html#Global_AchievementData_IsUnlocked
+  commentId: F:Global.AchievementData.IsUnlocked
+  fullName: AchievementData.IsUnlocked
+  nameWithType: AchievementData.IsUnlocked
 - uid: Global.AchievementData.LockedDescription
   name: LockedDescription
   href: api/Global.AchievementData.html#Global_AchievementData_LockedDescription
