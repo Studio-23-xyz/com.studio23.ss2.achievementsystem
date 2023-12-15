@@ -7,6 +7,6 @@ public class AchievementData
     public bool IsSecret;
     public string UnlockedDescription;
     public string LockedDescription;
-
+    public bool IsUnlocked;
 
 }
