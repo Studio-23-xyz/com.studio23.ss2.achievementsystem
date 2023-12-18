@@ -143,6 +143,12 @@ references:
   commentId: F:Studio23.SS2.AchievementSystem.Core.AchievementSystem.Instance
   fullName: Studio23.SS2.AchievementSystem.Core.AchievementSystem.Instance
   nameWithType: AchievementSystem.Instance
+- uid: Studio23.SS2.AchievementSystem.Core.AchievementSystem.OnInitializeComplete
+  name: OnInitializeComplete
+  href: api/Studio23.SS2.AchievementSystem.Core.AchievementSystem.html#Studio23_SS2_AchievementSystem_Core_AchievementSystem_OnInitializeComplete
+  commentId: E:Studio23.SS2.AchievementSystem.Core.AchievementSystem.OnInitializeComplete
+  fullName: Studio23.SS2.AchievementSystem.Core.AchievementSystem.OnInitializeComplete
+  nameWithType: AchievementSystem.OnInitializeComplete
 - uid: Studio23.SS2.AchievementSystem.Core.AchievementSystem.UnlockAchievement(System.String)
   name: UnlockAchievement(string)
   href: api/Studio23.SS2.AchievementSystem.Core.AchievementSystem.html#Studio23_SS2_AchievementSystem_Core_AchievementSystem_UnlockAchievement_System_String_
@@ -318,6 +324,12 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.Initialize
   nameWithType: AchievementProvider.Initialize
+- uid: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.OnInitializationComplete
+  name: OnInitializationComplete
+  href: api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html#Studio23_SS2_AchievementSystem_Providers_AchievementProvider_OnInitializationComplete
+  commentId: E:Studio23.SS2.AchievementSystem.Providers.AchievementProvider.OnInitializationComplete
+  fullName: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.OnInitializationComplete
+  nameWithType: AchievementProvider.OnInitializationComplete
 - uid: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.UpdateAchievementProgress(System.String,System.Single)
   name: UpdateAchievementProgress(string, float)
   href: api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html#Studio23_SS2_AchievementSystem_Providers_AchievementProvider_UpdateAchievementProgress_System_String_System_Single_
