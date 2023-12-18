@@ -1,0 +1,31 @@
+{
+    "name": "com.studio23.ss2.achievementsystem",
+    "version": "1.1.9",
+    "displayName": "Achievement System",
+    "description": "Elevate your game development experience with the Unity Achievements System Package! This powerful Unity package simplifies the creation and management of achievements in your games, enhancing player engagement and retention.",
+    "unity": "2021.3",
+    "unityRelease": "10f1",
+    "documentationUrl": "https://studio-23-xyz.github.io/com.studio23.ss2.achievementsystem/manual/",
+    "changelogUrl": "https://studio-23-xyz.github.io/com.studio23.ss2.achievementsystem/changelog/CHANGELOG.html",
+    "licensesUrl": "https://studio-23-xyz.github.io/com.studio23.ss2.achievementsystem/license/LICENSE.html",
+    "scopedRegistries": [
+        {
+            "name": "Studio 23",
+            "url": "https://package.openupm.com",
+            "scopes": [
+                "com.studio23.ss2"
+            ]
+        }
+    ],
+
+    "keywords": [
+      "Achievement",
+      "Achievement Manager",
+      "Stats"
+    ],
+    "author": {
+        "name": "Studio 23",
+        "email": "contact@studio-23.xyz",
+        "url": "https://studio-23.xyz"
+    }
+}
