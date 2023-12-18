@@ -1,5 +1,12 @@
 # Changelog
 
+## [v1.1.9] - 2023-12-18
+
+### Added
+- Added Initialiation Event
+- Now Achievement system initialization is being check by a bool
+
+
 ## [v1.1.8] - 2023-12-15
 
 ### Added

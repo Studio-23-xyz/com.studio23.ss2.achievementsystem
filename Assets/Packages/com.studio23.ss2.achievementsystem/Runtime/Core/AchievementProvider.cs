@@ -8,6 +8,9 @@ namespace Studio23.SS2.AchievementSystem.Providers
 	{
 		[SerializeField] protected IDTableMapper _achievementMapper;
         [SerializeField] protected IDTableMapper _statsMapper;
+
+        public event Action OnInitializationComplete;
+
         public AchievementData[] achievementDatas;
         public abstract void Initialize();
         public abstract AchievementData GetAchievement(string id);

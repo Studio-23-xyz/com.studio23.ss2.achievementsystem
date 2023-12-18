@@ -1,4 +1,5 @@
 using Studio23.SS2.AchievementSystem.Providers;
+using System;
 using UnityEngine;
 
 namespace Studio23.SS2.AchievementSystem.Core
@@ -10,10 +11,21 @@ namespace Studio23.SS2.AchievementSystem.Core
         public AchievementProvider _achievementProvider;
 
 
+        [SerializeField]private bool InitializeOnStart = true;
+
+        public event Action OnInitializeComplete;
+
         private void Awake()
         {
             Instance = this;
-            Initialize();
+        }
+
+        private void Start()
+        {
+            if (InitializeOnStart)
+            {
+                Initialize();
+            }
         }
 
 
@@ -23,6 +35,7 @@ namespace Studio23.SS2.AchievementSystem.Core
         public void Initialize()
         {
             _achievementProvider = GetComponent<AchievementProvider>();
+            _achievementProvider.OnInitializationComplete += ()=> OnInitializeComplete?.Invoke();
             _achievementProvider?.Initialize();
         }
 
