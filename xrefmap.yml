@@ -146,7 +146,7 @@ references:
 - uid: Studio23.SS2.AchievementSystem.Core.AchievementSystem.OnInitializeComplete
   name: OnInitializeComplete
   href: api/Studio23.SS2.AchievementSystem.Core.AchievementSystem.html#Studio23_SS2_AchievementSystem_Core_AchievementSystem_OnInitializeComplete
-  commentId: E:Studio23.SS2.AchievementSystem.Core.AchievementSystem.OnInitializeComplete
+  commentId: F:Studio23.SS2.AchievementSystem.Core.AchievementSystem.OnInitializeComplete
   fullName: Studio23.SS2.AchievementSystem.Core.AchievementSystem.OnInitializeComplete
   nameWithType: AchievementSystem.OnInitializeComplete
 - uid: Studio23.SS2.AchievementSystem.Core.AchievementSystem.UnlockAchievement(System.String)
@@ -187,6 +187,12 @@ references:
   commentId: F:Studio23.SS2.AchievementSystem.Core.AchievementSystem._achievementProvider
   fullName: Studio23.SS2.AchievementSystem.Core.AchievementSystem._achievementProvider
   nameWithType: AchievementSystem._achievementProvider
+- uid: Studio23.SS2.AchievementSystem.Core.InitializationEvent
+  name: InitializationEvent
+  href: api/Studio23.SS2.AchievementSystem.Core.InitializationEvent.html
+  commentId: T:Studio23.SS2.AchievementSystem.Core.InitializationEvent
+  fullName: Studio23.SS2.AchievementSystem.Core.InitializationEvent
+  nameWithType: InitializationEvent
 - uid: Studio23.SS2.AchievementSystem.Data
   name: Studio23.SS2.AchievementSystem.Data
   href: api/Studio23.SS2.AchievementSystem.Data.html
@@ -327,7 +333,7 @@ references:
 - uid: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.OnInitializationComplete
   name: OnInitializationComplete
   href: api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html#Studio23_SS2_AchievementSystem_Providers_AchievementProvider_OnInitializationComplete
-  commentId: E:Studio23.SS2.AchievementSystem.Providers.AchievementProvider.OnInitializationComplete
+  commentId: F:Studio23.SS2.AchievementSystem.Providers.AchievementProvider.OnInitializationComplete
   fullName: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.OnInitializationComplete
   nameWithType: AchievementProvider.OnInitializationComplete
 - uid: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.UpdateAchievementProgress(System.String,System.Single)

@@ -22,12 +22,17 @@
   "api/Studio23.SS2.AchievementSystem.Core.AchievementSystem.html": {
     "href": "api/Studio23.SS2.AchievementSystem.Core.AchievementSystem.html",
     "title": "Class AchievementSystem | |",
-    "keywords": "Class AchievementSystem Namespace Studio23.SS2.AchievementSystem.Core public class AchievementSystem : MonoBehaviour Inheritance object AchievementSystem Fields Instance public static AchievementSystem Instance Field Value AchievementSystem _achievementProvider public AchievementProvider _achievementProvider Field Value AchievementProvider Methods GetAchievement(string) public AchievementData GetAchievement(string id) Parameters id string Returns AchievementData Initialize() Initialize Provider public void Initialize() UnlockAchievement(string) Unlocks The achievement public void UnlockAchievement(string achievementName) Parameters achievementName string UpdateAchievementProgress(string, float) Unlocks The achievement progression public void UpdateAchievementProgress(string achievementName, float progression) Parameters achievementName string progression float progression is the unlock percentage of a achievement, the value will be withing 0 to 100 Events OnInitializeComplete public event Action OnInitializeComplete Event Type Action"
+    "keywords": "Class AchievementSystem Namespace Studio23.SS2.AchievementSystem.Core public class AchievementSystem : MonoBehaviour Inheritance object AchievementSystem Fields Instance public static AchievementSystem Instance Field Value AchievementSystem OnInitializeComplete public InitializationEvent OnInitializeComplete Field Value InitializationEvent _achievementProvider public AchievementProvider _achievementProvider Field Value AchievementProvider Methods GetAchievement(string) public AchievementData GetAchievement(string id) Parameters id string Returns AchievementData Initialize() Initialize Provider public void Initialize() UnlockAchievement(string) Unlocks The achievement public void UnlockAchievement(string achievementName) Parameters achievementName string UpdateAchievementProgress(string, float) Unlocks The achievement progression public void UpdateAchievementProgress(string achievementName, float progression) Parameters achievementName string progression float progression is the unlock percentage of a achievement, the value will be withing 0 to 100"
+  },
+  "api/Studio23.SS2.AchievementSystem.Core.InitializationEvent.html": {
+    "href": "api/Studio23.SS2.AchievementSystem.Core.InitializationEvent.html",
+    "title": "Delegate InitializationEvent | |",
+    "keywords": "Delegate InitializationEvent Namespace Studio23.SS2.AchievementSystem.Core public delegate void InitializationEvent()"
   },
   "api/Studio23.SS2.AchievementSystem.Core.html": {
     "href": "api/Studio23.SS2.AchievementSystem.Core.html",
     "title": "Namespace Studio23.SS2.AchievementSystem.Core | |",
-    "keywords": "Namespace Studio23.SS2.AchievementSystem.Core Classes AchievementSystem"
+    "keywords": "Namespace Studio23.SS2.AchievementSystem.Core Classes AchievementSystem Delegates InitializationEvent"
   },
   "api/Studio23.SS2.AchievementSystem.Data.IDMap.html": {
     "href": "api/Studio23.SS2.AchievementSystem.Data.IDMap.html",
@@ -62,7 +67,7 @@
   "api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html": {
     "href": "api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html",
     "title": "Class AchievementProvider | |",
-    "keywords": "Class AchievementProvider Namespace Studio23.SS2.AchievementSystem.Providers public abstract class AchievementProvider : MonoBehaviour Inheritance object AchievementProvider Fields _achievementMapper protected IDTableMapper _achievementMapper Field Value IDTableMapper _statsMapper protected IDTableMapper _statsMapper Field Value IDTableMapper achievementDatas public AchievementData[] achievementDatas Field Value AchievementData[] Methods GetAchievement(string) public abstract AchievementData GetAchievement(string id) Parameters id string Returns AchievementData Initialize() public abstract void Initialize() UpdateAchievementProgress(string, float) public abstract void UpdateAchievementProgress(string id, float progression) Parameters id string progression float Events OnInitializationComplete public event Action OnInitializationComplete Event Type Action"
+    "keywords": "Class AchievementProvider Namespace Studio23.SS2.AchievementSystem.Providers public abstract class AchievementProvider : MonoBehaviour Inheritance object AchievementProvider Fields OnInitializationComplete public InitializationEvent OnInitializationComplete Field Value InitializationEvent _achievementMapper protected IDTableMapper _achievementMapper Field Value IDTableMapper _statsMapper protected IDTableMapper _statsMapper Field Value IDTableMapper achievementDatas public AchievementData[] achievementDatas Field Value AchievementData[] Methods GetAchievement(string) public abstract AchievementData GetAchievement(string id) Parameters id string Returns AchievementData Initialize() public abstract void Initialize() UpdateAchievementProgress(string, float) public abstract void UpdateAchievementProgress(string id, float progression) Parameters id string progression float"
   },
   "api/Studio23.SS2.AchievementSystem.Providers.html": {
     "href": "api/Studio23.SS2.AchievementSystem.Providers.html",
