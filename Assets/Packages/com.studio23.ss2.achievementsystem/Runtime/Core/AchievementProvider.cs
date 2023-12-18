@@ -1,3 +1,4 @@
+using Studio23.SS2.AchievementSystem.Core;
 using Studio23.SS2.AchievementSystem.Data;
 using System;
 using UnityEngine;
@@ -9,7 +10,7 @@ namespace Studio23.SS2.AchievementSystem.Providers
 		[SerializeField] protected IDTableMapper _achievementMapper;
         [SerializeField] protected IDTableMapper _statsMapper;
 
-        public event Action OnInitializationComplete;
+        public InitializationEvent OnInitializationComplete;
 
         public AchievementData[] achievementDatas;
         public abstract void Initialize();

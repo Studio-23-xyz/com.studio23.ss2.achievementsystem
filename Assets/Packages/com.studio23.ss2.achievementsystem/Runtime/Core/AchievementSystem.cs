@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Studio23.SS2.AchievementSystem.Core
 {
+    public delegate void InitializationEvent();
     public class AchievementSystem : MonoBehaviour
     {
         public static AchievementSystem Instance;
@@ -13,7 +14,7 @@ namespace Studio23.SS2.AchievementSystem.Core
 
         [SerializeField]private bool InitializeOnStart = true;
 
-        public event Action OnInitializeComplete;
+        public InitializationEvent OnInitializeComplete;
 
         private void Awake()
         {
