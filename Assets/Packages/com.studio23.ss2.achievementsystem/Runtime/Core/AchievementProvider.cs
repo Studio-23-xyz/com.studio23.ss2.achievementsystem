@@ -1,7 +1,6 @@
-using Studio23.SS2.AchievementSystem.Core;
 using Studio23.SS2.AchievementSystem.Data;
-using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Studio23.SS2.AchievementSystem.Providers
 {
@@ -10,7 +9,7 @@ namespace Studio23.SS2.AchievementSystem.Providers
 		[SerializeField] protected IDTableMapper _achievementMapper;
         [SerializeField] protected IDTableMapper _statsMapper;
 
-        public InitializationEvent OnInitializationComplete;
+        public UnityEvent OnInitializationComplete;
 
         public AchievementData[] achievementDatas;
         public abstract void Initialize();

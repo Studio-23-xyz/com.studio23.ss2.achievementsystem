@@ -1,10 +1,10 @@
 using Studio23.SS2.AchievementSystem.Providers;
-using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Studio23.SS2.AchievementSystem.Core
 {
-    public delegate void InitializationEvent();
+
     public class AchievementSystem : MonoBehaviour
     {
         public static AchievementSystem Instance;
@@ -14,7 +14,7 @@ namespace Studio23.SS2.AchievementSystem.Core
 
         [SerializeField]private bool InitializeOnStart = true;
 
-        public InitializationEvent OnInitializeComplete;
+        public UnityEvent OnInitializeComplete;
 
         private void Awake()
         {
@@ -36,7 +36,7 @@ namespace Studio23.SS2.AchievementSystem.Core
         public void Initialize()
         {
             _achievementProvider = GetComponent<AchievementProvider>();
-            _achievementProvider.OnInitializationComplete += ()=> OnInitializeComplete?.Invoke();
+            _achievementProvider.OnInitializationComplete.AddListener(()=> OnInitializeComplete?.Invoke());
             _achievementProvider?.Initialize();
         }
 
