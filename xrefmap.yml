@@ -187,12 +187,6 @@ references:
   commentId: F:Studio23.SS2.AchievementSystem.Core.AchievementSystem._achievementProvider
   fullName: Studio23.SS2.AchievementSystem.Core.AchievementSystem._achievementProvider
   nameWithType: AchievementSystem._achievementProvider
-- uid: Studio23.SS2.AchievementSystem.Core.InitializationEvent
-  name: InitializationEvent
-  href: api/Studio23.SS2.AchievementSystem.Core.InitializationEvent.html
-  commentId: T:Studio23.SS2.AchievementSystem.Core.InitializationEvent
-  fullName: Studio23.SS2.AchievementSystem.Core.InitializationEvent
-  nameWithType: InitializationEvent
 - uid: Studio23.SS2.AchievementSystem.Data
   name: Studio23.SS2.AchievementSystem.Data
   href: api/Studio23.SS2.AchievementSystem.Data.html

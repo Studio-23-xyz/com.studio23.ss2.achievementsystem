@@ -65,16 +65,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Studio23.SS2.AchievementSystem.Core.InitializationEvent.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Studio23.SS2.AchievementSystem.Core.InitializationEvent.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Studio23.SS2.AchievementSystem.Core.yml",
       "output": {
         ".html": {
