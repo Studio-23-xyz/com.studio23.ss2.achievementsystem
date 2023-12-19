@@ -1,5 +1,10 @@
 # Changelog
 
+## [v1.2.1] - 2023-12-20
+
+### Added
+- Initialization Event is now based on unity event.
+
 ## [v1.1.9] - 2023-12-18
 
 ### Added
