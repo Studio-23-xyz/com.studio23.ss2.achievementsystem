@@ -1,4 +1,7 @@
 using Studio23.SS2.AchievementSystem.Providers;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,11 +12,18 @@ namespace Studio23.SS2.AchievementSystem.Core
     {
         public static AchievementSystem Instance;
 
+        [Header("Config")]
+        [SerializeField]
+        private bool InitializeOnStart = true;
         public AchievementProvider _achievementProvider;
 
 
-        [SerializeField]private bool InitializeOnStart = true;
+        private Queue<(string id, float progression)> _achievementProcessQueue;
+        private bool _isProcessing;
+        [SerializeField]
+        private float _processingSpeed;
 
+        [Header("Events")]
         public UnityEvent OnInitializeComplete;
 
         private void Awake()
@@ -35,6 +45,7 @@ namespace Studio23.SS2.AchievementSystem.Core
         /// </summary>
         public void Initialize()
         {
+            _achievementProcessQueue = new Queue<(string id, float progression)>();
             _achievementProvider = GetComponent<AchievementProvider>();
             _achievementProvider.OnInitializationComplete.AddListener(()=> OnInitializeComplete?.Invoke());
             _achievementProvider?.Initialize();
@@ -55,7 +66,9 @@ namespace Studio23.SS2.AchievementSystem.Core
         
         public  void UpdateAchievementProgress(string achievementName, float progression)
         {
-           _achievementProvider.UpdateAchievementProgress(achievementName, progression);
+            _achievementProcessQueue.Enqueue((achievementName, progression));
+            if (_isProcessing) return;
+            StartCoroutine(ProcessAchievements());
         }
         
         
@@ -70,7 +83,18 @@ namespace Studio23.SS2.AchievementSystem.Core
             UpdateAchievementProgress(achievementName, 100);
         }
 
-      
+        IEnumerator ProcessAchievements()
+        {
+            _isProcessing = true;
+            while (_achievementProcessQueue.Count > 0)
+            {
+                var (id, progression) = _achievementProcessQueue.Dequeue();
+                Debug.Log($"Processing Achievement Id {id} with progression: {progression}");
+                _achievementProvider.UpdateAchievementProgress(id, progression);
+                yield return new WaitForSeconds(_processingSpeed);
+            }
+            _isProcessing = false;
+        }
 
 
     }
