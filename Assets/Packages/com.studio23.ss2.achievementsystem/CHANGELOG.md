@@ -1,5 +1,10 @@
 # Changelog
 
+## [v1.2.2] - 2024-1-2
+
+### Update
+- Unlocking achievements now implements a process queue
+
 ## [v1.2.1] - 2023-12-20
 
 ### Added
