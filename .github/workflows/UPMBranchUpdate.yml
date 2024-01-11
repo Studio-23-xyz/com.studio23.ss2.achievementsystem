@@ -36,9 +36,22 @@ jobs:
     - name: Push Branch and Tags
       run: |
         git checkout upm
-        if [[ -d "Samples" ]]; then
-          git mv Samples Samples~
-          rm -f Samples.meta
-        fi
         git push -f -u origin upm
         git push --tags
+  
+  publish:
+    needs: update-and-tag
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: upm  
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+          registry-url: ${{ secrets.NPM_SERVER }}
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          
