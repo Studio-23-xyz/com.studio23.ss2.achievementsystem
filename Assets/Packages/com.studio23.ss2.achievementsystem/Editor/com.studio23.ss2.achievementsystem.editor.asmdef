@@ -2,7 +2,8 @@
     "name": "com.studio23.ss2.achievementsystem.editor",
     "rootNamespace": "",
     "references": [
-        "GUID:d71212f901861074293b8c1e6f53d45f"
+        "com.studio23.ss2.achievementsystem",
+        "UniTask"
     ],
     "includePlatforms": [
         "Editor"

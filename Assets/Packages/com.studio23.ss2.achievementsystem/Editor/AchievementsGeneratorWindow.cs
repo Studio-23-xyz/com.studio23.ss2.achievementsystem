@@ -19,7 +19,7 @@ namespace Studio23.SS2.AchievementSystem.Editor
         private Vector2 scrollPosition;
 
 
-        [MenuItem("Studio-23/Achievement System/Achievement Table Generator")]
+        [MenuItem("Studio-23/AchievementSystem/Generators/Achievement Table")]
         public static void OpenWindow()
         {
             AchievementsGeneratorWindow window = GetWindow<AchievementsGeneratorWindow>("Achievement Table Generator");
@@ -89,7 +89,7 @@ namespace Studio23.SS2.AchievementSystem.Editor
             scriptContent += "\t}\n";
             scriptContent += "}";
 
-            string scriptDirectory = Path.Combine("Assets", "Resources");
+            string scriptDirectory = Path.Combine("Assets", "Resources","AchievementSystem");
             string scriptPath = Path.Combine(scriptDirectory, $"{_className}.cs");
 
             if (!Directory.Exists(scriptDirectory))

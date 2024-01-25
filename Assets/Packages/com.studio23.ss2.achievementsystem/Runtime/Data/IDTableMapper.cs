@@ -7,6 +7,7 @@ namespace Studio23.SS2.AchievementSystem.Data
 {
     public class IDTableMapper : ScriptableObject
     {
+        public PlatformProvider PlatformProvider;
         public List<IDMap> IDMaps;
         public string GetMappedID(string id)
         {

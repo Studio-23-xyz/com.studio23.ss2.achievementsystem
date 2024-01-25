@@ -1,5 +1,18 @@
 # Changelog
 
+## [v2.0.0] - 2024-1-24
+
+### Update
+- AchievementSystem Provider is now retrived via a Factory Pattern.
+- All methods are now Async UniTask
+- Provider is now an Scriptable Object
+
+### Added
+- Added Installer
+- Added Editor script for easier debugging
+- Added a Dummy Provider for testing
+
+
 ## [v1.2.2] - 2024-1-2
 
 ### Update

@@ -6,120 +6,125 @@ using System.Reflection;
 using System;
 using System.IO;
 
-public class AchievementTableMapEditor : EditorWindow
+namespace Studio23.SS2.AchievementSystem.Editor
 {
-    private IDTableMapper AchievementIdTableMap;
-    private Dictionary<string, string> defaultValues=new Dictionary<string, string>();
-    private string AssetSaveFolderPath = "Assets/Resources/AchievementSystem";
-
-    string scriptPath => Path.Combine("Assets", "Resources", $"AchievementsTable.cs");
-
-
-    [MenuItem("Studio-23/Achievement System/Achievement Table Map Generator")]
-    public static void OpenWindow()
+    public class AchievementTableMapEditor : EditorWindow
     {
-        AchievementTableMapEditor window = GetWindow<AchievementTableMapEditor>("Achievement Table Map Generator");
-        window.minSize = new Vector2(300, 300);
-  
-    }
+        private IDTableMapper AchievementIdTableMap;
+        private Dictionary<string, string> defaultValues = new Dictionary<string, string>();
+        private string AssetSaveFolderPath = "Assets/Resources/AchievementSystem";
 
-    private void OnGUI()
-    {
-        GUILayout.Label("Achievement Table Map Generator", EditorStyles.boldLabel);
+        string scriptPath => Path.Combine(AssetSaveFolderPath, "AchievementsTable.cs");
 
-        if(!File.Exists(scriptPath))
+
+        [MenuItem("Studio-23/AchievementSystem/Generators/Table Mapper")]
+        public static void OpenWindow()
         {
-            EditorGUILayout.HelpBox("Create Achievement Table First", MessageType.Error);
-            return;
+            AchievementTableMapEditor window = GetWindow<AchievementTableMapEditor>("Achievement Table Map Generator");
+            window.minSize = new Vector2(300, 300);
+
         }
 
-
-        if (GUILayout.Button("Create New AchievementID Table Map"))
+        private void OnGUI()
         {
-            CreateIDTableMap();
-        }
+            GUILayout.Label("Achievement Table Map Generator", EditorStyles.boldLabel);
 
-        if (AchievementIdTableMap != null)
-        {
-            GUILayout.Label("AchievementID Mappning Table", EditorStyles.boldLabel);
-
-            foreach (var IDMap in AchievementIdTableMap.IDMaps)
+            if (!File.Exists(scriptPath))
             {
-                GUILayout.BeginHorizontal();
-                IDMap.Value = EditorGUILayout.TextField(IDMap.Key,IDMap.Value);
-                GUILayout.EndHorizontal();
+                EditorGUILayout.HelpBox("Create Achievement Table First", MessageType.Error);
+                return;
             }
-        }
 
-       
-    }
 
-    private void CreateIDTableMap()
-    {
-        AchievementIdTableMap = ScriptableObject.CreateInstance<IDTableMapper>();
-        
-        AchievementIdTableMap.IDMaps = new List<IDMap>();
-        LoadAchievementsTable();
-        ApplyDefaultValues();
-
-        if (!Directory.Exists(AssetSaveFolderPath))
-        {
-            Directory.CreateDirectory(AssetSaveFolderPath);
-        }
-
-        AssetDatabase.CreateAsset(AchievementIdTableMap, $"{AssetSaveFolderPath}/AchievementIDMap.asset");
-        AssetDatabase.SaveAssets();
-        AssetDatabase.Refresh();
-
-    }
-
-    private void ApplyDefaultValues()
-    {
-        if (AchievementIdTableMap == null)
-        {
-            Debug.LogWarning("Achievement Table Map is not created.");
-            return;
-        }
-
-        AchievementIdTableMap.IDMaps.Clear();
-
-        foreach (var kvp in defaultValues)
-        {
-            AchievementIdTableMap.IDMaps.Add(new IDMap { Key = kvp.Key, Value = kvp.Value });
-        }
-
-        EditorUtility.SetDirty(AchievementIdTableMap);
-        AssetDatabase.SaveAssets();
-        Debug.Log("Default values applied and IDTableMap saved.");
-    }
-
-    private void LoadAchievementsTable()
-    {
-        Assembly[] assemblies = AppDomain.CurrentDomain.GetAssemblies();
-
-        foreach (Assembly assembly in assemblies)
-        {
-            Type achievementsTableType = assembly.GetType("Studio23.SS2.AchievementSystem.Data.AchievementsTable");
-
-            if (achievementsTableType != null)
+            if (GUILayout.Button("Create New AchievementID Table Map"))
             {
-                FieldInfo[] fields = achievementsTableType.GetFields(BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic);
+                CreateIDTableMap();
+            }
 
-                defaultValues.Clear();
+            if (AchievementIdTableMap != null)
+            {
+                GUILayout.Label("AchievementID Mappning Table", EditorStyles.boldLabel);
 
-                foreach (FieldInfo field in fields)
+                foreach (var IDMap in AchievementIdTableMap.IDMaps)
                 {
-                    if (field.FieldType == typeof(string))
-                    {
-                        defaultValues[field.Name] = "";
-                    }
+                    GUILayout.BeginHorizontal();
+                    IDMap.Value = EditorGUILayout.TextField(IDMap.Key, IDMap.Value);
+                    GUILayout.EndHorizontal();
                 }
-
-                Debug.Log("AchievementsTable.cs properties loaded, default keys created.");
-                return; // Exit the loop if AchievementsTable is found
             }
+
+
         }
 
-        Debug.LogError("AchievementsTable.cs class not found.");
+        private void CreateIDTableMap()
+        {
+            AchievementIdTableMap = ScriptableObject.CreateInstance<IDTableMapper>();
+
+            AchievementIdTableMap.IDMaps = new List<IDMap>();
+            LoadAchievementsTable();
+            ApplyDefaultValues();
+
+            if (!Directory.Exists(AssetSaveFolderPath))
+            {
+                Directory.CreateDirectory(AssetSaveFolderPath);
+            }
+
+            AssetDatabase.CreateAsset(AchievementIdTableMap, $"{AssetSaveFolderPath}/AchievementIDMap.asset");
+            AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh();
+
+        }
+
+        private void ApplyDefaultValues()
+        {
+            if (AchievementIdTableMap == null)
+            {
+                Debug.LogWarning("Achievement Table Map is not created.");
+                return;
+            }
+
+            AchievementIdTableMap.IDMaps.Clear();
+
+            foreach (var kvp in defaultValues)
+            {
+                AchievementIdTableMap.IDMaps.Add(new IDMap { Key = kvp.Key, Value = kvp.Value });
+            }
+
+            EditorUtility.SetDirty(AchievementIdTableMap);
+            AssetDatabase.SaveAssets();
+            Debug.Log("Default values applied and IDTableMap saved.");
+        }
+
+        private void LoadAchievementsTable()
+        {
+            Assembly[] assemblies = AppDomain.CurrentDomain.GetAssemblies();
+
+            foreach (Assembly assembly in assemblies)
+            {
+                Type achievementsTableType = assembly.GetType("Studio23.SS2.AchievementSystem.Data.AchievementsTable");
+
+                if (achievementsTableType != null)
+                {
+                    FieldInfo[] fields = achievementsTableType.GetFields(BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic);
+
+                    defaultValues.Clear();
+
+                    foreach (FieldInfo field in fields)
+                    {
+                        if (field.FieldType == typeof(string))
+                        {
+                            defaultValues[field.Name] = "";
+                        }
+                    }
+
+                    Debug.Log("AchievementsTable.cs properties loaded, default keys created.");
+                    return; // Exit the loop if AchievementsTable is found
+                }
+            }
+
+            Debug.LogError("AchievementsTable.cs class not found.");
+        }
     }
 }
+
+
