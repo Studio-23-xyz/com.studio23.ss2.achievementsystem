@@ -4,30 +4,40 @@
     "title": "Class AchievementData | |",
     "keywords": "Class AchievementData Namespace Global public class AchievementData Inheritance object AchievementData Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields Id public string Id Field Value string IsSecret public bool IsSecret Field Value bool IsUnlocked public bool IsUnlocked Field Value bool LockedDescription public string LockedDescription Field Value string Name public string Name Field Value string ProgressState public string ProgressState Field Value string Progression public float Progression Field Value float UnlockedDescription public string UnlockedDescription Field Value string"
   },
-  "api/Global.AchievementTableMapEditor.html": {
-    "href": "api/Global.AchievementTableMapEditor.html",
-    "title": "Class AchievementTableMapEditor | |",
-    "keywords": "Class AchievementTableMapEditor Namespace Global public class AchievementTableMapEditor : EditorWindow Inheritance object AchievementTableMapEditor Methods OpenWindow() public static void OpenWindow()"
-  },
-  "api/Global.StatTableMapEditor.html": {
-    "href": "api/Global.StatTableMapEditor.html",
-    "title": "Class StatTableMapEditor | |",
-    "keywords": "Class StatTableMapEditor Namespace Global public class StatTableMapEditor : EditorWindow Inheritance object StatTableMapEditor Methods OpenWindow() public static void OpenWindow()"
-  },
   "api/Global.html": {
     "href": "api/Global.html",
     "title": "Namespace | |",
-    "keywords": "Namespace Classes AchievementData AchievementTableMapEditor StatTableMapEditor"
+    "keywords": "Namespace Classes AchievementData"
+  },
+  "api/Studio23.SS2.AchievementSystem.Core.AchievementProviderFactory.html": {
+    "href": "api/Studio23.SS2.AchievementSystem.Core.AchievementProviderFactory.html",
+    "title": "Class AchievementProviderFactory | |",
+    "keywords": "Class AchievementProviderFactory Namespace Studio23.SS2.AchievementSystem.Core public class AchievementProviderFactory : MonoBehaviour Inheritance object AchievementProviderFactory"
   },
   "api/Studio23.SS2.AchievementSystem.Core.AchievementSystem.html": {
     "href": "api/Studio23.SS2.AchievementSystem.Core.AchievementSystem.html",
     "title": "Class AchievementSystem | |",
-    "keywords": "Class AchievementSystem Namespace Studio23.SS2.AchievementSystem.Core public class AchievementSystem : MonoBehaviour Inheritance object AchievementSystem Fields Instance public static AchievementSystem Instance Field Value AchievementSystem OnInitializeComplete public UnityEvent OnInitializeComplete Field Value UnityEvent _achievementProvider public AchievementProvider _achievementProvider Field Value AchievementProvider Methods GetAchievement(string) public AchievementData GetAchievement(string id) Parameters id string Returns AchievementData Initialize() Initialize Provider public void Initialize() UnlockAchievement(string) Unlocks The achievement public void UnlockAchievement(string achievementName) Parameters achievementName string UpdateAchievementProgress(string, float) Unlocks The achievement progression public void UpdateAchievementProgress(string achievementName, float progression) Parameters achievementName string progression float progression is the unlock percentage of a achievement, the value will be withing 0 to 100"
+    "keywords": "Class AchievementSystem Namespace Studio23.SS2.AchievementSystem.Core public class AchievementSystem : MonoBehaviour Inheritance object AchievementSystem Fields Instance public static AchievementSystem Instance Field Value AchievementSystem OnInitializeComplete public UnityEvent OnInitializeComplete Field Value UnityEvent Methods Initialize() public UniTask Initialize() Returns UniTask UnlockAchievement(string) Unlocks The achievement to 100% public UniTask UnlockAchievement(string achievementName) Parameters achievementName string Returns UniTask UpdateAchievementProgress(string, float) Unlocks The achievement progression public UniTask UpdateAchievementProgress(string achievementName, float progression) Parameters achievementName string progression float progression is the unlock percentage of a achievement, the value will be withing 0 to 100 Returns UniTask"
   },
   "api/Studio23.SS2.AchievementSystem.Core.html": {
     "href": "api/Studio23.SS2.AchievementSystem.Core.html",
     "title": "Namespace Studio23.SS2.AchievementSystem.Core | |",
-    "keywords": "Namespace Studio23.SS2.AchievementSystem.Core Classes AchievementSystem"
+    "keywords": "Namespace Studio23.SS2.AchievementSystem.Core Classes AchievementProviderFactory AchievementSystem"
+  },
+  "api/Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.html": {
+    "href": "api/Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.html",
+    "title": "Class AbstractAchievementProvider | |",
+    "keywords": "Class AbstractAchievementProvider Namespace Studio23.SS2.AchievementSystem.Data public abstract class AbstractAchievementProvider : ScriptableObject Inheritance object AbstractAchievementProvider Derived DummyAchievementProvider Fields OnInitializationComplete public UnityEvent OnInitializationComplete Field Value UnityEvent PlatformProvider public PlatformProvider PlatformProvider Field Value PlatformProvider _achievementMapper protected IDTableMapper _achievementMapper Field Value IDTableMapper Methods GetAchievement(string) public abstract UniTask<AchievementData> GetAchievement(string id) Parameters id string Returns UniTask<AchievementData> GetAllAchievements() public abstract UniTask<AchievementData[]> GetAllAchievements() Returns UniTask<AchievementData[]> Initialize() public abstract UniTask<int> Initialize() Returns UniTask<int> OnEnable() protected virtual void OnEnable() UpdateAchievementProgress(string, float) public abstract UniTask<int> UpdateAchievementProgress(string id, float progression) Parameters id string progression float Returns UniTask<int>"
+  },
+  "api/Studio23.SS2.AchievementSystem.Data.AchievementsTable.html": {
+    "href": "api/Studio23.SS2.AchievementSystem.Data.AchievementsTable.html",
+    "title": "Class AchievementsTable | |",
+    "keywords": "Class AchievementsTable Namespace Studio23.SS2.AchievementSystem.Data public static class AchievementsTable Inheritance object AchievementsTable Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields ACHIEVEMENT_NAME public static readonly string ACHIEVEMENT_NAME Field Value string ACHIEVEMENT_NAME_2 public static readonly string ACHIEVEMENT_NAME_2 Field Value string ACHIEVEMENT_NAME_3 public static readonly string ACHIEVEMENT_NAME_3 Field Value string"
+  },
+  "api/Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.html": {
+    "href": "api/Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.html",
+    "title": "Class DummyAchievementProvider | |",
+    "keywords": "Class DummyAchievementProvider Namespace Studio23.SS2.AchievementSystem.Data public class DummyAchievementProvider : AbstractAchievementProvider Inheritance object AbstractAchievementProvider DummyAchievementProvider Inherited Members AbstractAchievementProvider.PlatformProvider AbstractAchievementProvider._achievementMapper AbstractAchievementProvider.OnInitializationComplete AbstractAchievementProvider.OnEnable() Fields errorCode public int errorCode Field Value int failInit public bool failInit Field Value bool Methods GetAchievement(string) public override UniTask<AchievementData> GetAchievement(string id) Parameters id string Returns UniTask<AchievementData> GetAllAchievements() public override UniTask<AchievementData[]> GetAllAchievements() Returns UniTask<AchievementData[]> Initialize() public override UniTask<int> Initialize() Returns UniTask<int> UpdateAchievementProgress(string, float) public override UniTask<int> UpdateAchievementProgress(string id, float progression) Parameters id string progression float Returns UniTask<int>"
   },
   "api/Studio23.SS2.AchievementSystem.Data.IDMap.html": {
     "href": "api/Studio23.SS2.AchievementSystem.Data.IDMap.html",
@@ -37,37 +47,47 @@
   "api/Studio23.SS2.AchievementSystem.Data.IDTableMapper.html": {
     "href": "api/Studio23.SS2.AchievementSystem.Data.IDTableMapper.html",
     "title": "Class IDTableMapper | |",
-    "keywords": "Class IDTableMapper Namespace Studio23.SS2.AchievementSystem.Data public class IDTableMapper : ScriptableObject Inheritance object IDTableMapper Fields IDMaps public List<IDMap> IDMaps Field Value List<IDMap> Methods GetMappedID(string) public string GetMappedID(string id) Parameters id string Returns string"
+    "keywords": "Class IDTableMapper Namespace Studio23.SS2.AchievementSystem.Data public class IDTableMapper : ScriptableObject Inheritance object IDTableMapper Fields IDMaps public List<IDMap> IDMaps Field Value List<IDMap> PlatformProvider public PlatformProvider PlatformProvider Field Value PlatformProvider Methods GetMappedID(string) public string GetMappedID(string id) Parameters id string Returns string"
+  },
+  "api/Studio23.SS2.AchievementSystem.Data.PlatformProvider.html": {
+    "href": "api/Studio23.SS2.AchievementSystem.Data.PlatformProvider.html",
+    "title": "Enum PlatformProvider | |",
+    "keywords": "Enum PlatformProvider Namespace Studio23.SS2.AchievementSystem.Data public enum PlatformProvider Fields Default = 0 Nintendo = 5 PlayStation = 4 Steam = 1 XBoxCore = 2 XBoxPC = 3"
   },
   "api/Studio23.SS2.AchievementSystem.Data.html": {
     "href": "api/Studio23.SS2.AchievementSystem.Data.html",
     "title": "Namespace Studio23.SS2.AchievementSystem.Data | |",
-    "keywords": "Namespace Studio23.SS2.AchievementSystem.Data Classes IDMap IDTableMapper"
+    "keywords": "Namespace Studio23.SS2.AchievementSystem.Data Classes AbstractAchievementProvider AchievementsTable DummyAchievementProvider IDMap IDTableMapper Enums PlatformProvider"
+  },
+  "api/Studio23.SS2.AchievementSystem.Editor.AchievementSystemEditor.html": {
+    "href": "api/Studio23.SS2.AchievementSystem.Editor.AchievementSystemEditor.html",
+    "title": "Class AchievementSystemEditor | |",
+    "keywords": "Class AchievementSystemEditor Namespace Studio23.SS2.AchievementSystem.Editor public class AchievementSystemEditor : UnityEditor.Editor Inheritance object AchievementSystemEditor Methods OnInspectorGUI() public override void OnInspectorGUI()"
+  },
+  "api/Studio23.SS2.AchievementSystem.Editor.AchievementTableMapEditor.html": {
+    "href": "api/Studio23.SS2.AchievementSystem.Editor.AchievementTableMapEditor.html",
+    "title": "Class AchievementTableMapEditor | |",
+    "keywords": "Class AchievementTableMapEditor Namespace Studio23.SS2.AchievementSystem.Editor public class AchievementTableMapEditor : EditorWindow Inheritance object AchievementTableMapEditor Methods OpenWindow() public static void OpenWindow()"
   },
   "api/Studio23.SS2.AchievementSystem.Editor.AchievementsGeneratorWindow.html": {
     "href": "api/Studio23.SS2.AchievementSystem.Editor.AchievementsGeneratorWindow.html",
     "title": "Class AchievementsGeneratorWindow | |",
     "keywords": "Class AchievementsGeneratorWindow Namespace Studio23.SS2.AchievementSystem.Editor public class AchievementsGeneratorWindow : EditorWindow Inheritance object AchievementsGeneratorWindow Methods OpenWindow() public static void OpenWindow()"
   },
-  "api/Studio23.SS2.AchievementSystem.Editor.StatsGeneratorWindow.html": {
-    "href": "api/Studio23.SS2.AchievementSystem.Editor.StatsGeneratorWindow.html",
-    "title": "Class StatsGeneratorWindow | |",
-    "keywords": "Class StatsGeneratorWindow Namespace Studio23.SS2.AchievementSystem.Editor public class StatsGeneratorWindow : EditorWindow Inheritance object StatsGeneratorWindow Methods OpenWindow() public static void OpenWindow()"
+  "api/Studio23.SS2.AchievementSystem.Editor.DummyProviderEditor.html": {
+    "href": "api/Studio23.SS2.AchievementSystem.Editor.DummyProviderEditor.html",
+    "title": "Class DummyProviderEditor | |",
+    "keywords": "Class DummyProviderEditor Namespace Studio23.SS2.AchievementSystem.Editor public class DummyProviderEditor : EditorWindow Inheritance object DummyProviderEditor Methods CreateDefaultProvider() public static void CreateDefaultProvider()"
+  },
+  "api/Studio23.SS2.AchievementSystem.Editor.Installer.html": {
+    "href": "api/Studio23.SS2.AchievementSystem.Editor.Installer.html",
+    "title": "Class Installer | |",
+    "keywords": "Class Installer Namespace Studio23.SS2.AchievementSystem.Editor public class Installer : UnityEditor.Editor Inheritance object Installer Methods Install() public static void Install()"
   },
   "api/Studio23.SS2.AchievementSystem.Editor.html": {
     "href": "api/Studio23.SS2.AchievementSystem.Editor.html",
     "title": "Namespace Studio23.SS2.AchievementSystem.Editor | |",
-    "keywords": "Namespace Studio23.SS2.AchievementSystem.Editor Classes AchievementsGeneratorWindow StatsGeneratorWindow"
-  },
-  "api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html": {
-    "href": "api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html",
-    "title": "Class AchievementProvider | |",
-    "keywords": "Class AchievementProvider Namespace Studio23.SS2.AchievementSystem.Providers public abstract class AchievementProvider : MonoBehaviour Inheritance object AchievementProvider Fields OnInitializationComplete public UnityEvent OnInitializationComplete Field Value UnityEvent _achievementMapper protected IDTableMapper _achievementMapper Field Value IDTableMapper _statsMapper protected IDTableMapper _statsMapper Field Value IDTableMapper achievementDatas public AchievementData[] achievementDatas Field Value AchievementData[] Methods GetAchievement(string) public abstract AchievementData GetAchievement(string id) Parameters id string Returns AchievementData Initialize() public abstract void Initialize() UpdateAchievementProgress(string, float) public abstract void UpdateAchievementProgress(string id, float progression) Parameters id string progression float"
-  },
-  "api/Studio23.SS2.AchievementSystem.Providers.html": {
-    "href": "api/Studio23.SS2.AchievementSystem.Providers.html",
-    "title": "Namespace Studio23.SS2.AchievementSystem.Providers | |",
-    "keywords": "Namespace Studio23.SS2.AchievementSystem.Providers Classes AchievementProvider"
+    "keywords": "Namespace Studio23.SS2.AchievementSystem.Editor Classes AchievementSystemEditor AchievementTableMapEditor AchievementsGeneratorWindow DummyProviderEditor Installer"
   },
   "api/index.html": {
     "href": "api/index.html",
@@ -77,7 +97,7 @@
   "changelog/CHANGELOG.html": {
     "href": "changelog/CHANGELOG.html",
     "title": "Changelog | |",
-    "keywords": "Changelog [v1.2.2] - 2024-1-2 Update Unlocking achievements now implements a process queue [v1.2.1] - 2023-12-20 Added Initialization Event is now based on unity event. [v1.1.9] - 2023-12-18 Added Added Initialiation Event Now Achievement system initialization is being check by a bool [v1.1.8] - 2023-12-15 Added Added Explicit is unlocked property [v1.1.7] - 2023-12-14 Added AchievementData Class added Now you can get AchievementData from the system [v1.1.5] - 2023-12-12 Added UpdateAchievementProgress method added [v1.1.4] - 2023-12-11 Added Get Achievement Method Fixed An editor script bug that didn't show stats features [v1.1.1] - 2023-12-08 Added Stats Table Generator and Mapper Added New API to call Stats From Achievement System [v0.1.0] - 2023-10-31 Updated Updated Provider Classs : Made IDMapper Protected [v0.0.9] - 2023-10-30 Added Added an Achievement Wizard for easy creation of achievements, including name, description, icons, type, and progress goal. Implemented an Achievement Manager for efficient management of achievements. Provided extensions for Xbox and Steam platforms. Added a new script for GUI elements and styles in the Achievement Wizard. Added ID Mapping Table Generator Updated Updated README with instructions on how to use the Achievement System package. Added a new MIT License, granting permissions for use, modification, and distribution of the software. Removed Removed all data classes as it's unnecessary for the System Removed Editor script for creating the assets"
+    "keywords": "Changelog [v2.0.0] - 2024-1-24 Update AchievementSystem Provider is now retrived via a Factory Pattern. All methods are now Async UniTask Provider is now an Scriptable Object Added Added Installer Added Editor script for easier debugging Added a Dummy Provider for testing [v1.2.2] - 2024-1-2 Update Unlocking achievements now implements a process queue [v1.2.1] - 2023-12-20 Added Initialization Event is now based on unity event. [v1.1.9] - 2023-12-18 Added Added Initialiation Event Now Achievement system initialization is being check by a bool [v1.1.8] - 2023-12-15 Added Added Explicit is unlocked property [v1.1.7] - 2023-12-14 Added AchievementData Class added Now you can get AchievementData from the system [v1.1.5] - 2023-12-12 Added UpdateAchievementProgress method added [v1.1.4] - 2023-12-11 Added Get Achievement Method Fixed An editor script bug that didn't show stats features [v1.1.1] - 2023-12-08 Added Stats Table Generator and Mapper Added New API to call Stats From Achievement System [v0.1.0] - 2023-10-31 Updated Updated Provider Classs : Made IDMapper Protected [v0.0.9] - 2023-10-30 Added Added an Achievement Wizard for easy creation of achievements, including name, description, icons, type, and progress goal. Implemented an Achievement Manager for efficient management of achievements. Provided extensions for Xbox and Steam platforms. Added a new script for GUI elements and styles in the Achievement Wizard. Added ID Mapping Table Generator Updated Updated README with instructions on how to use the Achievement System package. Added a new MIT License, granting permissions for use, modification, and distribution of the software. Removed Removed all data classes as it's unnecessary for the System Removed Editor script for creating the assets"
   },
   "index.html": {
     "href": "index.html",
@@ -92,6 +112,6 @@
   "manual/index.html": {
     "href": "manual/index.html",
     "title": "Achievement System | |",
-    "keywords": "Achievement System Introducing an Achievement System package for Unity, enabling the creation and management of achievements without coding. Table of Contents Installation Usage Getting Started Using the Achievement System Extensions Installation Install via Git URL You can also use the \"Install from Git URL\" option from Unity Package Manager to install the package. https://github.com/Studio-23-xyz/com.studio23.ss2.achievementsystem.git#upm Usage Getting Started To start using the Achievement System. You need to take a few setup stepts Click on the 'Studio-23' available on the top navigation bar and navigate to \"Achievement System > ID Table Generator\" A new window will appear in-front of you. Fill it up with the names of your Achievements. It will generate an achievements.cs class with static string properties that you can use when calling the UnlockAchievement() method Once you're done,Again on the top navigation bar and navigate to \"Achievement System > ID Table Map Generator\". Now you need to create a map for your Preferred Provider (Steam, Xbox, etc.) This IDMap needs to be assigned on your provider Script. Install your Preferred provider extention package. Using the Achievement System Create an empty gameobject. Attach The Achievement System Script to it. Create your own provider or install one and add it to the same gameobject. Simply call this following method to unlock an Achievement AchievementSystem.instance.UnlockAchievement(AchievementData achievementData) Extensions There are two extensions available for In-Game Achievement System that adds support for Xbox and Steam platforms separately. Please ensure that this base package is installed if you want to use either of them. And that only one of the extension packages can be used at a time."
+    "keywords": "Achievement System Introducing an Achievement System package for Unity, enabling the creation and management of achievements without coding. Table of Contents Installation Usage Getting Started Using the Achievement System Extensions Installation Install via Git URL You can also use the \"Install from Git URL\" option from Unity Package Manager to install the package. https://github.com/Studio-23-xyz/com.studio23.ss2.achievementsystem.git#upm Usage Getting Started To start using the Achievement System. You need to take a few setup stepts Click on the 'Studio-23' available on the top navigation bar and navigate to \"Achievement System> Generators > ID Table Generator\" A new window will appear in-front of you. Fill it up with the names of your Achievements. It will generate an achievements.cs class with static string properties that you can use when calling the UnlockAchievement() method Once you're done,Again on the top navigation bar and navigate to \"Achievement System > Generators >ID Table Map Generator\". Now you need to create a map for your Preferred Provider (Steam, Xbox, etc.) Install Achievement-System Using the Achievement System Create an empty gameobject. Attach The Achievement System Script to it. Simply call this following method to unlock an Achievement AchievementSystem.instance.UnlockAchievement(string id); Extensions There are two extensions available for In-Game Achievement System that adds support for Xbox and Steam platforms separately. Please ensure that this base package is installed if you want to use either of them. And that only one of the extension packages can be used at a time."
   }
 }

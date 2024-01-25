@@ -25,30 +25,20 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Global.AchievementTableMapEditor.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Global.AchievementTableMapEditor.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Global.StatTableMapEditor.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Global.StatTableMapEditor.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Global.yml",
       "output": {
         ".html": {
           "relative_path": "api/Global.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.AchievementSystem.Core.AchievementProviderFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.AchievementSystem.Core.AchievementProviderFactory.html"
         }
       },
       "version": ""
@@ -75,6 +65,36 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.AchievementSystem.Data.AchievementsTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.AchievementSystem.Data.AchievementsTable.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Studio23.SS2.AchievementSystem.Data.IDMap.yml",
       "output": {
         ".html": {
@@ -95,10 +115,40 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.AchievementSystem.Data.PlatformProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.AchievementSystem.Data.PlatformProvider.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Studio23.SS2.AchievementSystem.Data.yml",
       "output": {
         ".html": {
           "relative_path": "api/Studio23.SS2.AchievementSystem.Data.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.AchievementSystem.Editor.AchievementSystemEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.AchievementSystem.Editor.AchievementSystemEditor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.AchievementSystem.Editor.AchievementTableMapEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.AchievementSystem.Editor.AchievementTableMapEditor.html"
         }
       },
       "version": ""
@@ -115,10 +165,20 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Studio23.SS2.AchievementSystem.Editor.StatsGeneratorWindow.yml",
+      "source_relative_path": "api/Studio23.SS2.AchievementSystem.Editor.DummyProviderEditor.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Studio23.SS2.AchievementSystem.Editor.StatsGeneratorWindow.html"
+          "relative_path": "api/Studio23.SS2.AchievementSystem.Editor.DummyProviderEditor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.AchievementSystem.Editor.Installer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.AchievementSystem.Editor.Installer.html"
         }
       },
       "version": ""
@@ -129,26 +189,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Studio23.SS2.AchievementSystem.Editor.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Studio23.SS2.AchievementSystem.Providers.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Studio23.SS2.AchievementSystem.Providers.html"
         }
       },
       "version": ""
@@ -167,11 +207,11 @@
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "api/toc.json"
-        },
         ".html": {
           "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
         }
       },
       "version": ""
@@ -190,11 +230,11 @@
       "type": "Toc",
       "source_relative_path": "changelog/toc.md",
       "output": {
-        ".json": {
-          "relative_path": "changelog/toc.json"
-        },
         ".html": {
           "relative_path": "changelog/toc.html"
+        },
+        ".json": {
+          "relative_path": "changelog/toc.json"
         }
       },
       "version": ""
@@ -223,11 +263,11 @@
       "type": "Toc",
       "source_relative_path": "license/toc.md",
       "output": {
-        ".json": {
-          "relative_path": "license/toc.json"
-        },
         ".html": {
           "relative_path": "license/toc.html"
+        },
+        ".json": {
+          "relative_path": "license/toc.json"
         }
       },
       "version": ""
@@ -246,11 +286,11 @@
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "toc.json"
-        },
         ".html": {
           "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
         }
       },
       "version": ""

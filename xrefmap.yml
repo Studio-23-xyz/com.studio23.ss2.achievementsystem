@@ -58,72 +58,24 @@ references:
   commentId: F:Global.AchievementData.UnlockedDescription
   fullName: AchievementData.UnlockedDescription
   nameWithType: AchievementData.UnlockedDescription
-- uid: Global.AchievementTableMapEditor
-  name: AchievementTableMapEditor
-  href: api/Global.AchievementTableMapEditor.html
-  commentId: T:Global.AchievementTableMapEditor
-  fullName: AchievementTableMapEditor
-  nameWithType: AchievementTableMapEditor
-- uid: Global.AchievementTableMapEditor.OpenWindow
-  name: OpenWindow()
-  href: api/Global.AchievementTableMapEditor.html#Global_AchievementTableMapEditor_OpenWindow
-  commentId: M:Global.AchievementTableMapEditor.OpenWindow
-  fullName: AchievementTableMapEditor.OpenWindow()
-  nameWithType: AchievementTableMapEditor.OpenWindow()
-- uid: Global.AchievementTableMapEditor.OpenWindow*
-  name: OpenWindow
-  href: api/Global.AchievementTableMapEditor.html#Global_AchievementTableMapEditor_OpenWindow_
-  commentId: Overload:Global.AchievementTableMapEditor.OpenWindow
-  isSpec: "True"
-  fullName: AchievementTableMapEditor.OpenWindow
-  nameWithType: AchievementTableMapEditor.OpenWindow
-- uid: Global.StatTableMapEditor
-  name: StatTableMapEditor
-  href: api/Global.StatTableMapEditor.html
-  commentId: T:Global.StatTableMapEditor
-  fullName: StatTableMapEditor
-  nameWithType: StatTableMapEditor
-- uid: Global.StatTableMapEditor.OpenWindow
-  name: OpenWindow()
-  href: api/Global.StatTableMapEditor.html#Global_StatTableMapEditor_OpenWindow
-  commentId: M:Global.StatTableMapEditor.OpenWindow
-  fullName: StatTableMapEditor.OpenWindow()
-  nameWithType: StatTableMapEditor.OpenWindow()
-- uid: Global.StatTableMapEditor.OpenWindow*
-  name: OpenWindow
-  href: api/Global.StatTableMapEditor.html#Global_StatTableMapEditor_OpenWindow_
-  commentId: Overload:Global.StatTableMapEditor.OpenWindow
-  isSpec: "True"
-  fullName: StatTableMapEditor.OpenWindow
-  nameWithType: StatTableMapEditor.OpenWindow
 - uid: Studio23.SS2.AchievementSystem.Core
   name: Studio23.SS2.AchievementSystem.Core
   href: api/Studio23.SS2.AchievementSystem.Core.html
   commentId: N:Studio23.SS2.AchievementSystem.Core
   fullName: Studio23.SS2.AchievementSystem.Core
   nameWithType: Studio23.SS2.AchievementSystem.Core
+- uid: Studio23.SS2.AchievementSystem.Core.AchievementProviderFactory
+  name: AchievementProviderFactory
+  href: api/Studio23.SS2.AchievementSystem.Core.AchievementProviderFactory.html
+  commentId: T:Studio23.SS2.AchievementSystem.Core.AchievementProviderFactory
+  fullName: Studio23.SS2.AchievementSystem.Core.AchievementProviderFactory
+  nameWithType: AchievementProviderFactory
 - uid: Studio23.SS2.AchievementSystem.Core.AchievementSystem
   name: AchievementSystem
   href: api/Studio23.SS2.AchievementSystem.Core.AchievementSystem.html
   commentId: T:Studio23.SS2.AchievementSystem.Core.AchievementSystem
   fullName: Studio23.SS2.AchievementSystem.Core.AchievementSystem
   nameWithType: AchievementSystem
-- uid: Studio23.SS2.AchievementSystem.Core.AchievementSystem.GetAchievement(System.String)
-  name: GetAchievement(string)
-  href: api/Studio23.SS2.AchievementSystem.Core.AchievementSystem.html#Studio23_SS2_AchievementSystem_Core_AchievementSystem_GetAchievement_System_String_
-  commentId: M:Studio23.SS2.AchievementSystem.Core.AchievementSystem.GetAchievement(System.String)
-  name.vb: GetAchievement(String)
-  fullName: Studio23.SS2.AchievementSystem.Core.AchievementSystem.GetAchievement(string)
-  fullName.vb: Studio23.SS2.AchievementSystem.Core.AchievementSystem.GetAchievement(String)
-  nameWithType: AchievementSystem.GetAchievement(string)
-  nameWithType.vb: AchievementSystem.GetAchievement(String)
-- uid: Studio23.SS2.AchievementSystem.Core.AchievementSystem.GetAchievement*
-  name: GetAchievement
-  href: api/Studio23.SS2.AchievementSystem.Core.AchievementSystem.html#Studio23_SS2_AchievementSystem_Core_AchievementSystem_GetAchievement_
-  commentId: Overload:Studio23.SS2.AchievementSystem.Core.AchievementSystem.GetAchievement
-  isSpec: "True"
-  fullName: Studio23.SS2.AchievementSystem.Core.AchievementSystem.GetAchievement
-  nameWithType: AchievementSystem.GetAchievement
 - uid: Studio23.SS2.AchievementSystem.Core.AchievementSystem.Initialize
   name: Initialize()
   href: api/Studio23.SS2.AchievementSystem.Core.AchievementSystem.html#Studio23_SS2_AchievementSystem_Core_AchievementSystem_Initialize
@@ -181,18 +133,207 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.AchievementSystem.Core.AchievementSystem.UpdateAchievementProgress
   nameWithType: AchievementSystem.UpdateAchievementProgress
-- uid: Studio23.SS2.AchievementSystem.Core.AchievementSystem._achievementProvider
-  name: _achievementProvider
-  href: api/Studio23.SS2.AchievementSystem.Core.AchievementSystem.html#Studio23_SS2_AchievementSystem_Core_AchievementSystem__achievementProvider
-  commentId: F:Studio23.SS2.AchievementSystem.Core.AchievementSystem._achievementProvider
-  fullName: Studio23.SS2.AchievementSystem.Core.AchievementSystem._achievementProvider
-  nameWithType: AchievementSystem._achievementProvider
 - uid: Studio23.SS2.AchievementSystem.Data
   name: Studio23.SS2.AchievementSystem.Data
   href: api/Studio23.SS2.AchievementSystem.Data.html
   commentId: N:Studio23.SS2.AchievementSystem.Data
   fullName: Studio23.SS2.AchievementSystem.Data
   nameWithType: Studio23.SS2.AchievementSystem.Data
+- uid: Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider
+  name: AbstractAchievementProvider
+  href: api/Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.html
+  commentId: T:Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider
+  fullName: Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider
+  nameWithType: AbstractAchievementProvider
+- uid: Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.GetAchievement(System.String)
+  name: GetAchievement(string)
+  href: api/Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.html#Studio23_SS2_AchievementSystem_Data_AbstractAchievementProvider_GetAchievement_System_String_
+  commentId: M:Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.GetAchievement(System.String)
+  name.vb: GetAchievement(String)
+  fullName: Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.GetAchievement(string)
+  fullName.vb: Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.GetAchievement(String)
+  nameWithType: AbstractAchievementProvider.GetAchievement(string)
+  nameWithType.vb: AbstractAchievementProvider.GetAchievement(String)
+- uid: Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.GetAchievement*
+  name: GetAchievement
+  href: api/Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.html#Studio23_SS2_AchievementSystem_Data_AbstractAchievementProvider_GetAchievement_
+  commentId: Overload:Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.GetAchievement
+  isSpec: "True"
+  fullName: Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.GetAchievement
+  nameWithType: AbstractAchievementProvider.GetAchievement
+- uid: Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.GetAllAchievements
+  name: GetAllAchievements()
+  href: api/Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.html#Studio23_SS2_AchievementSystem_Data_AbstractAchievementProvider_GetAllAchievements
+  commentId: M:Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.GetAllAchievements
+  fullName: Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.GetAllAchievements()
+  nameWithType: AbstractAchievementProvider.GetAllAchievements()
+- uid: Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.GetAllAchievements*
+  name: GetAllAchievements
+  href: api/Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.html#Studio23_SS2_AchievementSystem_Data_AbstractAchievementProvider_GetAllAchievements_
+  commentId: Overload:Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.GetAllAchievements
+  isSpec: "True"
+  fullName: Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.GetAllAchievements
+  nameWithType: AbstractAchievementProvider.GetAllAchievements
+- uid: Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.Initialize
+  name: Initialize()
+  href: api/Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.html#Studio23_SS2_AchievementSystem_Data_AbstractAchievementProvider_Initialize
+  commentId: M:Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.Initialize
+  fullName: Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.Initialize()
+  nameWithType: AbstractAchievementProvider.Initialize()
+- uid: Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.Initialize*
+  name: Initialize
+  href: api/Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.html#Studio23_SS2_AchievementSystem_Data_AbstractAchievementProvider_Initialize_
+  commentId: Overload:Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.Initialize
+  isSpec: "True"
+  fullName: Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.Initialize
+  nameWithType: AbstractAchievementProvider.Initialize
+- uid: Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.OnEnable
+  name: OnEnable()
+  href: api/Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.html#Studio23_SS2_AchievementSystem_Data_AbstractAchievementProvider_OnEnable
+  commentId: M:Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.OnEnable
+  fullName: Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.OnEnable()
+  nameWithType: AbstractAchievementProvider.OnEnable()
+- uid: Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.OnEnable*
+  name: OnEnable
+  href: api/Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.html#Studio23_SS2_AchievementSystem_Data_AbstractAchievementProvider_OnEnable_
+  commentId: Overload:Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.OnEnable
+  isSpec: "True"
+  fullName: Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.OnEnable
+  nameWithType: AbstractAchievementProvider.OnEnable
+- uid: Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.OnInitializationComplete
+  name: OnInitializationComplete
+  href: api/Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.html#Studio23_SS2_AchievementSystem_Data_AbstractAchievementProvider_OnInitializationComplete
+  commentId: F:Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.OnInitializationComplete
+  fullName: Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.OnInitializationComplete
+  nameWithType: AbstractAchievementProvider.OnInitializationComplete
+- uid: Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.PlatformProvider
+  name: PlatformProvider
+  href: api/Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.html#Studio23_SS2_AchievementSystem_Data_AbstractAchievementProvider_PlatformProvider
+  commentId: F:Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.PlatformProvider
+  fullName: Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.PlatformProvider
+  nameWithType: AbstractAchievementProvider.PlatformProvider
+- uid: Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.UpdateAchievementProgress(System.String,System.Single)
+  name: UpdateAchievementProgress(string, float)
+  href: api/Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.html#Studio23_SS2_AchievementSystem_Data_AbstractAchievementProvider_UpdateAchievementProgress_System_String_System_Single_
+  commentId: M:Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.UpdateAchievementProgress(System.String,System.Single)
+  name.vb: UpdateAchievementProgress(String, Single)
+  fullName: Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.UpdateAchievementProgress(string, float)
+  fullName.vb: Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.UpdateAchievementProgress(String, Single)
+  nameWithType: AbstractAchievementProvider.UpdateAchievementProgress(string, float)
+  nameWithType.vb: AbstractAchievementProvider.UpdateAchievementProgress(String, Single)
+- uid: Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.UpdateAchievementProgress*
+  name: UpdateAchievementProgress
+  href: api/Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.html#Studio23_SS2_AchievementSystem_Data_AbstractAchievementProvider_UpdateAchievementProgress_
+  commentId: Overload:Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.UpdateAchievementProgress
+  isSpec: "True"
+  fullName: Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.UpdateAchievementProgress
+  nameWithType: AbstractAchievementProvider.UpdateAchievementProgress
+- uid: Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider._achievementMapper
+  name: _achievementMapper
+  href: api/Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider.html#Studio23_SS2_AchievementSystem_Data_AbstractAchievementProvider__achievementMapper
+  commentId: F:Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider._achievementMapper
+  fullName: Studio23.SS2.AchievementSystem.Data.AbstractAchievementProvider._achievementMapper
+  nameWithType: AbstractAchievementProvider._achievementMapper
+- uid: Studio23.SS2.AchievementSystem.Data.AchievementsTable
+  name: AchievementsTable
+  href: api/Studio23.SS2.AchievementSystem.Data.AchievementsTable.html
+  commentId: T:Studio23.SS2.AchievementSystem.Data.AchievementsTable
+  fullName: Studio23.SS2.AchievementSystem.Data.AchievementsTable
+  nameWithType: AchievementsTable
+- uid: Studio23.SS2.AchievementSystem.Data.AchievementsTable.ACHIEVEMENT_NAME
+  name: ACHIEVEMENT_NAME
+  href: api/Studio23.SS2.AchievementSystem.Data.AchievementsTable.html#Studio23_SS2_AchievementSystem_Data_AchievementsTable_ACHIEVEMENT_NAME
+  commentId: F:Studio23.SS2.AchievementSystem.Data.AchievementsTable.ACHIEVEMENT_NAME
+  fullName: Studio23.SS2.AchievementSystem.Data.AchievementsTable.ACHIEVEMENT_NAME
+  nameWithType: AchievementsTable.ACHIEVEMENT_NAME
+- uid: Studio23.SS2.AchievementSystem.Data.AchievementsTable.ACHIEVEMENT_NAME_2
+  name: ACHIEVEMENT_NAME_2
+  href: api/Studio23.SS2.AchievementSystem.Data.AchievementsTable.html#Studio23_SS2_AchievementSystem_Data_AchievementsTable_ACHIEVEMENT_NAME_2
+  commentId: F:Studio23.SS2.AchievementSystem.Data.AchievementsTable.ACHIEVEMENT_NAME_2
+  fullName: Studio23.SS2.AchievementSystem.Data.AchievementsTable.ACHIEVEMENT_NAME_2
+  nameWithType: AchievementsTable.ACHIEVEMENT_NAME_2
+- uid: Studio23.SS2.AchievementSystem.Data.AchievementsTable.ACHIEVEMENT_NAME_3
+  name: ACHIEVEMENT_NAME_3
+  href: api/Studio23.SS2.AchievementSystem.Data.AchievementsTable.html#Studio23_SS2_AchievementSystem_Data_AchievementsTable_ACHIEVEMENT_NAME_3
+  commentId: F:Studio23.SS2.AchievementSystem.Data.AchievementsTable.ACHIEVEMENT_NAME_3
+  fullName: Studio23.SS2.AchievementSystem.Data.AchievementsTable.ACHIEVEMENT_NAME_3
+  nameWithType: AchievementsTable.ACHIEVEMENT_NAME_3
+- uid: Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider
+  name: DummyAchievementProvider
+  href: api/Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.html
+  commentId: T:Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider
+  fullName: Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider
+  nameWithType: DummyAchievementProvider
+- uid: Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.GetAchievement(System.String)
+  name: GetAchievement(string)
+  href: api/Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.html#Studio23_SS2_AchievementSystem_Data_DummyAchievementProvider_GetAchievement_System_String_
+  commentId: M:Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.GetAchievement(System.String)
+  name.vb: GetAchievement(String)
+  fullName: Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.GetAchievement(string)
+  fullName.vb: Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.GetAchievement(String)
+  nameWithType: DummyAchievementProvider.GetAchievement(string)
+  nameWithType.vb: DummyAchievementProvider.GetAchievement(String)
+- uid: Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.GetAchievement*
+  name: GetAchievement
+  href: api/Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.html#Studio23_SS2_AchievementSystem_Data_DummyAchievementProvider_GetAchievement_
+  commentId: Overload:Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.GetAchievement
+  isSpec: "True"
+  fullName: Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.GetAchievement
+  nameWithType: DummyAchievementProvider.GetAchievement
+- uid: Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.GetAllAchievements
+  name: GetAllAchievements()
+  href: api/Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.html#Studio23_SS2_AchievementSystem_Data_DummyAchievementProvider_GetAllAchievements
+  commentId: M:Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.GetAllAchievements
+  fullName: Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.GetAllAchievements()
+  nameWithType: DummyAchievementProvider.GetAllAchievements()
+- uid: Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.GetAllAchievements*
+  name: GetAllAchievements
+  href: api/Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.html#Studio23_SS2_AchievementSystem_Data_DummyAchievementProvider_GetAllAchievements_
+  commentId: Overload:Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.GetAllAchievements
+  isSpec: "True"
+  fullName: Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.GetAllAchievements
+  nameWithType: DummyAchievementProvider.GetAllAchievements
+- uid: Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.Initialize
+  name: Initialize()
+  href: api/Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.html#Studio23_SS2_AchievementSystem_Data_DummyAchievementProvider_Initialize
+  commentId: M:Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.Initialize
+  fullName: Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.Initialize()
+  nameWithType: DummyAchievementProvider.Initialize()
+- uid: Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.Initialize*
+  name: Initialize
+  href: api/Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.html#Studio23_SS2_AchievementSystem_Data_DummyAchievementProvider_Initialize_
+  commentId: Overload:Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.Initialize
+  isSpec: "True"
+  fullName: Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.Initialize
+  nameWithType: DummyAchievementProvider.Initialize
+- uid: Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.UpdateAchievementProgress(System.String,System.Single)
+  name: UpdateAchievementProgress(string, float)
+  href: api/Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.html#Studio23_SS2_AchievementSystem_Data_DummyAchievementProvider_UpdateAchievementProgress_System_String_System_Single_
+  commentId: M:Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.UpdateAchievementProgress(System.String,System.Single)
+  name.vb: UpdateAchievementProgress(String, Single)
+  fullName: Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.UpdateAchievementProgress(string, float)
+  fullName.vb: Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.UpdateAchievementProgress(String, Single)
+  nameWithType: DummyAchievementProvider.UpdateAchievementProgress(string, float)
+  nameWithType.vb: DummyAchievementProvider.UpdateAchievementProgress(String, Single)
+- uid: Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.UpdateAchievementProgress*
+  name: UpdateAchievementProgress
+  href: api/Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.html#Studio23_SS2_AchievementSystem_Data_DummyAchievementProvider_UpdateAchievementProgress_
+  commentId: Overload:Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.UpdateAchievementProgress
+  isSpec: "True"
+  fullName: Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.UpdateAchievementProgress
+  nameWithType: DummyAchievementProvider.UpdateAchievementProgress
+- uid: Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.errorCode
+  name: errorCode
+  href: api/Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.html#Studio23_SS2_AchievementSystem_Data_DummyAchievementProvider_errorCode
+  commentId: F:Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.errorCode
+  fullName: Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.errorCode
+  nameWithType: DummyAchievementProvider.errorCode
+- uid: Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.failInit
+  name: failInit
+  href: api/Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.html#Studio23_SS2_AchievementSystem_Data_DummyAchievementProvider_failInit
+  commentId: F:Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.failInit
+  fullName: Studio23.SS2.AchievementSystem.Data.DummyAchievementProvider.failInit
+  nameWithType: DummyAchievementProvider.failInit
 - uid: Studio23.SS2.AchievementSystem.Data.IDMap
   name: IDMap
   href: api/Studio23.SS2.AchievementSystem.Data.IDMap.html
@@ -239,12 +380,98 @@ references:
   commentId: F:Studio23.SS2.AchievementSystem.Data.IDTableMapper.IDMaps
   fullName: Studio23.SS2.AchievementSystem.Data.IDTableMapper.IDMaps
   nameWithType: IDTableMapper.IDMaps
+- uid: Studio23.SS2.AchievementSystem.Data.IDTableMapper.PlatformProvider
+  name: PlatformProvider
+  href: api/Studio23.SS2.AchievementSystem.Data.IDTableMapper.html#Studio23_SS2_AchievementSystem_Data_IDTableMapper_PlatformProvider
+  commentId: F:Studio23.SS2.AchievementSystem.Data.IDTableMapper.PlatformProvider
+  fullName: Studio23.SS2.AchievementSystem.Data.IDTableMapper.PlatformProvider
+  nameWithType: IDTableMapper.PlatformProvider
+- uid: Studio23.SS2.AchievementSystem.Data.PlatformProvider
+  name: PlatformProvider
+  href: api/Studio23.SS2.AchievementSystem.Data.PlatformProvider.html
+  commentId: T:Studio23.SS2.AchievementSystem.Data.PlatformProvider
+  fullName: Studio23.SS2.AchievementSystem.Data.PlatformProvider
+  nameWithType: PlatformProvider
+- uid: Studio23.SS2.AchievementSystem.Data.PlatformProvider.Default
+  name: Default
+  href: api/Studio23.SS2.AchievementSystem.Data.PlatformProvider.html#Studio23_SS2_AchievementSystem_Data_PlatformProvider_Default
+  commentId: F:Studio23.SS2.AchievementSystem.Data.PlatformProvider.Default
+  fullName: Studio23.SS2.AchievementSystem.Data.PlatformProvider.Default
+  nameWithType: PlatformProvider.Default
+- uid: Studio23.SS2.AchievementSystem.Data.PlatformProvider.Nintendo
+  name: Nintendo
+  href: api/Studio23.SS2.AchievementSystem.Data.PlatformProvider.html#Studio23_SS2_AchievementSystem_Data_PlatformProvider_Nintendo
+  commentId: F:Studio23.SS2.AchievementSystem.Data.PlatformProvider.Nintendo
+  fullName: Studio23.SS2.AchievementSystem.Data.PlatformProvider.Nintendo
+  nameWithType: PlatformProvider.Nintendo
+- uid: Studio23.SS2.AchievementSystem.Data.PlatformProvider.PlayStation
+  name: PlayStation
+  href: api/Studio23.SS2.AchievementSystem.Data.PlatformProvider.html#Studio23_SS2_AchievementSystem_Data_PlatformProvider_PlayStation
+  commentId: F:Studio23.SS2.AchievementSystem.Data.PlatformProvider.PlayStation
+  fullName: Studio23.SS2.AchievementSystem.Data.PlatformProvider.PlayStation
+  nameWithType: PlatformProvider.PlayStation
+- uid: Studio23.SS2.AchievementSystem.Data.PlatformProvider.Steam
+  name: Steam
+  href: api/Studio23.SS2.AchievementSystem.Data.PlatformProvider.html#Studio23_SS2_AchievementSystem_Data_PlatformProvider_Steam
+  commentId: F:Studio23.SS2.AchievementSystem.Data.PlatformProvider.Steam
+  fullName: Studio23.SS2.AchievementSystem.Data.PlatformProvider.Steam
+  nameWithType: PlatformProvider.Steam
+- uid: Studio23.SS2.AchievementSystem.Data.PlatformProvider.XBoxCore
+  name: XBoxCore
+  href: api/Studio23.SS2.AchievementSystem.Data.PlatformProvider.html#Studio23_SS2_AchievementSystem_Data_PlatformProvider_XBoxCore
+  commentId: F:Studio23.SS2.AchievementSystem.Data.PlatformProvider.XBoxCore
+  fullName: Studio23.SS2.AchievementSystem.Data.PlatformProvider.XBoxCore
+  nameWithType: PlatformProvider.XBoxCore
+- uid: Studio23.SS2.AchievementSystem.Data.PlatformProvider.XBoxPC
+  name: XBoxPC
+  href: api/Studio23.SS2.AchievementSystem.Data.PlatformProvider.html#Studio23_SS2_AchievementSystem_Data_PlatformProvider_XBoxPC
+  commentId: F:Studio23.SS2.AchievementSystem.Data.PlatformProvider.XBoxPC
+  fullName: Studio23.SS2.AchievementSystem.Data.PlatformProvider.XBoxPC
+  nameWithType: PlatformProvider.XBoxPC
 - uid: Studio23.SS2.AchievementSystem.Editor
   name: Studio23.SS2.AchievementSystem.Editor
   href: api/Studio23.SS2.AchievementSystem.Editor.html
   commentId: N:Studio23.SS2.AchievementSystem.Editor
   fullName: Studio23.SS2.AchievementSystem.Editor
   nameWithType: Studio23.SS2.AchievementSystem.Editor
+- uid: Studio23.SS2.AchievementSystem.Editor.AchievementSystemEditor
+  name: AchievementSystemEditor
+  href: api/Studio23.SS2.AchievementSystem.Editor.AchievementSystemEditor.html
+  commentId: T:Studio23.SS2.AchievementSystem.Editor.AchievementSystemEditor
+  fullName: Studio23.SS2.AchievementSystem.Editor.AchievementSystemEditor
+  nameWithType: AchievementSystemEditor
+- uid: Studio23.SS2.AchievementSystem.Editor.AchievementSystemEditor.OnInspectorGUI
+  name: OnInspectorGUI()
+  href: api/Studio23.SS2.AchievementSystem.Editor.AchievementSystemEditor.html#Studio23_SS2_AchievementSystem_Editor_AchievementSystemEditor_OnInspectorGUI
+  commentId: M:Studio23.SS2.AchievementSystem.Editor.AchievementSystemEditor.OnInspectorGUI
+  fullName: Studio23.SS2.AchievementSystem.Editor.AchievementSystemEditor.OnInspectorGUI()
+  nameWithType: AchievementSystemEditor.OnInspectorGUI()
+- uid: Studio23.SS2.AchievementSystem.Editor.AchievementSystemEditor.OnInspectorGUI*
+  name: OnInspectorGUI
+  href: api/Studio23.SS2.AchievementSystem.Editor.AchievementSystemEditor.html#Studio23_SS2_AchievementSystem_Editor_AchievementSystemEditor_OnInspectorGUI_
+  commentId: Overload:Studio23.SS2.AchievementSystem.Editor.AchievementSystemEditor.OnInspectorGUI
+  isSpec: "True"
+  fullName: Studio23.SS2.AchievementSystem.Editor.AchievementSystemEditor.OnInspectorGUI
+  nameWithType: AchievementSystemEditor.OnInspectorGUI
+- uid: Studio23.SS2.AchievementSystem.Editor.AchievementTableMapEditor
+  name: AchievementTableMapEditor
+  href: api/Studio23.SS2.AchievementSystem.Editor.AchievementTableMapEditor.html
+  commentId: T:Studio23.SS2.AchievementSystem.Editor.AchievementTableMapEditor
+  fullName: Studio23.SS2.AchievementSystem.Editor.AchievementTableMapEditor
+  nameWithType: AchievementTableMapEditor
+- uid: Studio23.SS2.AchievementSystem.Editor.AchievementTableMapEditor.OpenWindow
+  name: OpenWindow()
+  href: api/Studio23.SS2.AchievementSystem.Editor.AchievementTableMapEditor.html#Studio23_SS2_AchievementSystem_Editor_AchievementTableMapEditor_OpenWindow
+  commentId: M:Studio23.SS2.AchievementSystem.Editor.AchievementTableMapEditor.OpenWindow
+  fullName: Studio23.SS2.AchievementSystem.Editor.AchievementTableMapEditor.OpenWindow()
+  nameWithType: AchievementTableMapEditor.OpenWindow()
+- uid: Studio23.SS2.AchievementSystem.Editor.AchievementTableMapEditor.OpenWindow*
+  name: OpenWindow
+  href: api/Studio23.SS2.AchievementSystem.Editor.AchievementTableMapEditor.html#Studio23_SS2_AchievementSystem_Editor_AchievementTableMapEditor_OpenWindow_
+  commentId: Overload:Studio23.SS2.AchievementSystem.Editor.AchievementTableMapEditor.OpenWindow
+  isSpec: "True"
+  fullName: Studio23.SS2.AchievementSystem.Editor.AchievementTableMapEditor.OpenWindow
+  nameWithType: AchievementTableMapEditor.OpenWindow
 - uid: Studio23.SS2.AchievementSystem.Editor.AchievementsGeneratorWindow
   name: AchievementsGeneratorWindow
   href: api/Studio23.SS2.AchievementSystem.Editor.AchievementsGeneratorWindow.html
@@ -264,103 +491,41 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.AchievementSystem.Editor.AchievementsGeneratorWindow.OpenWindow
   nameWithType: AchievementsGeneratorWindow.OpenWindow
-- uid: Studio23.SS2.AchievementSystem.Editor.StatsGeneratorWindow
-  name: StatsGeneratorWindow
-  href: api/Studio23.SS2.AchievementSystem.Editor.StatsGeneratorWindow.html
-  commentId: T:Studio23.SS2.AchievementSystem.Editor.StatsGeneratorWindow
-  fullName: Studio23.SS2.AchievementSystem.Editor.StatsGeneratorWindow
-  nameWithType: StatsGeneratorWindow
-- uid: Studio23.SS2.AchievementSystem.Editor.StatsGeneratorWindow.OpenWindow
-  name: OpenWindow()
-  href: api/Studio23.SS2.AchievementSystem.Editor.StatsGeneratorWindow.html#Studio23_SS2_AchievementSystem_Editor_StatsGeneratorWindow_OpenWindow
-  commentId: M:Studio23.SS2.AchievementSystem.Editor.StatsGeneratorWindow.OpenWindow
-  fullName: Studio23.SS2.AchievementSystem.Editor.StatsGeneratorWindow.OpenWindow()
-  nameWithType: StatsGeneratorWindow.OpenWindow()
-- uid: Studio23.SS2.AchievementSystem.Editor.StatsGeneratorWindow.OpenWindow*
-  name: OpenWindow
-  href: api/Studio23.SS2.AchievementSystem.Editor.StatsGeneratorWindow.html#Studio23_SS2_AchievementSystem_Editor_StatsGeneratorWindow_OpenWindow_
-  commentId: Overload:Studio23.SS2.AchievementSystem.Editor.StatsGeneratorWindow.OpenWindow
+- uid: Studio23.SS2.AchievementSystem.Editor.DummyProviderEditor
+  name: DummyProviderEditor
+  href: api/Studio23.SS2.AchievementSystem.Editor.DummyProviderEditor.html
+  commentId: T:Studio23.SS2.AchievementSystem.Editor.DummyProviderEditor
+  fullName: Studio23.SS2.AchievementSystem.Editor.DummyProviderEditor
+  nameWithType: DummyProviderEditor
+- uid: Studio23.SS2.AchievementSystem.Editor.DummyProviderEditor.CreateDefaultProvider
+  name: CreateDefaultProvider()
+  href: api/Studio23.SS2.AchievementSystem.Editor.DummyProviderEditor.html#Studio23_SS2_AchievementSystem_Editor_DummyProviderEditor_CreateDefaultProvider
+  commentId: M:Studio23.SS2.AchievementSystem.Editor.DummyProviderEditor.CreateDefaultProvider
+  fullName: Studio23.SS2.AchievementSystem.Editor.DummyProviderEditor.CreateDefaultProvider()
+  nameWithType: DummyProviderEditor.CreateDefaultProvider()
+- uid: Studio23.SS2.AchievementSystem.Editor.DummyProviderEditor.CreateDefaultProvider*
+  name: CreateDefaultProvider
+  href: api/Studio23.SS2.AchievementSystem.Editor.DummyProviderEditor.html#Studio23_SS2_AchievementSystem_Editor_DummyProviderEditor_CreateDefaultProvider_
+  commentId: Overload:Studio23.SS2.AchievementSystem.Editor.DummyProviderEditor.CreateDefaultProvider
   isSpec: "True"
-  fullName: Studio23.SS2.AchievementSystem.Editor.StatsGeneratorWindow.OpenWindow
-  nameWithType: StatsGeneratorWindow.OpenWindow
-- uid: Studio23.SS2.AchievementSystem.Providers
-  name: Studio23.SS2.AchievementSystem.Providers
-  href: api/Studio23.SS2.AchievementSystem.Providers.html
-  commentId: N:Studio23.SS2.AchievementSystem.Providers
-  fullName: Studio23.SS2.AchievementSystem.Providers
-  nameWithType: Studio23.SS2.AchievementSystem.Providers
-- uid: Studio23.SS2.AchievementSystem.Providers.AchievementProvider
-  name: AchievementProvider
-  href: api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html
-  commentId: T:Studio23.SS2.AchievementSystem.Providers.AchievementProvider
-  fullName: Studio23.SS2.AchievementSystem.Providers.AchievementProvider
-  nameWithType: AchievementProvider
-- uid: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.GetAchievement(System.String)
-  name: GetAchievement(string)
-  href: api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html#Studio23_SS2_AchievementSystem_Providers_AchievementProvider_GetAchievement_System_String_
-  commentId: M:Studio23.SS2.AchievementSystem.Providers.AchievementProvider.GetAchievement(System.String)
-  name.vb: GetAchievement(String)
-  fullName: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.GetAchievement(string)
-  fullName.vb: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.GetAchievement(String)
-  nameWithType: AchievementProvider.GetAchievement(string)
-  nameWithType.vb: AchievementProvider.GetAchievement(String)
-- uid: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.GetAchievement*
-  name: GetAchievement
-  href: api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html#Studio23_SS2_AchievementSystem_Providers_AchievementProvider_GetAchievement_
-  commentId: Overload:Studio23.SS2.AchievementSystem.Providers.AchievementProvider.GetAchievement
+  fullName: Studio23.SS2.AchievementSystem.Editor.DummyProviderEditor.CreateDefaultProvider
+  nameWithType: DummyProviderEditor.CreateDefaultProvider
+- uid: Studio23.SS2.AchievementSystem.Editor.Installer
+  name: Installer
+  href: api/Studio23.SS2.AchievementSystem.Editor.Installer.html
+  commentId: T:Studio23.SS2.AchievementSystem.Editor.Installer
+  fullName: Studio23.SS2.AchievementSystem.Editor.Installer
+  nameWithType: Installer
+- uid: Studio23.SS2.AchievementSystem.Editor.Installer.Install
+  name: Install()
+  href: api/Studio23.SS2.AchievementSystem.Editor.Installer.html#Studio23_SS2_AchievementSystem_Editor_Installer_Install
+  commentId: M:Studio23.SS2.AchievementSystem.Editor.Installer.Install
+  fullName: Studio23.SS2.AchievementSystem.Editor.Installer.Install()
+  nameWithType: Installer.Install()
+- uid: Studio23.SS2.AchievementSystem.Editor.Installer.Install*
+  name: Install
+  href: api/Studio23.SS2.AchievementSystem.Editor.Installer.html#Studio23_SS2_AchievementSystem_Editor_Installer_Install_
+  commentId: Overload:Studio23.SS2.AchievementSystem.Editor.Installer.Install
   isSpec: "True"
-  fullName: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.GetAchievement
-  nameWithType: AchievementProvider.GetAchievement
-- uid: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.Initialize
-  name: Initialize()
-  href: api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html#Studio23_SS2_AchievementSystem_Providers_AchievementProvider_Initialize
-  commentId: M:Studio23.SS2.AchievementSystem.Providers.AchievementProvider.Initialize
-  fullName: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.Initialize()
-  nameWithType: AchievementProvider.Initialize()
-- uid: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.Initialize*
-  name: Initialize
-  href: api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html#Studio23_SS2_AchievementSystem_Providers_AchievementProvider_Initialize_
-  commentId: Overload:Studio23.SS2.AchievementSystem.Providers.AchievementProvider.Initialize
-  isSpec: "True"
-  fullName: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.Initialize
-  nameWithType: AchievementProvider.Initialize
-- uid: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.OnInitializationComplete
-  name: OnInitializationComplete
-  href: api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html#Studio23_SS2_AchievementSystem_Providers_AchievementProvider_OnInitializationComplete
-  commentId: F:Studio23.SS2.AchievementSystem.Providers.AchievementProvider.OnInitializationComplete
-  fullName: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.OnInitializationComplete
-  nameWithType: AchievementProvider.OnInitializationComplete
-- uid: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.UpdateAchievementProgress(System.String,System.Single)
-  name: UpdateAchievementProgress(string, float)
-  href: api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html#Studio23_SS2_AchievementSystem_Providers_AchievementProvider_UpdateAchievementProgress_System_String_System_Single_
-  commentId: M:Studio23.SS2.AchievementSystem.Providers.AchievementProvider.UpdateAchievementProgress(System.String,System.Single)
-  name.vb: UpdateAchievementProgress(String, Single)
-  fullName: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.UpdateAchievementProgress(string, float)
-  fullName.vb: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.UpdateAchievementProgress(String, Single)
-  nameWithType: AchievementProvider.UpdateAchievementProgress(string, float)
-  nameWithType.vb: AchievementProvider.UpdateAchievementProgress(String, Single)
-- uid: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.UpdateAchievementProgress*
-  name: UpdateAchievementProgress
-  href: api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html#Studio23_SS2_AchievementSystem_Providers_AchievementProvider_UpdateAchievementProgress_
-  commentId: Overload:Studio23.SS2.AchievementSystem.Providers.AchievementProvider.UpdateAchievementProgress
-  isSpec: "True"
-  fullName: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.UpdateAchievementProgress
-  nameWithType: AchievementProvider.UpdateAchievementProgress
-- uid: Studio23.SS2.AchievementSystem.Providers.AchievementProvider._achievementMapper
-  name: _achievementMapper
-  href: api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html#Studio23_SS2_AchievementSystem_Providers_AchievementProvider__achievementMapper
-  commentId: F:Studio23.SS2.AchievementSystem.Providers.AchievementProvider._achievementMapper
-  fullName: Studio23.SS2.AchievementSystem.Providers.AchievementProvider._achievementMapper
-  nameWithType: AchievementProvider._achievementMapper
-- uid: Studio23.SS2.AchievementSystem.Providers.AchievementProvider._statsMapper
-  name: _statsMapper
-  href: api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html#Studio23_SS2_AchievementSystem_Providers_AchievementProvider__statsMapper
-  commentId: F:Studio23.SS2.AchievementSystem.Providers.AchievementProvider._statsMapper
-  fullName: Studio23.SS2.AchievementSystem.Providers.AchievementProvider._statsMapper
-  nameWithType: AchievementProvider._statsMapper
-- uid: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.achievementDatas
-  name: achievementDatas
-  href: api/Studio23.SS2.AchievementSystem.Providers.AchievementProvider.html#Studio23_SS2_AchievementSystem_Providers_AchievementProvider_achievementDatas
-  commentId: F:Studio23.SS2.AchievementSystem.Providers.AchievementProvider.achievementDatas
-  fullName: Studio23.SS2.AchievementSystem.Providers.AchievementProvider.achievementDatas
-  nameWithType: AchievementProvider.achievementDatas
+  fullName: Studio23.SS2.AchievementSystem.Editor.Installer.Install
+  nameWithType: Installer.Install

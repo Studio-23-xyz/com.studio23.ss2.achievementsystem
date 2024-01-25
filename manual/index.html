@@ -6,6 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Achievement System |  |  ">
       
+      
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -110,17 +111,15 @@
 <h3 id="getting-started">Getting Started</h3>
 <p>To start using the Achievement System. You need to take a few setup stepts</p>
 <ol>
-<li><p>Click on the 'Studio-23' available on the top navigation bar and navigate to &quot;Achievement System &gt; ID Table Generator&quot;</p>
+<li><p>Click on the 'Studio-23' available on the top navigation bar and navigate to &quot;Achievement System&gt; Generators &gt; ID Table Generator&quot;</p>
 </li>
 <li><p>A new window will appear in-front of you. Fill it up with the names of your Achievements.</p>
 </li>
 <li><p>It will generate an achievements.cs class with static string properties that you can use when calling the UnlockAchievement() method</p>
 </li>
-<li><p>Once you're done,Again on the top navigation bar and navigate to &quot;Achievement System &gt; ID Table Map Generator&quot;. Now you need to create a map for your Preferred Provider (Steam, Xbox, etc.)</p>
+<li><p>Once you're done,Again on the top navigation bar and navigate to &quot;Achievement System &gt; Generators &gt;ID Table Map Generator&quot;. Now you need to create a map for your Preferred Provider (Steam, Xbox, etc.)</p>
 </li>
-<li><p>This IDMap needs to be assigned on your provider Script.</p>
-</li>
-<li><p>Install your Preferred provider extention package.</p>
+<li><p>Install Achievement-System</p>
 </li>
 </ol>
 <h3 id="using-the-achievement-system">Using the Achievement System</h3>
@@ -129,12 +128,10 @@
 </li>
 <li><p>Attach The Achievement System Script to it.</p>
 </li>
-<li><p>Create your own provider or install one and add it to the same gameobject.</p>
-</li>
 <li><p>Simply call this following method to unlock an Achievement</p>
 </li>
 </ol>
-<pre><code class="lang-Csharp">   AchievementSystem.instance.UnlockAchievement(AchievementData achievementData)
+<pre><code class="lang-Csharp">   AchievementSystem.instance.UnlockAchievement(string id);
 </code></pre>
 <h2 id="extensions">Extensions</h2>
 <p>There are two extensions available for In-Game Achievement System that adds support for Xbox and Steam platforms separately. Please ensure that this base package is installed if you want to use either of them. And that only one of the extension packages can be used at a time.</p>
