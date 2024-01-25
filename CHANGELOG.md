@@ -1,4 +1,48 @@
 # Changelog
+
+## [v2.0.0] - 2024-1-24
+
+### Update
+- AchievementSystem Provider is now retrived via a Factory Pattern.
+- All methods are now Async UniTask
+- Provider is now an Scriptable Object
+
+### Added
+- Added Installer
+- Added Editor script for easier debugging
+- Added a Dummy Provider for testing
+
+
+## [v1.2.2] - 2024-1-2
+
+### Update
+- Unlocking achievements now implements a process queue
+
+## [v1.2.1] - 2023-12-20
+
+### Added
+- Initialization Event is now based on unity event.
+
+## [v1.1.9] - 2023-12-18
+
+### Added
+- Added Initialiation Event
+- Now Achievement system initialization is being check by a bool
+
+
+## [v1.1.8] - 2023-12-15
+
+### Added
+- Added Explicit is unlocked property
+
+
+## [v1.1.7] - 2023-12-14
+
+### Added
+- AchievementData Class added
+- Now you can get AchievementData from the system
+
+
 ## [v1.1.5] - 2023-12-12
 
 ### Added

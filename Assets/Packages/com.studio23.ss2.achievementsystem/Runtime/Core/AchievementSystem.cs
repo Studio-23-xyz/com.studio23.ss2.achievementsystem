@@ -1,62 +1,83 @@
-using Studio23.SS2.AchievementSystem.Providers;
-using System;
+using Cysharp.Threading.Tasks;
+using Studio23.SS2.AchievementSystem.Data;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
 
 namespace Studio23.SS2.AchievementSystem.Core
 {
-
+    [RequireComponent(typeof(AchievementProviderFactory))]
     public class AchievementSystem : MonoBehaviour
     {
         public static AchievementSystem Instance;
 
-        [Header("Config")]
         [SerializeField]
-        private bool InitializeOnStart = true;
-        public AchievementProvider _achievementProvider;
+        private PlatformProvider _platformProvider;
+        private AchievementProviderFactory _factory;
+        [SerializeField]
+        private AbstractAchievementProvider _achievementProvider;
 
 
         private Queue<(string id, float progression)> _achievementProcessQueue;
         private bool _isProcessing;
         [SerializeField]
-        private float _processingSpeed;
+        private float _processingDelay=2f;
 
         [Header("Events")]
         public UnityEvent OnInitializeComplete;
 
         private void Awake()
         {
-            Instance = this;
-        }
-
-        private void Start()
-        {
-            if (InitializeOnStart)
+            if(Instance == null)
             {
-                Initialize();
+                Instance = this;
+                _factory=GetComponent<AchievementProviderFactory>();
+                _factory.Initialize();
+            }
+            else
+            {
+                Destroy(gameObject);
             }
         }
 
 
-        /// <summary>
-        /// Initialize Provider
-        /// </summary>
-        public void Initialize()
+        private void Start()
         {
+            SetProvider();
+            _achievementProvider = _factory.GetProvider(_platformProvider);
+        }
+
+        private void SetProvider()
+        {
+            _platformProvider = PlatformProvider.Default;
+
+#if UNITY_GAMECORE
+            _platformProvider = PlatformProvider.XBoxCore;
+#endif
+
+#if MICROSOFT_GAME_CORE
+            _platformProvider = PlatformProvider.XBoxPC;
+#endif
+
+#if STEAMWORKS_ENABLED
+            _platformProvider = PlatformProvider.Steam;
+#endif
+        }
+
+        /// <summary>
+        /// Initialize Provider & process queue
+        /// </summary>
+        public async UniTask Initialize()
+        {
+
             _achievementProcessQueue = new Queue<(string id, float progression)>();
-            _achievementProvider = GetComponent<AchievementProvider>();
             _achievementProvider.OnInitializationComplete.AddListener(()=> OnInitializeComplete?.Invoke());
-            _achievementProvider?.Initialize();
+            await _achievementProvider.Initialize();
         }
 
     
-        public AchievementData GetAchievement(string id)
-        {
-            return _achievementProvider.GetAchievement(id);
-        }
-         
 
         /// <summary>
         /// Unlocks The achievement progression
@@ -64,37 +85,36 @@ namespace Studio23.SS2.AchievementSystem.Core
         /// <param name="achievementName"></param>
         /// <param name="progression"> progression is the unlock percentage of a achievement, the value will be withing 0 to 100</param>
         
-        public  void UpdateAchievementProgress(string achievementName, float progression)
+        public async UniTask UpdateAchievementProgress(string achievementName, float progression)
         {
             _achievementProcessQueue.Enqueue((achievementName, progression));
             if (_isProcessing) return;
-            StartCoroutine(ProcessAchievements());
+
+            _isProcessing = true;
+            while (_achievementProcessQueue.Count > 0)
+            {
+                var (id, progress) = _achievementProcessQueue.Dequeue();
+                Debug.Log($"Processing Achievement Id {id} with progression: {progress}");
+                await _achievementProvider.UpdateAchievementProgress(id, progress);
+                await UniTask.Delay((int)_processingDelay * 1000, true);
+            }
+            _isProcessing = false;
+
         }
         
         
         /// <summary>
-        /// Unlocks The achievement
+        /// Unlocks The achievement to 100%
         /// </summary>
         /// <param name="achievementName"></param>
 
         
-        public  void UnlockAchievement(string achievementName)
+        public async UniTask UnlockAchievement(string achievementName)
         {
-            UpdateAchievementProgress(achievementName, 100);
+           await  UpdateAchievementProgress(achievementName, 100);
         }
 
-        IEnumerator ProcessAchievements()
-        {
-            _isProcessing = true;
-            while (_achievementProcessQueue.Count > 0)
-            {
-                var (id, progression) = _achievementProcessQueue.Dequeue();
-                Debug.Log($"Processing Achievement Id {id} with progression: {progression}");
-                _achievementProvider.UpdateAchievementProgress(id, progression);
-                yield return new WaitForSeconds(_processingSpeed);
-            }
-            _isProcessing = false;
-        }
+   
 
 
     }
