@@ -1,6 +1,4 @@
-
 using Studio23.SS2.AchievementSystem.Data;
-
 using System.IO;
 using UnityEditor;
 using UnityEngine;
@@ -16,7 +14,6 @@ namespace Studio23.SS2.AchievementSystem.Editor
         {
             DummyAchievementProvider provider = ScriptableObject.CreateInstance<DummyAchievementProvider>();
 
-            provider.PlatformProvider = PlatformProvider.Default;
 
             if (!Directory.Exists(AssetSaveFolderPath))
             {

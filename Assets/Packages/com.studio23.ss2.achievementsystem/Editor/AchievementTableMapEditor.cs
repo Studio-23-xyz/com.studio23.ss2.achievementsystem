@@ -69,7 +69,7 @@ namespace Studio23.SS2.AchievementSystem.Editor
                 Directory.CreateDirectory(AssetSaveFolderPath);
             }
 
-            AssetDatabase.CreateAsset(AchievementIdTableMap, $"{AssetSaveFolderPath}/AchievementIDMap.asset");
+            AssetDatabase.CreateAsset(AchievementIdTableMap, $"{AssetSaveFolderPath}/IDMap.asset");
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
 

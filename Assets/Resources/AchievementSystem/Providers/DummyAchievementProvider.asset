@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d2f8541fe558c84a9d99aa8eaa29954, type: 3}
   m_Name: DummyAchievementProvider
   m_EditorClassIdentifier: 
-  PlatformProvider: 0
-  _achievementMapper: {fileID: 11400000, guid: d9d96a0efe9521141b5391b3983ee723, type: 2}
+  _achievementMapper: {fileID: 11400000, guid: 137fe25b04c1197409f9de56429c20f3, type: 2}
   OnInitializationComplete:
     m_PersistentCalls:
       m_Calls: []
+  failInit: 0
+  errorCode: 0

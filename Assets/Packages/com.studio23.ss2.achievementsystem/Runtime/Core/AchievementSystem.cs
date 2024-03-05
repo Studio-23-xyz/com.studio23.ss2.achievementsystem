@@ -13,8 +13,7 @@ namespace Studio23.SS2.AchievementSystem.Core
     {
         public static AchievementSystem Instance;
 
-        [SerializeField]
-        private PlatformProvider _platformProvider;
+  
         private AchievementProviderFactory _factory;
         [SerializeField]
         private AbstractAchievementProvider _achievementProvider;
@@ -45,26 +44,11 @@ namespace Studio23.SS2.AchievementSystem.Core
 
         private void Start()
         {
-            SetProvider();
-            _achievementProvider = _factory.GetProvider(_platformProvider);
+
+            _achievementProvider = _factory.GetProvider();
         }
 
-        private void SetProvider()
-        {
-            _platformProvider = PlatformProvider.Default;
 
-#if UNITY_GAMECORE
-            _platformProvider = PlatformProvider.XBoxCore;
-#endif
-
-#if MICROSOFT_GAME_CORE
-            _platformProvider = PlatformProvider.XBoxPC;
-#endif
-
-#if STEAMWORKS_ENABLED
-            _platformProvider = PlatformProvider.Steam;
-#endif
-        }
 
         /// <summary>
         /// Initialize Provider & process queue

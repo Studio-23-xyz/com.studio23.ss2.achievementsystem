@@ -1,32 +1,27 @@
 using Studio23.SS2.AchievementSystem.Data;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Studio23.SS2.AchievementSystem.Core
 {
     public class AchievementProviderFactory : MonoBehaviour
     {
-        private Dictionary<PlatformProvider, AbstractAchievementProvider> _providers;
-
+        private  AbstractAchievementProvider _dummyProvider;
+        private AbstractAchievementProvider _provider;
         internal void Initialize()
         {
-            _providers = new Dictionary<PlatformProvider, AbstractAchievementProvider>();
             LoadProvidersFromResources();
         }
 
-        internal void LoadProvidersFromResources()
+        private void LoadProvidersFromResources()
         {
-            AbstractAchievementProvider[] providers = Resources.LoadAll<AbstractAchievementProvider>("AchievementSystem/Providers");
-            foreach (AbstractAchievementProvider provider in providers)
-            {
-                _providers[provider.PlatformProvider] = provider;
-            }
+            _dummyProvider = Resources.Load<AbstractAchievementProvider>("AchievementSystem/Providers/DummyAchievementProvider");
+            _provider= Resources.Load<AbstractAchievementProvider>("AchievementSystem/Providers/AchievementProvider");
 
         }
 
-        internal AbstractAchievementProvider GetProvider(PlatformProvider provider)
+        internal AbstractAchievementProvider GetProvider()
         {
-            return _providers[provider];
+            return _provider!= null ? _provider : _dummyProvider;
         }
     }
 }
